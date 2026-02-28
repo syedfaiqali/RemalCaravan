@@ -23,7 +23,7 @@ function Footer() {
             </Typography>
           </Grid>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography variant="body2" align="right" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" sx={{ textAlign: { xs: 'left', md: 'right' } }}>
               © {new Date().getFullYear()} RemalCaravan. All rights reserved.
             </Typography>
           </Grid>

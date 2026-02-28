@@ -56,7 +56,18 @@ function Navbar() {
             </Typography>
           </Box>
 
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: { xs: 'nowrap', md: 'wrap' },
+              gap: 1,
+              width: { xs: '100%', md: 'auto' },
+              overflowX: { xs: 'auto', md: 'visible' },
+              pb: { xs: 0.5, md: 0 },
+              scrollbarWidth: 'thin',
+              '&::-webkit-scrollbar': { height: 6 },
+            }}
+          >
             {navItems.map((item) => {
               const isActive = location.pathname === item.path
               return (
@@ -69,6 +80,8 @@ function Navbar() {
                   sx={{
                     fontWeight: 700,
                     px: 1.8,
+                    fontSize: { xs: 13, sm: 14 },
+                    whiteSpace: 'nowrap',
                     bgcolor: isActive ? undefined : 'rgba(25,118,210,0.06)',
                     '&:hover': {
                       bgcolor: isActive ? undefined : 'rgba(25,118,210,0.13)',

@@ -268,13 +268,13 @@ function HomePage() {
               <Grid size={{ xs: 12 }}>
                 <Box component="img" src={image3b} alt="About caravan exterior" sx={{ width: '100%', height: 280, objectFit: 'cover', borderRadius: 3 }} />
               </Grid>
-              <Grid size={{ xs: 4 }}>
+              <Grid size={{ xs: 12, sm: 4 }}>
                 <Box component="img" src={image7s} alt="Caravan detail 1" sx={{ width: '100%', height: 165, objectFit: 'cover', borderRadius: 3 }} />
               </Grid>
-              <Grid size={{ xs: 4 }}>
+              <Grid size={{ xs: 12, sm: 4 }}>
                 <Box component="img" src={image8s} alt="Caravan detail 2" sx={{ width: '100%', height: 165, objectFit: 'cover', borderRadius: 3 }} />
               </Grid>
-              <Grid size={{ xs: 4 }}>
+              <Grid size={{ xs: 12, sm: 4 }}>
                 <Box component="img" src={image9s} alt="Caravan detail 3" sx={{ width: '100%', height: 165, objectFit: 'cover', borderRadius: 3 }} />
               </Grid>
             </Grid>

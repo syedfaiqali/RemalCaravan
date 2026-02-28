@@ -1,6 +1,6 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 
-export const appTheme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: '#1976d2',
@@ -29,21 +29,31 @@ export const appTheme = createTheme({
     h1: {
       fontWeight: 800,
       letterSpacing: '-0.03em',
+      fontSize: 'clamp(2.1rem, 5vw, 4.5rem)',
+      lineHeight: 1.1,
     },
     h2: {
       fontWeight: 800,
       letterSpacing: '-0.03em',
+      fontSize: 'clamp(1.9rem, 4.2vw, 3.8rem)',
+      lineHeight: 1.15,
     },
     h3: {
       fontWeight: 800,
       letterSpacing: '-0.02em',
+      fontSize: 'clamp(1.7rem, 3.2vw, 3rem)',
+      lineHeight: 1.2,
     },
     h4: {
       fontWeight: 780,
       letterSpacing: '-0.01em',
+      fontSize: 'clamp(1.35rem, 2.5vw, 2.3rem)',
+      lineHeight: 1.25,
     },
     h5: {
       fontWeight: 740,
+      fontSize: 'clamp(1.08rem, 2vw, 1.6rem)',
+      lineHeight: 1.35,
     },
     body1: {
       lineHeight: 1.7,
@@ -84,6 +94,7 @@ export const appTheme = createTheme({
           borderRadius: 999,
           paddingInline: 18,
           paddingBlock: 8,
+          minHeight: 40,
         },
         containedPrimary: {
           boxShadow: '0 10px 24px rgba(25,118,210,0.22)',
@@ -110,3 +121,7 @@ export const appTheme = createTheme({
     },
   },
 })
+
+theme = responsiveFontSizes(theme)
+
+export const appTheme = theme

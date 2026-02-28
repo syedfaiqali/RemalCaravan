@@ -150,7 +150,7 @@ function AboutPage() {
 
           <Grid size={{ xs: 12, md: 6 }}>
             <Grid container spacing={2}>
-              <Grid size={{ xs: 7 }}>
+              <Grid size={{ xs: 12, sm: 7 }}>
                 <Box
                   component="img"
                   src={image3b}
@@ -158,7 +158,7 @@ function AboutPage() {
                   sx={{ width: '100%', height: 290, objectFit: 'cover', borderRadius: 3 }}
                 />
               </Grid>
-              <Grid size={{ xs: 5 }}>
+              <Grid size={{ xs: 12, sm: 5 }}>
                 <Stack spacing={2}>
                   <Box
                     component="img"
@@ -174,7 +174,7 @@ function AboutPage() {
                   />
                 </Stack>
               </Grid>
-              <Grid size={{ xs: 7 }}>
+              <Grid size={{ xs: 12, sm: 7 }}>
                 <Box
                   component="img"
                   src={image7s}
@@ -182,7 +182,7 @@ function AboutPage() {
                   sx={{ width: '100%', height: 210, objectFit: 'cover', borderRadius: 3 }}
                 />
               </Grid>
-              <Grid size={{ xs: 5 }}>
+              <Grid size={{ xs: 12, sm: 5 }}>
                 <Box
                   component="img"
                   src={image8s}

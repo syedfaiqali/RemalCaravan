@@ -19,6 +19,7 @@ body {
     linear-gradient(180deg, #f8fbff 0%, #f2f7fc 55%, #edf4fb 100%);
   color: #0f2942;
   font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: clip;
 }
 
 a {
