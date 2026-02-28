@@ -1,12 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap');
+
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 260ms;
+  --motion-base: 420ms;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top right, #fef4e6 0%, #f4f8fc 35%, #f4f8fc 100%);
+  background:
+    radial-gradient(circle at 84% 8%, rgba(255, 168, 38, 0.2) 0%, rgba(255, 168, 38, 0) 36%),
+    radial-gradient(circle at 8% 30%, rgba(25, 118, 210, 0.15) 0%, rgba(25, 118, 210, 0) 40%),
+    linear-gradient(180deg, #f8fbff 0%, #f2f7fc 55%, #edf4fb 100%);
+  color: #0f2942;
+  font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+@keyframes premiumSectionIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes premiumTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premiumCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+main .MuiContainer-root,
+main .MuiBox-root,
+main .MuiPaper-root {
+  animation: premiumSectionIn 760ms var(--motion-ease) both;
+}
+
+main .MuiTypography-root,
+main .MuiButton-root,
+main .MuiChip-root {
+  animation: premiumTextIn 620ms var(--motion-ease) both;
+}
+
+main .MuiCard-root {
+  animation: premiumCardIn 720ms var(--motion-ease) both;
+}
+
+main .MuiGrid-container > .MuiGrid-root:nth-of-type(1) {
+  animation-delay: 60ms;
+}
+main .MuiGrid-container > .MuiGrid-root:nth-of-type(2) {
+  animation-delay: 120ms;
+}
+main .MuiGrid-container > .MuiGrid-root:nth-of-type(3) {
+  animation-delay: 180ms;
+}
+main .MuiGrid-container > .MuiGrid-root:nth-of-type(4) {
+  animation-delay: 240ms;
+}
+main .MuiGrid-container > .MuiGrid-root:nth-of-type(5) {
+  animation-delay: 300ms;
+}
+
+.MuiTypography-root,
+.MuiCard-root,
+.MuiPaper-root,
+.MuiButton-root,
+.MuiChip-root,
+.MuiBox-root {
+  transition: all var(--motion-fast) var(--motion-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

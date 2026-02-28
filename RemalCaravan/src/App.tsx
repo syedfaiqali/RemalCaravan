@@ -1,10 +1,12 @@
 import { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Box, CircularProgress } from '@mui/material'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import BookingGuard from './components/booking/BookingGuard'
 import SupportWidget from './components/support/SupportWidget'
+import ScrollToTopFab from './components/common/ScrollToTopFab'
+import ScrollToTopOnRoute from './components/common/ScrollToTopOnRoute'
 
 const HomePage = lazy(() => import('./pages/HomePage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
@@ -21,10 +23,13 @@ const loader = (
 )
 
 function App() {
+  const location = useLocation()
+
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <ScrollToTopOnRoute />
       <Navbar />
-      <Box component="main" sx={{ flexGrow: 1 }}>
+      <Box key={location.pathname} component="main" sx={{ flexGrow: 1 }}>
         <Suspense fallback={loader}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -45,6 +50,7 @@ function App() {
         </Suspense>
       </Box>
       <Footer />
+      <ScrollToTopFab />
       <SupportWidget />
     </Box>
   )

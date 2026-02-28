@@ -19,17 +19,29 @@ function CustomCard({ title, description, image, badge, subBadge, specs, childre
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden',
-        border: '1px solid',
-        borderColor: 'rgba(25,118,210,0.12)',
-        boxShadow: '0 10px 26px rgba(25,118,210,0.12)',
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        border: '1px solid rgba(25,118,210,0.12)',
+        boxShadow: '0 12px 28px rgba(15,41,66,0.1)',
+        transition: 'transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease',
         '&:hover': {
-          transform: 'translateY(-4px)',
-          boxShadow: '0 14px 30px rgba(25,118,210,0.2)',
+          transform: 'translateY(-6px)',
+          boxShadow: '0 18px 34px rgba(25,118,210,0.2)',
+          borderColor: 'rgba(255,152,0,0.4)',
+          '& .caravan-media': {
+            transform: 'scale(1.04)',
+          },
         },
       }}
     >
-      {image ? <CardMedia component="img" height="210" image={image} alt={title} sx={{ objectFit: 'cover' }} /> : null}
+      {image ? (
+        <CardMedia
+          component="img"
+          className="caravan-media"
+          height="220"
+          image={image}
+          alt={title}
+          sx={{ objectFit: 'cover', transition: 'transform 0.35s ease' }}
+        />
+      ) : null}
       <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
         {(badge || subBadge) ? (
           <Stack direction="row" spacing={1} sx={{ mb: 1.4 }}>

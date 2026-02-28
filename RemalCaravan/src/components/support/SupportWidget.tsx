@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import {
   Avatar,
   Box,
@@ -13,6 +13,7 @@ import {
 import CloseIcon from '@mui/icons-material/Close'
 import SendIcon from '@mui/icons-material/Send'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import SupportAgentIcon from '@mui/icons-material/SupportAgent'
 
 function SupportWidget() {
   const [open, setOpen] = useState(false)
@@ -31,13 +32,16 @@ function SupportWidget() {
         <Paper
           elevation={8}
           sx={{
-            width: { xs: 'calc(100vw - 28px)', sm: 360 },
+            width: { xs: 'calc(100vw - 24px)', sm: 360 },
             maxWidth: 380,
             borderRadius: 2,
             overflow: 'hidden',
+            maxHeight: 'calc(100vh - 110px)',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          <Box sx={{ bgcolor: '#25d366', color: '#fff', p: 3, position: 'relative' }}>
+          <Box sx={{ bgcolor: '#25d366', color: '#fff', p: { xs: 2.2, sm: 3 }, position: 'relative' }}>
             <IconButton
               onClick={() => setOpen(false)}
               aria-label="Close support"
@@ -53,14 +57,16 @@ function SupportWidget() {
               <CloseIcon />
             </IconButton>
             <Stack alignItems="center" spacing={1.5}>
-              <Avatar sx={{ width: 72, height: 72, bgcolor: '#ffeb99', fontSize: 36 }}>👩</Avatar>
-              <Typography variant="h5" align="center" sx={{ fontWeight: 600, lineHeight: 1.35 }}>
+              <Avatar sx={{ width: 72, height: 72, bgcolor: '#ffeb99' }}>
+                <SupportAgentIcon sx={{ color: '#7a4f1e', fontSize: 38 }} />
+              </Avatar>
+              <Typography variant="h5" align="center" sx={{ fontWeight: 600, lineHeight: 1.35, fontSize: { xs: 30, sm: 34 } }}>
                 Our customer support team is here to answer your questions. Ask us anything!
               </Typography>
             </Stack>
           </Box>
 
-          <Box sx={{ p: 2.2, bgcolor: '#f4f4f4' }}>
+          <Box sx={{ p: 2.2, bgcolor: '#f4f4f4', overflowY: 'auto' }}>
             <Divider sx={{ mb: 2.2 }} />
             <Stack spacing={2}>
               <TextField
@@ -74,7 +80,7 @@ function SupportWidget() {
                 fullWidth
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
-                placeholder="Reply to RV Rentals..."
+                placeholder="Reply to RemalCaravan..."
                 multiline
                 minRows={4}
               />
@@ -106,7 +112,7 @@ function SupportWidget() {
             py: 1.1,
             color: '#fff',
             bgcolor: '#25d366',
-            fontSize: 20,
+            fontSize: { xs: 19, sm: 20 },
             textTransform: 'none',
             fontWeight: 600,
             boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
