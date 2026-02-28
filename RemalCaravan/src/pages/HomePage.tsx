@@ -1,9 +1,12 @@
-import { Box, Container, Grid, Paper, Stack, Typography } from '@mui/material'
+import { useRef } from 'react'
+import { Box, Container, Grid, Paper, Stack, Typography, IconButton } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../store/hooks'
 import { selectCaravan } from '../store/slices/bookingSlice'
 import CustomCard from '../components/common/CustomCard'
 import CustomButton from '../components/common/CustomButton'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import { featuredCaravans, heroImage } from '../data/caravans'
 import image1s from '../assets/1s.jpg'
 import image2s from '../assets/2s.jpg'
@@ -38,10 +41,20 @@ const popularDestinations = [
 function HomePage() {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
+  const recommendedScrollRef = useRef<HTMLDivElement | null>(null)
 
   const handleSelect = (id: string) => {
     dispatch(selectCaravan(id))
     navigate('/booking')
+  }
+
+  const scrollRecommended = (direction: 'left' | 'right') => {
+    if (!recommendedScrollRef.current) return
+    const amount = Math.round(recommendedScrollRef.current.clientWidth * 0.8)
+    recommendedScrollRef.current.scrollBy({
+      left: direction === 'left' ? -amount : amount,
+      behavior: 'smooth',
+    })
   }
 
   return (
@@ -159,38 +172,89 @@ function HomePage() {
             Curated specially for you
           </Typography>
 
-          <Stack direction="row" spacing={2} sx={{ overflowX: 'auto', pb: 1.5 }}>
-            {recommendedDestinations.map((item) => (
-              <Box
-                key={item.name}
-                sx={{
-                  minWidth: { xs: 220, sm: 250, md: 280 },
-                  height: { xs: 280, md: 350 },
-                  borderRadius: 3,
-                  overflow: 'hidden',
-                  position: 'relative',
-                  flex: '0 0 auto',
-                  boxShadow: '0 14px 34px rgba(15,41,66,0.18)',
-                }}
-              >
-                <Box component="img" src={item.image} alt={item.name} sx={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <Box sx={{ position: 'relative' }}>
+            <IconButton
+              aria-label="Move images left"
+              onClick={() => scrollRecommended('left')}
+              sx={{
+                position: 'absolute',
+                left: { xs: -8, sm: -14 },
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 3,
+                bgcolor: 'rgba(15,41,66,0.82)',
+                color: '#fff',
+                width: 42,
+                height: 42,
+                '&:hover': { bgcolor: 'rgba(15,41,66,0.95)' },
+              }}
+            >
+              <ChevronLeftIcon />
+            </IconButton>
+
+            <IconButton
+              aria-label="Move images right"
+              onClick={() => scrollRecommended('right')}
+              sx={{
+                position: 'absolute',
+                right: { xs: -8, sm: -14 },
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 3,
+                bgcolor: 'rgba(15,41,66,0.82)',
+                color: '#fff',
+                width: 42,
+                height: 42,
+                '&:hover': { bgcolor: 'rgba(15,41,66,0.95)' },
+              }}
+            >
+              <ChevronRightIcon />
+            </IconButton>
+
+            <Stack
+              ref={recommendedScrollRef}
+              direction="row"
+              spacing={2}
+              sx={{
+                overflowX: 'auto',
+                pb: 1.5,
+                px: { xs: 2.4, sm: 2.8 },
+                scrollbarWidth: 'none',
+                '&::-webkit-scrollbar': { display: 'none' },
+              }}
+            >
+              {recommendedDestinations.map((item) => (
                 <Box
+                  key={item.name}
                   sx={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(180deg, rgba(5,20,35,0.08) 35%, rgba(5,20,35,0.7) 100%)',
-                    display: 'flex',
-                    alignItems: 'flex-end',
-                    p: 2,
+                    minWidth: { xs: 220, sm: 250, md: 280 },
+                    height: { xs: 280, md: 350 },
+                    borderRadius: 3,
+                    overflow: 'hidden',
+                    position: 'relative',
+                    flex: '0 0 auto',
+                    boxShadow: '0 14px 34px rgba(15,41,66,0.18)',
                   }}
                 >
-                  <Typography variant="h5" sx={{ color: '#fff', fontWeight: 800 }}>
-                    {item.name}
-                  </Typography>
+                  <Box component="img" src={item.image} alt={item.name} sx={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(180deg, rgba(5,20,35,0.08) 35%, rgba(5,20,35,0.7) 100%)',
+                      display: 'flex',
+                      alignItems: 'flex-end',
+                      p: 2,
+                    }}
+                  >
+                    <Typography variant="h5" sx={{ color: '#fff', fontWeight: 800 }}>
+                      {item.name}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
-          </Stack>
+              ))}
+            </Stack>
+          </Box>
         </Container>
       </Box>
 
