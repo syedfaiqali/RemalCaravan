@@ -15,6 +15,7 @@ import RecommendedCaravansSection from '../components/sections/home/RecommendedC
 import WhyChooseUsSection from '../components/sections/home/WhyChooseUsSection'
 import BookYourRVSection from '../components/sections/home/BookYourRVSection'
 import HassleFreeRentalSection from '../components/sections/home/HassleFreeRentalSection'
+import MotionSection from '../components/common/MotionSection'
 
 function HomePage() {
   const dispatch = useAppDispatch()
@@ -30,32 +31,48 @@ function HomePage() {
 
   return (
     <>
-      <HomeHeroSection
-        onViewGallery={() => navigate('/gallery')}
-      />
+      <MotionSection>
+        <HomeHeroSection
+          onViewGallery={() => navigate('/gallery')}
+        />
+      </MotionSection>
 
-      <FeaturedCaravansSection
-        caravans={featuredCaravans}
-        onBookNow={handleBookNow}
-      />
+      <MotionSection delay={100}>
+        <FeaturedCaravansSection
+          caravans={featuredCaravans}
+          onBookNow={handleBookNow}
+        />
+      </MotionSection>
 
-      <CaravanForYouSection 
-        image={caravanForYouImages[0]} 
-        onLearnMore={() => navigate('/about')}
-      />
+      <MotionSection delay={200}>
+        <CaravanForYouSection 
+          image={caravanForYouImages[0]} 
+          onLearnMore={() => navigate('/about')}
+        />
+      </MotionSection>
 
-      <PopularDestinationsSection items={popularDestinations} />
+      <MotionSection delay={100}>
+        <PopularDestinationsSection items={popularDestinations} />
+      </MotionSection>
 
-      <RecommendedCaravansSection 
-        caravans={premiumCaravans}
-        onBookNow={handleBookNow}
-      />
+      <MotionSection delay={100}>
+        <RecommendedCaravansSection 
+          caravans={premiumCaravans}
+          onBookNow={handleBookNow}
+        />
+      </MotionSection>
 
-      <WhyChooseUsSection />
+      <MotionSection delay={100}>
+        <WhyChooseUsSection />
+      </MotionSection>
 
-      <BookYourRVSection />
+      <MotionSection delay={100}>
+        <BookYourRVSection />
+      </MotionSection>
 
-      <HassleFreeRentalSection onLearnMore={() => navigate('/about')} />
+      <MotionSection delay={100}>
+        <HassleFreeRentalSection onLearnMore={() => navigate('/about')} />
+      </MotionSection>
     </>
   )
 }
