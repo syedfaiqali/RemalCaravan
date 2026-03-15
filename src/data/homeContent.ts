@@ -29,10 +29,10 @@ export const recommendedDestinations: DestinationItem[] = [
 ]
 
 export const popularDestinations: DestinationItem[] = [
-  { name: 'Neelum Valley', image: image1s },
-  { name: 'Swat Valley', image: image2s },
-  { name: 'Skardu', image: image3s },
-  { name: 'Hunza Valley', image: image4s },
+  { name: 'Hill Station', image: image1s },
+  { name: 'Beach Side', image: image2s },
+  { name: 'Desert Safari', image: image3s },
+  { name: 'Forest Trail', image: image4s },
 ]
 
 export const aboutPreviewImages = {

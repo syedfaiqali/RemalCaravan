@@ -1,68 +1,106 @@
-import { ReactNode } from 'react'
-import { Card, CardContent, CardMedia, Chip, Stack, Typography, Box } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material'
+import CustomButton from './CustomButton'
 
 interface CustomCardProps {
   title: string
   description: string
   image?: string
-  badge?: string
-  subBadge?: string
-  specs?: string[]
-  children?: ReactNode
+  price?: string
+  btnBgColor?: string
+  btnTextColor?: string
+  onBookNow?: () => void
 }
 
-function CustomCard({ title, description, image, badge, subBadge, specs, children }: CustomCardProps) {
+function CustomCard({ title, description, image, price, btnBgColor, btnTextColor, onBookNow }: CustomCardProps) {
   return (
     <Card
+      elevation={0}
       sx={{
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden',
-        border: '1px solid rgba(25,118,210,0.12)',
-        boxShadow: '0 12px 28px rgba(15,41,66,0.1)',
-        transition: 'transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease',
+        borderRadius: '16px',
+        border: '1px solid #f1f5f9',
+        bgcolor: '#ffffff',
+        transition: 'all 0.3s ease',
         '&:hover': {
-          transform: 'translateY(-6px)',
-          boxShadow: '0 18px 34px rgba(25,118,210,0.2)',
-          borderColor: 'rgba(255,152,0,0.4)',
-          '& .caravan-media': {
-            transform: 'scale(1.04)',
-          },
+          transform: 'translateY(-4px)',
+          borderColor: '#e2e8f0',
+          boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05)',
         },
       }}
     >
-      {image ? (
-        <CardMedia
-          component="img"
-          className="caravan-media"
-          height="220"
-          image={image}
-          alt={title}
-          sx={{ objectFit: 'cover', transition: 'transform 0.35s ease' }}
-        />
-      ) : null}
-      <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
-        {(badge || subBadge) ? (
-          <Stack direction="row" spacing={1} sx={{ mb: 1.4 }}>
-            {badge ? <Chip size="small" label={badge} color="primary" /> : null}
-            {subBadge ? <Chip size="small" label={subBadge} color="secondary" variant="outlined" /> : null}
-          </Stack>
-        ) : null}
-        <Typography variant="h6" gutterBottom>
+      <Box sx={{ p: 1.5 }}>
+        <Box
+          sx={{
+            width: '100%',
+            height: 220,
+            borderRadius: '12px',
+            bgcolor: '#e9eff6', // Placeholder color as seen in screenshot
+            overflow: 'hidden',
+          }}
+        >
+          {image ? (
+            <CardMedia
+              component="img"
+              height="220"
+              image={image}
+              alt={title}
+              sx={{ objectFit: 'cover' }}
+            />
+          ) : null}
+        </Box>
+      </Box>
+
+      <CardContent sx={{ flexGrow: 1, p: '1.5rem', pt: 0.5 }}>
+        <Typography
+          sx={{
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 700,
+            fontSize: '1.25rem',
+            color: '#0F172A',
+            mb: 0.5,
+          }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 1.6 }}>
+        
+        <Typography
+          sx={{
+            fontFamily: '"Plus Jakarta Sans", sans-serif',
+            fontSize: '1rem',
+            color: '#64748b',
+            mb: 1,
+            fontWeight: 400,
+          }}
+        >
           {description}
         </Typography>
-        {specs && specs.length > 0 ? (
-          <Stack direction="row" useFlexGap flexWrap="wrap" spacing={1} sx={{ mb: 2 }}>
-            {specs.map((spec) => (
-              <Chip key={spec} label={spec} size="small" variant="outlined" />
-            ))}
-          </Stack>
-        ) : null}
-        <Box>{children}</Box>
+
+        <Typography
+          sx={{
+            fontFamily: '"Plus Jakarta Sans", sans-serif',
+            fontSize: '1.15rem',
+            fontWeight: 700,
+            color: '#0F172A',
+            mb: 2,
+          }}
+        >
+          {price}
+        </Typography>
+
+        <CustomButton
+          fullWidth
+          bgColor={btnBgColor || "#f1f5f9"}
+          textColor={btnTextColor || "#0F172A"}
+          onClick={onBookNow}
+          sx={{ 
+            fontWeight: 600,
+            py: 1.5,
+          }}
+        >
+          Book Now
+        </CustomButton>
       </CardContent>
     </Card>
   )

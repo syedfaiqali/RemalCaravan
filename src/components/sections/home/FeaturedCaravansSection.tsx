@@ -1,46 +1,55 @@
-import { Container, Grid, Stack, Typography } from '@mui/material'
+import { Container, Grid, Typography, Box } from '@mui/material'
 import { CaravanItem } from '../../../data/caravans'
 import CustomCard from '../../common/CustomCard'
-import CustomButton from '../../common/CustomButton'
 
 interface FeaturedCaravansSectionProps {
   caravans: CaravanItem[]
-  onViewDetails: (id: string) => void
   onBookNow: (id: string) => void
 }
 
-function FeaturedCaravansSection({ caravans, onViewDetails, onBookNow }: FeaturedCaravansSectionProps) {
+function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectionProps) {
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Typography variant="h4" gutterBottom>
-        Featured Caravans
-      </Typography>
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-        Handpicked units with excellent condition, easy handling, and thoughtful interiors.
-      </Typography>
+    <Box sx={{ py: 10, bgcolor: '#ffffff' }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+        <Box sx={{ mb: 6 }}>
+          <Typography
+            sx={{
+              fontFamily: '"Poppins", sans-serif',
+              fontWeight: 800,
+              fontSize: { xs: '2rem', md: '2.5rem' },
+              color: '#0F172A',
+              mb: 1,
+            }}
+          >
+            RV For You
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: '"Plus Jakarta Sans", sans-serif',
+              fontSize: '1.2rem',
+              color: '#64748b',
+              fontWeight: 400,
+            }}
+          >
+            Curated specially for you
+          </Typography>
+        </Box>
 
-      <Grid container spacing={3}>
-        {caravans.map((caravan) => (
-          <Grid key={caravan.id} size={{ xs: 12, md: 4 }}>
-            <CustomCard
-              title={caravan.title}
-              description={caravan.description}
-              image={caravan.image}
-              badge={caravan.pricePerDay}
-              subBadge={caravan.sleeps}
-              specs={caravan.quickSpecs}
-            >
-              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.2}>
-                <CustomButton onClick={() => onViewDetails(caravan.id)} color="primary" variant="outlined">
-                  View Details
-                </CustomButton>
-                <CustomButton onClick={() => onBookNow(caravan.id)}>Book Now</CustomButton>
-              </Stack>
-            </CustomCard>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+        <Grid container spacing={4}>
+          {caravans.slice(0, 4).map((caravan) => (
+            <Grid key={caravan.id} size={{ xs: 12, sm: 6, md: 3 }}>
+              <CustomCard
+                title={caravan.title}
+                description={caravan.sleeps} // Using sleeps count as description to match screenshot
+                image={caravan.image}
+                price={caravan.pricePerDay}
+                onBookNow={() => onBookNow(caravan.id)}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
   )
 }
 

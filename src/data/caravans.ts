@@ -86,6 +86,24 @@ export const featuredCaravans: CaravanItem[] = [
       { label: 'Transmission', value: 'Automatic' },
     ],
   },
+  {
+    id: 'remal-signature',
+    title: 'Remal Signature',
+    description: 'Premium fit-out with expanded storage and upgraded amenities.',
+    image: image3b,
+    gallery: [image3b, image7s, image8s, image9s],
+    pricePerDay: 'PKR 28,000/day',
+    sleeps: 'Sleeps 6',
+    quickSpecs: ['Premium Interior', 'Large Storage', 'AC'],
+    specs: [
+      { label: 'Length', value: '24 ft' },
+      { label: 'Berths', value: '6 persons' },
+      { label: 'Shower', value: 'Indoor' },
+      { label: 'Fridge', value: '90L' },
+      { label: 'Awning', value: 'Manual' },
+      { label: 'Transmission', value: 'Automatic' },
+    ],
+  },
 ]
 
 export const premiumCaravans: CaravanItem[] = [
