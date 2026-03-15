@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from '../store/hooks'
 import { selectCaravan } from '../store/slices/bookingSlice'
-import { featuredCaravans, heroImage } from '../data/caravans'
+import { featuredCaravans } from '../data/caravans'
 import {
   aboutPreviewImages,
   caravanForYouImages,
@@ -40,9 +40,7 @@ function HomePage() {
   return (
     <>
       <HomeHeroSection
-        heroImage={heroImage}
         onViewGallery={() => navigate('/gallery')}
-        onExploreServices={() => navigate('/services')}
       />
 
       <FeaturedCaravansSection

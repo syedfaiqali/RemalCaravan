@@ -1,34 +1,33 @@
 import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material'
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
-import { Link as RouterLink, useLocation } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
+import CustomButton from '../common/CustomButton'
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Services', path: '/services' },
+  { label: 'Our RV fleet', path: '/services' },
   { label: 'Gallery', path: '/gallery' },
-  { label: 'About', path: '/about' },
+  { label: 'Our Destinations', path: '/destinations' },
   { label: 'Contact', path: '/contact' },
-  { label: 'Booking', path: '/booking' },
+  { label: 'About Us', path: '/about' },
 ]
 
 function Navbar() {
-  const location = useLocation()
-
   return (
     <AppBar
       position="sticky"
       color="inherit"
       elevation={0}
       sx={{
-        borderBottom: '1px solid rgba(25,118,210,0.1)',
+        borderBottom: '1px solid rgba(0,0,0,0.04)',
         backdropFilter: 'blur(14px)',
         background:
           'linear-gradient(90deg, rgba(255,255,255,0.93) 0%, rgba(244,249,255,0.93) 65%, rgba(255,246,232,0.93) 100%)',
       }}
     >
-      <Container maxWidth="lg">
-        <Toolbar disableGutters sx={{ py: 1, gap: 1, flexWrap: 'wrap' }}>
-          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+        <Toolbar disableGutters sx={{ py: 2, gap: 4, justifyContent: 'space-between' }}>
+          <Box component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 1.5, textDecoration: 'none' }}>
             <Box
               sx={{
                 width: 36,
@@ -43,48 +42,64 @@ function Navbar() {
             >
               <DirectionsCarFilledIcon fontSize="small" />
             </Box>
-            <Typography
-              variant="h6"
-              sx={{
-                color: 'primary.dark',
-                fontWeight: 800,
-                letterSpacing: '-0.01em',
-                fontFamily: '"Sora", "Manrope", sans-serif',
-              }}
-            >
-              RemalCaravan
-            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+              <Typography
+                sx={{
+                  color: '#0F172A',
+                  fontWeight: 800,
+                  fontSize: '1.25rem',
+                  fontFamily: '"Plus Jakarta Sans", sans-serif',
+                  lineHeight: 1,
+                }}
+              >
+                Remal
+              </Typography>
+              <Typography
+                sx={{
+                  color: '#0F172A',
+                  fontWeight: 800,
+                  fontSize: '1.25rem',
+                  fontFamily: '"Plus Jakarta Sans", sans-serif',
+                  lineHeight: 1,
+                }}
+              >
+                Caravan
+              </Typography>
+            </Box>
           </Box>
 
           <Box
             sx={{
               display: 'flex',
               flexWrap: { xs: 'nowrap', md: 'wrap' },
-              gap: 1,
-              width: { xs: '100%', md: 'auto' },
+              gap: 4,
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexGrow: 1,
+              px: 4,
               overflowX: { xs: 'auto', md: 'visible' },
-              pb: { xs: 0.5, md: 0 },
-              scrollbarWidth: 'thin',
-              '&::-webkit-scrollbar': { height: 6 },
+              scrollbarWidth: 'none',
+              '&::-webkit-scrollbar': { display: 'none' },
             }}
           >
             {navItems.map((item) => {
-              const isActive = location.pathname === item.path
               return (
                 <Button
                   key={item.path}
                   component={RouterLink}
                   to={item.path}
-                  color={isActive ? 'secondary' : 'primary'}
-                  variant={isActive ? 'contained' : 'text'}
                   sx={{
-                    fontWeight: 700,
-                    px: 1.8,
-                    fontSize: { xs: 13, sm: 14 },
+                    fontWeight: 600,
+                    px: 1,
+                    fontSize: '0.95rem',
+                    color: '#0F172A',
+                    fontFamily: '"Plus Jakarta Sans", sans-serif',
+                    textTransform: 'none',
+                    transition: 'all 0.3s ease',
                     whiteSpace: 'nowrap',
-                    bgcolor: isActive ? undefined : 'rgba(25,118,210,0.06)',
                     '&:hover': {
-                      bgcolor: isActive ? undefined : 'rgba(25,118,210,0.13)',
+                      color: '#64748b',
+                      bgcolor: 'transparent',
                     },
                   }}
                 >
@@ -92,6 +107,21 @@ function Navbar() {
                 </Button>
               )
             })}
+          </Box>
+
+          <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', gap: 2 }}>
+            <CustomButton
+              bgColor="#f1f5f9"
+              textColor="#0F172A"
+              sx={{ px: 3, fontWeight: 600 }}
+            >
+              RV on Rent in City
+            </CustomButton>
+            <CustomButton
+              sx={{ px: 3, fontWeight: 600 }}
+            >
+              +91 XXX XXX XXXX
+            </CustomButton>
           </Box>
         </Toolbar>
       </Container>

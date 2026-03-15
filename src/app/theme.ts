@@ -17,48 +17,66 @@ let theme = createTheme({
       paper: '#ffffff',
     },
     text: {
-      primary: '#0f2942',
-      secondary: '#5d6f82',
+      primary: '#0F172A',
+      secondary: '#334155',
     },
   },
   shape: {
     borderRadius: 16,
   },
   typography: {
-    fontFamily: '"Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+    fontFamily: '"Plus Jakarta Sans", "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif',
     h1: {
+      fontFamily: '"Poppins", sans-serif',
       fontWeight: 800,
+      color: '#0F172A',
       letterSpacing: '-0.03em',
       fontSize: 'clamp(2.1rem, 5vw, 4.5rem)',
       lineHeight: 1.1,
     },
     h2: {
+      fontFamily: '"Poppins", sans-serif',
       fontWeight: 800,
+      color: '#0F172A',
       letterSpacing: '-0.03em',
       fontSize: 'clamp(1.9rem, 4.2vw, 3.8rem)',
       lineHeight: 1.15,
     },
     h3: {
+      fontFamily: '"Poppins", sans-serif',
       fontWeight: 800,
+      color: '#0F172A',
       letterSpacing: '-0.02em',
       fontSize: 'clamp(1.7rem, 3.2vw, 3rem)',
       lineHeight: 1.2,
     },
     h4: {
-      fontWeight: 780,
+      fontFamily: '"Poppins", sans-serif',
+      fontWeight: 800,
+      color: '#0F172A',
       letterSpacing: '-0.01em',
       fontSize: 'clamp(1.35rem, 2.5vw, 2.3rem)',
       lineHeight: 1.25,
     },
     h5: {
-      fontWeight: 740,
+      fontFamily: '"Poppins", sans-serif',
+      fontWeight: 800,
+      color: '#0F172A',
       fontSize: 'clamp(1.08rem, 2vw, 1.6rem)',
       lineHeight: 1.35,
     },
+    h6: {
+      fontFamily: '"Plus Jakarta Sans", sans-serif',
+      fontWeight: 400,
+      color: '#334155',
+    },
     body1: {
+      fontFamily: '"Plus Jakarta Sans", sans-serif',
       lineHeight: 1.7,
+      color: '#334155',
     },
     button: {
+      fontFamily: '"Plus Jakarta Sans", sans-serif',
       fontWeight: 700,
       textTransform: 'none',
     },
@@ -91,16 +109,24 @@ let theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 999,
-          paddingInline: 18,
-          paddingBlock: 8,
-          minHeight: 40,
+          paddingInline: 24,
+          paddingBlock: 12,
+          minHeight: 48,
+          fontSize: '1rem',
         },
         containedPrimary: {
-          boxShadow: '0 10px 24px rgba(25,118,210,0.22)',
+          backgroundColor: '#141414',
+          color: '#FFFFFF',
+          '&:hover': {
+            backgroundColor: '#2a2a2a',
+          },
         },
         containedSecondary: {
-          boxShadow: '0 10px 24px rgba(255,152,0,0.25)',
+          backgroundColor: '#141414',
+          color: '#FFFFFF',
+          '&:hover': {
+            backgroundColor: '#2a2a2a',
+          },
         },
       },
     },
