@@ -14,7 +14,7 @@ import PopularDestinationsSection from '../components/sections/home/PopularDesti
 import RecommendedCaravansSection from '../components/sections/home/RecommendedCaravansSection'
 import WhyChooseUsSection from '../components/sections/home/WhyChooseUsSection'
 import BookYourRVSection from '../components/sections/home/BookYourRVSection'
-import HassleFreeRentalSection from '../components/sections/home/HassleFreeRentalSection'
+import AdventureCTASection from '../components/common/AdventureCTASection'
 import MotionSection from '../components/common/MotionSection'
 
 function HomePage() {
@@ -70,9 +70,12 @@ function HomePage() {
         <BookYourRVSection />
       </MotionSection>
 
-      <MotionSection delay={100}>
-        <HassleFreeRentalSection onLearnMore={() => navigate('/about')} />
-      </MotionSection>
+      <AdventureCTASection 
+        title="Hassle-Free Rental Experience"
+        subtitle="Experience the Remal Caravans Difference across the UAE."
+        buttonText="Learn More"
+        onAction={() => navigate('/about')}
+      />
     </>
   )
 }
