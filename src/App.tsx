@@ -3,8 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { Box, CircularProgress } from '@mui/material'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
-import BookingGuard from './components/booking/BookingGuard'
-import SupportWidget from './components/support/SupportWidget'
+import WhatsAppWidget from './components/common/WhatsAppWidget'
 import ScrollToTopFab from './components/common/ScrollToTopFab'
 import ScrollToTopOnRoute from './components/common/ScrollToTopOnRoute'
 
@@ -14,7 +13,6 @@ const GalleryPage = lazy(() => import('./pages/GalleryPage'))
 const DestinationsPage = lazy(() => import('./pages/DestinationsPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
-const BookingPage = lazy(() => import('./pages/BookingPage'))
 const CaravanDetailsPage = lazy(() => import('./pages/CaravanDetailsPage'))
 
 const loader = (
@@ -53,7 +51,7 @@ function App() {
       </Box>
       <Footer />
       <ScrollToTopFab />
-      <SupportWidget />
+      <WhatsAppWidget />
     </Box>
   )
 }
