@@ -92,13 +92,13 @@ function Footer() {
                     boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.2)'
                   }}
                 >
-                  <RvHookupIcon sx={{ color: '#fff', fontSize: '2.5rem' }} />
+                  <RvHookupIcon sx={{ color: '#fff', fontSize: { xs: '2rem', md: '2.5rem' } }} />
                 </Box>
                 <Typography
                   sx={{
                     fontFamily: '"Poppins", sans-serif',
                     fontWeight: 800,
-                    fontSize: { xs: '1.8rem', md: '2.4rem' },
+                    fontSize: { xs: '1.6rem', md: '2.4rem' },
                     lineHeight: 1,
                     color: '#0F172A',
                     letterSpacing: '-0.02em'

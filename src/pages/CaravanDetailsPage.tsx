@@ -137,9 +137,19 @@ function CaravanDetailsPage() {
             ))}
           </Stack>
 
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.3}>
-            <CustomButton onClick={bookCaravan}>Book This Caravan</CustomButton>
-            <CustomButton color="primary" variant="outlined" onClick={() => navigate('/gallery')}>
+          <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
+            <CustomButton 
+              onClick={bookCaravan}
+              sx={{ py: 2, fontSize: '1rem', fontWeight: 700 }}
+            >
+              Book This Caravan
+            </CustomButton>
+            <CustomButton 
+              color="primary" 
+              variant="outlined" 
+              onClick={() => navigate('/gallery')}
+              sx={{ py: 2, fontSize: '1rem', fontWeight: 700 }}
+            >
               Back to Gallery
             </CustomButton>
           </Stack>

@@ -1,6 +1,9 @@
-import { AppBar, Toolbar, Typography, Button, Box, Container } from '@mui/material'
+import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
-import { Link as RouterLink } from 'react-router-dom'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+import { Link as RouterLink, useLocation } from 'react-router-dom'
+import { useState } from 'react'
 import CustomButton from '../common/CustomButton'
 
 const navItems = [
@@ -13,6 +16,64 @@ const navItems = [
 ]
 
 function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen)
+  }
+
+  const drawer = (
+    <Box sx={{ p: 3, height: '100%', bgcolor: '#fff' }}>
+      <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 4 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+          <Box sx={{ width: 32, height: 32, borderRadius: '50%', bgcolor: 'primary.main', display: 'grid', placeItems: 'center', color: '#fff' }}>
+            <DirectionsCarFilledIcon fontSize="small" />
+          </Box>
+          <Typography sx={{ color: '#0F172A', fontWeight: 800, fontSize: '1.1rem', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+            Remal Caravan
+          </Typography>
+        </Box>
+        <IconButton onClick={handleDrawerToggle}>
+          <CloseIcon />
+        </IconButton>
+      </Stack>
+      <List sx={{ pt: 0 }}>
+        {navItems.map((item) => (
+          <ListItem 
+            key={item.path} 
+            component={RouterLink} 
+            to={item.path} 
+            onClick={handleDrawerToggle}
+            sx={{ 
+              px: 0, 
+              py: 2, 
+              color: location.pathname === item.path ? 'primary.main' : '#0F172A',
+              borderBottom: '1px solid #f1f5f9'
+            }}
+          >
+            <ListItemText 
+              primary={item.label} 
+              primaryTypographyProps={{ 
+                fontFamily: '"Plus Jakarta Sans", sans-serif', 
+                fontWeight: 700,
+                fontSize: '1.2rem'
+              }} 
+            />
+          </ListItem>
+        ))}
+      </List>
+      <Stack spacing={2} sx={{ mt: 4 }}>
+        <CustomButton fullWidth bgColor="#f1f5f9" textColor="#0F172A">
+          RV on Rent in City
+        </CustomButton>
+        <CustomButton fullWidth>
+          +91 XXX XXX XXXX
+        </CustomButton>
+      </Stack>
+    </Box>
+  )
+
   return (
     <AppBar
       position="sticky"
@@ -21,17 +82,18 @@ function Navbar() {
       sx={{
         borderBottom: '1px solid rgba(0,0,0,0.04)',
         backdropFilter: 'blur(14px)',
-        background:
-          'linear-gradient(90deg, rgba(255,255,255,0.93) 0%, rgba(244,249,255,0.93) 65%, rgba(255,246,232,0.93) 100%)',
+        background: 'rgba(255, 255, 255, 0.95)',
+        zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
-      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
-        <Toolbar disableGutters sx={{ py: 2, gap: 4, justifyContent: 'space-between' }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 2.5, md: 8 } }}>
+        <Toolbar disableGutters sx={{ py: { xs: 1.5, md: 2 }, justifyContent: 'space-between' }}>
+          {/* Logo */}
           <Box component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 1.5, textDecoration: 'none' }}>
             <Box
               sx={{
-                width: 36,
-                height: 36,
+                width: { xs: 32, md: 36 },
+                height: { xs: 32, md: 36 },
                 borderRadius: '50%',
                 bgcolor: 'primary.main',
                 display: 'grid',
@@ -47,7 +109,7 @@ function Navbar() {
                 sx={{
                   color: '#0F172A',
                   fontWeight: 800,
-                  fontSize: '1.25rem',
+                  fontSize: { xs: '1.1rem', md: '1.25rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   lineHeight: 1,
                 }}
@@ -58,7 +120,7 @@ function Navbar() {
                 sx={{
                   color: '#0F172A',
                   fontWeight: 800,
-                  fontSize: '1.25rem',
+                  fontSize: { xs: '1.1rem', md: '1.25rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   lineHeight: 1,
                 }}
@@ -68,63 +130,73 @@ function Navbar() {
             </Box>
           </Box>
 
+          {/* Desktop Nav */}
           <Box
             sx={{
-              display: 'flex',
-              flexWrap: { xs: 'nowrap', md: 'wrap' },
+              display: { xs: 'none', lg: 'flex' },
               gap: 4,
               alignItems: 'center',
               justifyContent: 'center',
-              flexGrow: 1,
               px: 4,
-              overflowX: { xs: 'auto', md: 'visible' },
-              scrollbarWidth: 'none',
-              '&::-webkit-scrollbar': { display: 'none' },
             }}
           >
-            {navItems.map((item) => {
-              return (
-                <Button
-                  key={item.path}
-                  component={RouterLink}
-                  to={item.path}
-                  sx={{
-                    fontWeight: 600,
-                    px: 1,
-                    fontSize: '0.95rem',
-                    color: '#0F172A',
-                    fontFamily: '"Plus Jakarta Sans", sans-serif',
-                    textTransform: 'none',
-                    transition: 'all 0.3s ease',
-                    whiteSpace: 'nowrap',
-                    '&:hover': {
-                      color: '#64748b',
-                      bgcolor: 'transparent',
-                    },
-                  }}
-                >
-                  {item.label}
-                </Button>
-              )
-            })}
+            {navItems.map((item) => (
+              <Button
+                key={item.path}
+                component={RouterLink}
+                to={item.path}
+                sx={{
+                  fontWeight: 700,
+                  px: 0.5,
+                  fontSize: '0.95rem',
+                  color: location.pathname === item.path ? 'primary.main' : '#0F172A',
+                  fontFamily: '"Plus Jakarta Sans", sans-serif',
+                  textTransform: 'none',
+                  '&:hover': { bgcolor: 'transparent', color: 'primary.main' },
+                }}
+              >
+                {item.label}
+              </Button>
+            ))}
           </Box>
 
-          <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', gap: 2 }}>
-            <CustomButton
-              bgColor="#f1f5f9"
-              textColor="#0F172A"
-              sx={{ px: 3, fontWeight: 600 }}
+          {/* Destkop CTA / Mobile Toggle */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Box sx={{ display: { xs: 'none', xl: 'flex' }, alignItems: 'center', gap: 2 }}>
+              <CustomButton bgColor="#f1f5f9" textColor="#0F172A" sx={{ px: 3, fontWeight: 600 }}>
+                RV on Rent in City
+              </CustomButton>
+              <CustomButton sx={{ px: 3, fontWeight: 600 }}>
+                +91 XXX XXX XXXX
+              </CustomButton>
+            </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ display: { lg: 'none' }, color: '#0F172A' }}
             >
-              RV on Rent in City
-            </CustomButton>
-            <CustomButton
-              sx={{ px: 3, fontWeight: 600 }}
-            >
-              +91 XXX XXX XXXX
-            </CustomButton>
+              <MenuIcon />
+            </IconButton>
           </Box>
         </Toolbar>
       </Container>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        variant="temporary"
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: 'block', lg: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '100%', maxWidth: 350 },
+        }}
+      >
+        {drawer}
+      </Drawer>
     </AppBar>
   )
 }

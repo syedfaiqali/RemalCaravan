@@ -48,7 +48,7 @@ function WhyChooseUsSection() {
           <Typography
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              fontSize: { xs: '1rem', md: '1.25rem' },
               color: '#64748b',
               fontWeight: 400,
               maxWidth: 800,
@@ -56,7 +56,7 @@ function WhyChooseUsSection() {
               lineHeight: 1.6,
             }}
           >
-            We provide more than just a vehicle; we provide freedom and bonding experiences that last a lifetime.
+            We provide more than just a vehicle; we provide freedom and bonding experiences that last a lifetime across the UAE.
           </Typography>
         </Box>
 

@@ -19,9 +19,9 @@ function TravelFreelySection() {
               <Box
                 sx={{
                   width: '100%',
-                  height: { xs: '400px', md: '650px' },
+                  height: { xs: '300px', sm: '450px', md: '650px' },
                   bgcolor: '#f1f5f9',
-                  borderRadius: '40px',
+                  borderRadius: { xs: '24px', md: '40px' },
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -46,10 +46,10 @@ function TravelFreelySection() {
                 sx={{
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
-                  fontSize: { xs: '2.5rem', md: '4rem' },
+                  fontSize: { xs: '2.2rem', sm: '3rem', md: '4rem' },
                   color: '#0F172A',
                   lineHeight: 1.1,
-                  mb: 4
+                  mb: { xs: 3, md: 4 }
                 }}
               >
                 Travel Freely <br />

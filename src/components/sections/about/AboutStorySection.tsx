@@ -66,27 +66,30 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
               <Stack spacing={4}>
                 {timelineData.map((item, index) => (
                   <Stack key={index} direction="row" spacing={3} alignItems="flex-start">
-                    <Box sx={{ pt: 1 }}>
+                    <Box sx={{ pt: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                       <Box
                         sx={{
                           width: '12px',
                           height: '12px',
                           borderRadius: '50%',
                           bgcolor: '#3b82f6',
-                          position: 'relative',
-                          '&::after': index !== timelineData.length - 1 ? {
-                            content: '""',
-                            position: 'absolute',
-                            top: 20,
-                            left: 5,
-                            width: '2px',
-                            height: '40px',
-                            bgcolor: '#e2e8f0',
-                          } : {}
+                          flexShrink: 0
                         }}
                       />
+                      {index !== timelineData.length - 1 && (
+                        <Box 
+                          sx={{ 
+                            width: '2px', 
+                            flexGrow: 1, 
+                            minHeight: '40px',
+                            bgcolor: '#e2e8f0',
+                            mt: 1,
+                            mb: -1 
+                          }} 
+                        />
+                      )}
                     </Box>
-                    <Box>
+                    <Box sx={{ pb: index !== timelineData.length - 1 ? 4 : 0 }}>
                       <Typography
                         sx={{
                           fontFamily: '"Poppins", sans-serif',

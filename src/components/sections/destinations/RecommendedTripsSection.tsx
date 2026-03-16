@@ -14,7 +14,13 @@ function RecommendedTripsSection() {
     <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <MotionSection delay={100}>
-          <Stack direction="row" justifyContent="space-between" alignItems="flex-end" sx={{ mb: 8 }}>
+          <Stack 
+            direction={{ xs: 'column', sm: 'row' }} 
+            justifyContent="space-between" 
+            alignItems={{ xs: 'flex-start', sm: 'flex-end' }} 
+            spacing={3}
+            sx={{ mb: 8 }}
+          >
             <Box>
               <Typography
                 sx={{
@@ -30,7 +36,7 @@ function RecommendedTripsSection() {
               <Typography
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
-                  fontSize: '1.2rem',
+                  fontSize: { xs: '1.1rem', md: '1.2rem' },
                   color: '#64748b',
                 }}
               >
@@ -45,6 +51,7 @@ function RecommendedTripsSection() {
                 color: '#0F172A',
                 textTransform: 'none',
                 fontSize: '1.1rem',
+                p: { xs: 0, sm: 1 },
                 '&:hover': { bgcolor: 'transparent', color: '#3b82f6' }
               }}
             >

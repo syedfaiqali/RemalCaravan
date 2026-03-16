@@ -38,7 +38,13 @@ function AboutFleetSection() {
     <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <MotionSection delay={100}>
-          <Stack direction="row" justifyContent="space-between" alignItems="flex-end" sx={{ mb: 8 }}>
+          <Stack 
+            direction={{ xs: 'column', sm: 'row' }} 
+            justifyContent="space-between" 
+            alignItems={{ xs: 'flex-start', sm: 'flex-end' }} 
+            spacing={2}
+            sx={{ mb: 8 }}
+          >
             <Box>
               <Typography
                 sx={{
@@ -54,7 +60,7 @@ function AboutFleetSection() {
               <Typography
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
-                  fontSize: '1.2rem',
+                  fontSize: { xs: '1.1rem', md: '1.2rem' },
                   color: '#64748b',
                 }}
               >

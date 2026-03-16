@@ -44,7 +44,7 @@ function GalleryContentSection() {
             justifyContent="center"
             flexWrap="wrap"
             useFlexGap
-            sx={{ mb: { xs: 8, md: 12 } }}
+            sx={{ mb: { xs: 6, md: 12 } }}
           >
             {categories.map((cat) => (
               <Chip
