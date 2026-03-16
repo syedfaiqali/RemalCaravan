@@ -18,16 +18,16 @@ export const contactCards: ContactCardItem[] = [
   {
     icon: <PhoneInTalkIcon sx={{ fontSize: 40 }} />,
     title: 'Phone No',
-    value: '+92 300 8527737',
+    value: '+971 XX XXX XXXX',
   },
   {
     icon: <MailOutlineIcon sx={{ fontSize: 40 }} />,
     title: 'Mail',
-    value: 'info@remalcaravan.com',
+    value: 'info@remalcaravan.ae',
   },
   {
     icon: <NearMeIcon sx={{ fontSize: 40 }} />,
     title: 'Address',
-    value: 'Suite 402, Shahrah-e-Faisal, PECHS, Karachi',
+    value: 'Business Bay, Dubai, United Arab Emirates',
   },
 ]

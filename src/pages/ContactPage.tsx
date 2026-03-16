@@ -1,24 +1,19 @@
-import { Container } from '@mui/material'
+import { Container, Box } from '@mui/material'
 import ContactHeroSection from '../components/sections/contact/ContactHeroSection'
-import ContactInfoCardsSection from '../components/sections/contact/ContactInfoCardsSection'
 import ContactEnquirySection from '../components/sections/contact/ContactEnquirySection'
 import ContactMapAndDetailsSection from '../components/sections/contact/ContactMapAndDetailsSection'
-import { contactCards, contactHeroImage, contactSideImage } from '../data/contactContent'
+import { contactHeroImage } from '../data/contactContent'
 
 function ContactPage() {
   return (
-    <>
+    <Box sx={{ bgcolor: '#f8fafc', minHeight: '100vh' }}>
       <ContactHeroSection image={contactHeroImage} />
-      <ContactInfoCardsSection cards={contactCards} />
 
-      <Container maxWidth="xl" sx={{ pb: 6 }}>
-        <ContactEnquirySection sideImage={contactSideImage} />
-      </Container>
-
-      <Container maxWidth="xl" sx={{ pb: 8 }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+        <ContactEnquirySection />
         <ContactMapAndDetailsSection />
       </Container>
-    </>
+    </Box>
   )
 }
 
