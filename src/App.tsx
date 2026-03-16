@@ -11,6 +11,7 @@ import ScrollToTopOnRoute from './components/common/ScrollToTopOnRoute'
 const HomePage = lazy(() => import('./pages/HomePage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const GalleryPage = lazy(() => import('./pages/GalleryPage'))
+const DestinationsPage = lazy(() => import('./pages/DestinationsPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const BookingPage = lazy(() => import('./pages/BookingPage'))
@@ -35,6 +36,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/destinations" element={<DestinationsPage />} />
             <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
