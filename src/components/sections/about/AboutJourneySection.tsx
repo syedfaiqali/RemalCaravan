@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material'
+import MotionSection from '../../common/MotionSection'
 
 interface AboutJourneySectionProps {
   images: {
@@ -11,68 +12,141 @@ interface AboutJourneySectionProps {
 }
 
 function AboutJourneySection({ images }: AboutJourneySectionProps) {
-  return (
-    <Container maxWidth="xl" sx={{ py: 7 }}>
-      <Grid container spacing={4} alignItems="flex-start">
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Typography
-            sx={{
-              display: 'inline-block',
-              px: 2.3,
-              py: 0.9,
-              borderRadius: 2,
-              bgcolor: 'rgba(25,118,210,0.08)',
-              color: 'primary.dark',
-              fontWeight: 800,
-              mb: 2,
-            }}
-          >
-            About Us
-          </Typography>
-          <Typography variant="h2" sx={{ mb: 2 }}>
-            Let&apos;s know About Our Journey For RemalCaravan
-          </Typography>
-          <Typography variant="h5" color="primary.dark" sx={{ mb: 2.5 }}>
-            Caravan on Hire in Karachi
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-            Welcome to RemalCaravan, where adventure meets convenience. As passionate travelers ourselves, we understand the joy of exploring
-            the outdoors without sacrificing comfort. That is why we offer top-quality caravans at competitive rates.
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-            Our easy booking process ensures your adventure begins with just a few clicks. With insured options and responsive assistance, you
-            can travel with peace of mind on every route.
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-            Customer satisfaction is at the heart of everything we do. Whether you are planning a weekend getaway or a cross-country road trip,
-            our team is dedicated to helping you choose the perfect caravan.
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Join us on the open road and create memories that last a lifetime with comfort, style, and dependable support.
-          </Typography>
-        </Grid>
+  const bodyStyle = {
+    fontFamily: '"Plus Jakarta Sans", sans-serif',
+    fontSize: '1.05rem',
+    color: '#64748b',
+    lineHeight: 1.8,
+    mb: 3
+  }
 
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 12, sm: 7 }}>
-              <Box component="img" src={images.large} alt="Road journey" sx={{ width: '100%', height: 290, objectFit: 'cover', borderRadius: 3 }} />
-            </Grid>
-            <Grid size={{ xs: 12, sm: 5 }}>
-              <Stack spacing={2}>
-                <Box component="img" src={images.sideTop} alt="Travel night stay" sx={{ width: '100%', height: 138, objectFit: 'cover', borderRadius: 3 }} />
-                <Box component="img" src={images.sideBottom} alt="Open sky evening" sx={{ width: '100%', height: 138, objectFit: 'cover', borderRadius: 3 }} />
-              </Stack>
-            </Grid>
-            <Grid size={{ xs: 12, sm: 7 }}>
-              <Box component="img" src={images.bottomWide} alt="Desert caravan road" sx={{ width: '100%', height: 210, objectFit: 'cover', borderRadius: 3 }} />
-            </Grid>
-            <Grid size={{ xs: 12, sm: 5 }}>
-              <Box component="img" src={images.bottomTall} alt="Travel couple" sx={{ width: '100%', height: 210, objectFit: 'cover', borderRadius: 3 }} />
-            </Grid>
+  return (
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#f8fafc' }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+        <Grid container spacing={{ xs: 8, md: 12 }} alignItems="center">
+          <Grid size={{ xs: 12, md: 6 }}>
+            <MotionSection delay={100}>
+              <Typography
+                sx={{
+                  fontFamily: '"Poppins", sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.9rem',
+                  color: '#3b82f6',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.25em',
+                  mb: 2.5
+                }}
+              >
+                Our Journey
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: '"Poppins", sans-serif',
+                  fontWeight: 800,
+                  fontSize: { xs: '2.2rem', md: '3.2rem' },
+                  color: '#0F172A',
+                  lineHeight: 1.1,
+                  mb: 4
+                }}
+              >
+                Connecting the Seven Emirates Through Adventure
+              </Typography>
+              
+              <Typography sx={bodyStyle}>
+                Welcome to Remal RV Caravan, the premier choice for luxury road travel in the UAE. Our journey began with a simple vision: to make the breathtaking landscapes of the Emirates accessible to everyone through the comfort of an RV.
+              </Typography>
+              <Typography sx={bodyStyle}>
+                From the towering dunes of Liwa to the rugged mountains of Ras Al Khaimah, we have helped thousands of travelers create unforgettable memories. Our fleet is curated to handle the unique terrain of the region while providing all the amenities of a home.
+              </Typography>
+              <Typography sx={{ ...bodyStyle, mb: 0 }}>
+                Whether you're a local family seeking a staycation like no other or an international traveler looking to explore the hidden gems of the UAE, we are here to ensure your journey is smooth, safe, and truly exceptional.
+              </Typography>
+            </MotionSection>
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 6 }}>
+            <MotionSection delay={300}>
+              <Grid container spacing={2}>
+                <Grid size={{ xs: 12, sm: 7 }}>
+                  <Box 
+                    component="img" 
+                    src={images.large} 
+                    alt="UAE Journey" 
+                    sx={{ 
+                      width: '100%', 
+                      height: { xs: 300, md: 350 }, 
+                      objectFit: 'cover', 
+                      borderRadius: '24px',
+                      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+                    }} 
+                  />
+                </Grid>
+                <Grid size={{ xs: 12, sm: 5 }}>
+                  <Stack spacing={2}>
+                    <Box 
+                      component="img" 
+                      src={images.sideTop} 
+                      alt="Desert Camping" 
+                      sx={{ 
+                        width: '100%', 
+                        height: { xs: 140, md: 166 }, 
+                        objectFit: 'cover', 
+                        borderRadius: '24px',
+                        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+                      }} 
+                    />
+                    <Box 
+                      component="img" 
+                      src={images.sideBottom} 
+                      alt="Caravan Side" 
+                      sx={{ 
+                        width: '100%', 
+                        height: { xs: 140, md: 166 }, 
+                        objectFit: 'cover', 
+                        borderRadius: '24px',
+                        boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+                      }} 
+                    />
+                  </Stack>
+                </Grid>
+                <Grid size={{ xs: 12, sm: 7 }}>
+                  <Box 
+                    component="img" 
+                    src={images.bottomWide} 
+                    alt="Road Trip UAE" 
+                    sx={{ 
+                      width: '100%', 
+                      height: { xs: 200, md: 250 }, 
+                      objectFit: 'cover', 
+                      borderRadius: '24px',
+                      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
+                    }} 
+                  />
+                </Grid>
+                <Grid size={{ xs: 12, sm: 5 }}>
+                  <Box 
+                    component="img" 
+                    src={images.bottomTall} 
+                    alt="RV Lifestyle" 
+                    sx={{ 
+                      width: '100%', 
+                      height: { xs: 200, md: 250 }, 
+                      objectFit: 'cover', 
+                      borderRadius: '24px',
+                      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+                      transition: '0.3s',
+                      '&:hover': {
+                        transform: 'scale(1.02)'
+                      }
+                    }} 
+                  />
+                </Grid>
+              </Grid>
+            </MotionSection>
           </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   )
 }
 

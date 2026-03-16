@@ -1,39 +1,71 @@
-import { Box, Container, Grid, Paper, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+import VisibilityIcon from '@mui/icons-material/Visibility'
+import MotionSection from '../../common/MotionSection'
 
-interface AboutMissionVisionSectionProps {
-  image: string
-}
+function AboutMissionVisionSection() {
+  const cardStyle = {
+    p: { xs: 5, md: 6 },
+    height: '100%',
+    borderRadius: '24px',
+    background: '#f8fafc',
+    border: '1px solid #e2e8f0',
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      transform: 'translateY(-10px)',
+      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
+      borderColor: '#3b82f6'
+    }
+  }
 
-function AboutMissionVisionSection({ image }: AboutMissionVisionSectionProps) {
+  const titleStyle = {
+    fontFamily: '"Poppins", sans-serif',
+    fontWeight: 700,
+    fontSize: '1.5rem',
+    color: '#0F172A',
+    mb: 2.5
+  }
+
+  const bodyStyle = {
+    fontFamily: '"Plus Jakarta Sans", sans-serif',
+    fontSize: '1rem',
+    color: '#64748b',
+    lineHeight: 1.7
+  }
+
   return (
-    <Container maxWidth="lg" sx={{ py: 7 }}>
-      <Grid container spacing={3}>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Paper sx={{ p: { xs: 2.5, md: 4 }, height: '100%' }}>
-            <Typography variant="h3" color="primary.dark" sx={{ mb: 2 }}>
-              Our Mission
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Our mission is to provide travelers with the freedom to explore in comfort and style. We are dedicated to offering quality
-              caravans at practical pricing, backed by responsive support and transparent service at every step.
-            </Typography>
-          </Paper>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff' }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+        <Grid container spacing={4}>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <MotionSection delay={100}>
+              <Box sx={cardStyle}>
+                <Box sx={{ color: '#0F172A', mb: 3 }}>
+                  <RocketLaunchIcon sx={{ fontSize: 40 }} />
+                </Box>
+                <Typography sx={titleStyle}>Our Mission</Typography>
+                <Typography sx={bodyStyle}>
+                  To provide accessible, high-quality RV rentals that empower people to explore the great outdoors without compromising on comfort or safety.
+                </Typography>
+              </Box>
+            </MotionSection>
+          </Grid>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <MotionSection delay={300}>
+              <Box sx={cardStyle}>
+                <Box sx={{ color: '#0F172A', mb: 3 }}>
+                  <VisibilityIcon sx={{ fontSize: 40 }} />
+                </Box>
+                <Typography sx={titleStyle}>Our Vision</Typography>
+                <Typography sx={bodyStyle}>
+                  To become the world's most trusted partner for road travel, known for our exceptional fleet and commitment to sustainable tourism.
+                </Typography>
+              </Box>
+            </MotionSection>
+          </Grid>
         </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Paper sx={{ p: { xs: 2.5, md: 4 }, height: '100%' }}>
-            <Typography variant="h3" color="primary.dark" sx={{ mb: 2 }}>
-              Our Vision
-            </Typography>
-            <Typography variant="body1" color="text.secondary">
-              Our vision is to inspire a world where every traveler can embrace open-road freedom without compromise. We aim to be the trusted
-              destination for reliable, affordable, and memorable caravan travel experiences.
-            </Typography>
-          </Paper>
-        </Grid>
-      </Grid>
-
-      <Box component="img" src={image} alt="RemalCaravan fleet" sx={{ width: '100%', mt: 4, borderRadius: 3, height: { xs: 220, md: 320 }, objectFit: 'cover' }} />
-    </Container>
+      </Container>
+    </Box>
   )
 }
 

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee'
+import PaymentsIcon from '@mui/icons-material/Payments'
 import GppGoodIcon from '@mui/icons-material/GppGood'
 import SupportAgentIcon from '@mui/icons-material/SupportAgent'
 import WalletIcon from '@mui/icons-material/Wallet'
@@ -21,24 +21,24 @@ export const aboutHeroImage = image2b
 
 export const aboutHighlights: AboutHighlight[] = [
   {
-    icon: <CurrencyRupeeIcon sx={{ fontSize: 40 }} />,
-    title: 'Affordable Pricing',
-    text: 'Budget-friendly plans with premium quality so your journey stays practical and memorable.',
+    icon: <PaymentsIcon sx={{ fontSize: 40 }} />,
+    title: 'Value for Money',
+    text: 'Premium RV experiences at competitive rates, ensuring your UAE adventure is both luxury and practical.',
   },
   {
     icon: <GppGoodIcon sx={{ fontSize: 40 }} />,
     title: 'Fully Insured',
-    text: 'Travel confidently with insured fleet options and reliable safety-first preparation.',
+    text: 'Discover the Emirates with complete peace of mind, backed by a fully insured and maintained fleet.',
   },
   {
     icon: <SupportAgentIcon sx={{ fontSize: 40 }} />,
     title: '24/7 Support',
-    text: 'Our team is ready around the clock to assist during booking, pickup, and the trip itself.',
+    text: 'Our dedicated team is available around the clock to support your journey across all seven Emirates.',
   },
   {
     icon: <WalletIcon sx={{ fontSize: 40 }} />,
-    title: 'Easy Booking',
-    text: 'Fast inquiry flow, clear terms, and simple reservation steps from start to finish.',
+    title: 'Seamless Booking',
+    text: 'Experience a hassle-free reservation process with transparent terms and flexible pickup options.',
   },
 ]
 

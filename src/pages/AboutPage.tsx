@@ -1,21 +1,26 @@
 import AboutHeroHighlightsSection from '../components/sections/about/AboutHeroHighlightsSection'
-import AboutJourneySection from '../components/sections/about/AboutJourneySection'
 import AboutWhyChooseSection from '../components/sections/about/AboutWhyChooseSection'
+import AboutStorySection from '../components/sections/about/AboutStorySection'
 import AboutMissionVisionSection from '../components/sections/about/AboutMissionVisionSection'
+import AboutFleetSection from '../components/sections/about/AboutFleetSection'
+import AboutTeamSection from '../components/sections/about/AboutTeamSection'
+import AboutExperienceSection from '../components/sections/about/AboutExperienceSection'
 import {
-  aboutFooterImage,
   aboutHeroImage,
-  aboutHighlights,
   aboutJourneyImages,
+  aboutFooterImage
 } from '../data/aboutContent'
 
 function AboutPage() {
   return (
     <>
-      <AboutHeroHighlightsSection image={aboutHeroImage} highlights={aboutHighlights} />
-      <AboutJourneySection images={aboutJourneyImages} />
+      <AboutHeroHighlightsSection image={aboutHeroImage} />
+      <AboutStorySection image={aboutJourneyImages.large} />
       <AboutWhyChooseSection />
-      <AboutMissionVisionSection image={aboutFooterImage} />
+      <AboutMissionVisionSection />
+      <AboutFleetSection />
+      <AboutTeamSection />
+      <AboutExperienceSection image={aboutFooterImage} />
     </>
   )
 }
