@@ -60,13 +60,13 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
                     transition: 'transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)',
                   }}
                 />
-                
+
                 {/* Visual Gradient Placeholder as seen in mockup */}
                 {!item.image && (
-                  <Box sx={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    background: 'linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%)' 
+                  <Box sx={{
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%)'
                   }} />
                 )}
 
@@ -93,9 +93,9 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
                   >
                     {item.name}
                   </Typography>
-                  
+
                   <Link
-                    href="#"
+                    href="/destinations"
                     sx={{
                       color: '#ffffff',
                       fontFamily: '"Plus Jakarta Sans", sans-serif',

@@ -24,7 +24,7 @@ function HomePage() {
 
   const handleBookNow = (id: string) => {
     dispatch(selectCaravan(id))
-    navigate('/booking')
+    navigate('/contact')
   }
 
 
@@ -33,7 +33,7 @@ function HomePage() {
     <>
       <MotionSection>
         <HomeHeroSection
-          onViewGallery={() => navigate('/gallery')}
+          onViewGallery={() => navigate('/contact')}
         />
       </MotionSection>
 
@@ -45,8 +45,8 @@ function HomePage() {
       </MotionSection>
 
       <MotionSection delay={200}>
-        <CaravanForYouSection 
-          image={caravanForYouImages[0]} 
+        <CaravanForYouSection
+          image={caravanForYouImages[0]}
           onLearnMore={() => navigate('/about')}
         />
       </MotionSection>
@@ -56,7 +56,7 @@ function HomePage() {
       </MotionSection>
 
       <MotionSection delay={100}>
-        <RecommendedCaravansSection 
+        <RecommendedCaravansSection
           caravans={premiumCaravans}
           onBookNow={handleBookNow}
         />
@@ -70,7 +70,7 @@ function HomePage() {
         <BookYourRVSection />
       </MotionSection>
 
-      <AdventureCTASection 
+      <AdventureCTASection
         title="Hassle-Free Rental Experience"
         subtitle="Experience the Remal Caravans Difference across the UAE."
         buttonText="Learn More"

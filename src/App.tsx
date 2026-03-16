@@ -40,14 +40,14 @@ function App() {
             <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route
+            {/* <Route
               path="/booking"
               element={
                 <BookingGuard>
                   <BookingPage />
                 </BookingGuard>
               }
-            />
+            /> */}
           </Routes>
         </Suspense>
       </Box>
