@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@mui/material'
+﻿import { Button, ButtonProps } from '@mui/material'
 
 interface CustomButtonProps extends ButtonProps {
   bgColor?: string
@@ -6,7 +6,7 @@ interface CustomButtonProps extends ButtonProps {
 }
 
 function CustomButton({ bgColor, textColor, sx, ...props }: CustomButtonProps) {
-  const isLightBg = bgColor === '#FFFFFF' || bgColor === '#f1f5f9' || bgColor === 'white'
+  const isLightBg = bgColor === '#FFFFFF' || bgColor === '#f3e4d2' || bgColor === 'white'
 
   return (
     <Button
@@ -15,19 +15,19 @@ function CustomButton({ bgColor, textColor, sx, ...props }: CustomButtonProps) {
         fontWeight: 700,
         px: 3,
         py: 1.2,
-        backgroundColor: bgColor || '#141414',
+        backgroundColor: bgColor || '#fea116',
         color: textColor || '#FFFFFF',
-        fontFamily: '"Plus Jakarta Sans", sans-serif',
+        fontFamily: '"Manrope", sans-serif',
         borderRadius: '12px', // Explicit 12px for consistent moderate rounding
         textTransform: 'none',
         fontSize: '1rem',
         boxShadow: 'none',
-        border: isLightBg ? '1.5px solid #141414' : '1.5px solid transparent', // Prevent jumping on hover
+        border: isLightBg ? '1.5px solid #fea116' : '1.5px solid transparent', // Prevent jumping on hover
         transition: 'all 0.25s ease-in-out',
         '&:hover': {
-          backgroundColor: isLightBg ? '#141414' : 'transparent',
-          color: isLightBg ? '#FFFFFF' : '#141414',
-          borderColor: '#141414',
+          backgroundColor: '#f29407',
+          color: '#FFFFFF',
+          borderColor: '#f29407',
           boxShadow: 'none',
           opacity: 1,
         },
@@ -39,3 +39,6 @@ function CustomButton({ bgColor, textColor, sx, ...props }: CustomButtonProps) {
 }
 
 export default CustomButton
+
+
+

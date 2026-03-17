@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Avatar } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Avatar } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function AboutTeamSection() {
@@ -10,7 +10,7 @@ function AboutTeamSection() {
   ]
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#f8fafc' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <MotionSection delay={100}>
           <Box sx={{ textAlign: 'center', mb: { xs: 8, md: 12 } }}>
@@ -19,7 +19,7 @@ function AboutTeamSection() {
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 800,
                 fontSize: { xs: '2.5rem', md: '3.5rem' },
-                color: '#0F172A',
+                color: '#2b2b2b',
                 mb: 2
               }}
             >
@@ -29,7 +29,7 @@ function AboutTeamSection() {
               sx={{
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontSize: '1.2rem',
-                color: '#64748b',
+                color: '#5b5b5b',
                 maxWidth: '700px',
                 mx: 'auto'
               }}
@@ -61,8 +61,8 @@ function AboutTeamSection() {
                       mx: 'auto',
                       mb: 4,
                       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
-                      bgcolor: '#eff6ff',
-                      color: '#3b82f6',
+                      bgcolor: '#fdebd2',
+                      color: '#f39a1e',
                       fontSize: '3rem',
                       fontWeight: 700
                     }}
@@ -74,7 +74,7 @@ function AboutTeamSection() {
                       fontFamily: '"Poppins", sans-serif',
                       fontWeight: 700,
                       fontSize: '1.25rem',
-                      color: '#0F172A',
+                      color: '#2b2b2b',
                       mb: 1
                     }}
                   >
@@ -84,7 +84,7 @@ function AboutTeamSection() {
                     sx={{
                       fontFamily: '"Plus Jakarta Sans", sans-serif',
                       fontWeight: 600,
-                      color: '#3b82f6',
+                      color: '#f39a1e',
                       fontSize: '0.95rem',
                       mb: 2
                     }}
@@ -94,7 +94,7 @@ function AboutTeamSection() {
                   <Typography
                     sx={{
                       fontFamily: '"Plus Jakarta Sans", sans-serif',
-                      color: '#64748b',
+                      color: '#5b5b5b',
                       fontSize: '0.95rem',
                       lineHeight: 1.6
                     }}
@@ -112,3 +112,5 @@ function AboutTeamSection() {
 }
 
 export default AboutTeamSection
+
+

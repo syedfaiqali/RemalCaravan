@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Button } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Button } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
@@ -19,20 +19,20 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.5rem', md: '4.2rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   lineHeight: 1.1,
                   mb: 3,
                   letterSpacing: '-0.02em',
                 }}
               >
                 About Remal <br />
-                <Box component="span" sx={{ color: '#3b82f6' }}>RV Caravan</Box>
+                <Box component="span" sx={{ color: '#f39a1e' }}>RV Caravan</Box>
               </Typography>
               <Typography
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
-                  color: '#64748b',
+                  color: '#5b5b5b',
                   mb: 5,
                   lineHeight: 1.6,
                   maxWidth: '550px'
@@ -80,7 +80,7 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                     right: -20,
                     width: '100%',
                     height: '100%',
-                    border: '2px dashed #e2e8f0',
+                    border: '2px dashed #d3deea',
                     borderRadius: '40px',
                     zIndex: 0
                   }
@@ -110,3 +110,5 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
 }
 
 export default AboutHeroHighlightsSection
+
+

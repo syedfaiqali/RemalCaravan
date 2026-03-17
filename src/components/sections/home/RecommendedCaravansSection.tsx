@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box } from '@mui/material'
+﻿import { Container, Grid, Typography, Box } from '@mui/material'
 import { CaravanItem } from '../../../data/caravans'
 import CustomCard from '../../common/CustomCard'
 
@@ -19,7 +19,7 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2rem', md: '2.5rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               lineHeight: 1.1,
               mb: 1.5,
             }}
@@ -30,7 +30,7 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: '1.2rem',
-              color: '#64748b',
+              color: '#5b5b5b',
               fontWeight: 400,
             }}
           >
@@ -51,8 +51,8 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
                   title={mockupTitles[index] || caravan.title}
                   description={mockupDesc[index] || caravan.sleeps}
                   image={caravan.image}
-                  price="₹XXX" // As per screenshot
-                  btnBgColor="#141414" // Solid black as seen in screenshot
+                  price="â‚¹XXX" // As per screenshot
+                  btnBgColor="#fea116" // Solid black as seen in screenshot
                   btnTextColor="#FFFFFF"
                   onBookNow={() => onBookNow(caravan.id)}
                 />
@@ -66,3 +66,7 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
 }
 
 export default RecommendedCaravansSection
+
+
+
+

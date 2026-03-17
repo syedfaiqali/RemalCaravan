@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Button } from '@mui/material'
+﻿import { Box, Container, Typography, Button } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import MotionSection from '../../common/MotionSection'
 
@@ -6,7 +6,7 @@ function GalleryHeroSection() {
   return (
     <Box
       sx={{
-        bgcolor: '#94a3b8',
+        bgcolor: '#ffb84d',
         minHeight: '70vh',
         display: 'flex',
         alignItems: 'center',
@@ -50,7 +50,7 @@ function GalleryHeroSection() {
             startIcon={<KeyboardArrowDownIcon />}
             sx={{
               bgcolor: '#fff',
-              color: '#0F172A',
+              color: '#2b2b2b',
               px: 4,
               py: 2,
               borderRadius: '16px',
@@ -59,7 +59,7 @@ function GalleryHeroSection() {
               textTransform: 'none',
               fontSize: '1.1rem',
               '&:hover': {
-                bgcolor: '#f1f5f9',
+                bgcolor: '#f3e4d2',
                 transform: 'translateY(-3px)'
               },
               transition: '0.3s'
@@ -74,3 +74,5 @@ function GalleryHeroSection() {
 }
 
 export default GalleryHeroSection
+
+

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Stack } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 interface AboutStorySectionProps {
@@ -43,7 +43,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   lineHeight: 1.2,
                   mb: 4,
                 }}
@@ -54,7 +54,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: '1.1rem',
-                  color: '#64748b',
+                  color: '#5b5b5b',
                   lineHeight: 1.8,
                   mb: 6,
                 }}
@@ -72,7 +72,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                           width: '12px',
                           height: '12px',
                           borderRadius: '50%',
-                          bgcolor: '#3b82f6',
+                          bgcolor: '#f39a1e',
                           flexShrink: 0
                         }}
                       />
@@ -82,7 +82,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                             width: '2px', 
                             flexGrow: 1, 
                             minHeight: '40px',
-                            bgcolor: '#e2e8f0',
+                            bgcolor: '#d3deea',
                             mt: 1,
                             mb: -1 
                           }} 
@@ -95,7 +95,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                           fontFamily: '"Poppins", sans-serif',
                           fontWeight: 700,
                           fontSize: '1.2rem',
-                          color: '#0F172A',
+                          color: '#2b2b2b',
                           mb: 0.5
                         }}
                       >
@@ -105,7 +105,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                         sx={{
                           fontFamily: '"Plus Jakarta Sans", sans-serif',
                           fontWeight: 600,
-                          color: '#3b82f6',
+                          color: '#f39a1e',
                           fontSize: '0.95rem',
                           mb: 0.5
                         }}
@@ -115,7 +115,7 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
                       <Typography
                         sx={{
                           fontFamily: '"Plus Jakarta Sans", sans-serif',
-                          color: '#64748b',
+                          color: '#5b5b5b',
                           fontSize: '0.9rem'
                         }}
                       >
@@ -134,3 +134,5 @@ function AboutStorySection({ image }: AboutStorySectionProps) {
 }
 
 export default AboutStorySection
+
+

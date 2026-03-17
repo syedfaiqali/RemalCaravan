@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+﻿import { Box, Container, Grid, Typography } from '@mui/material'
 import VerifiedIcon from '@mui/icons-material/Verified'
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus'
 import MapIcon from '@mui/icons-material/Map'
@@ -39,7 +39,7 @@ function AboutWhyChooseSection() {
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
                 fontSize: '1rem',
-                color: '#3b82f6',
+                color: '#f39a1e',
                 textTransform: 'uppercase',
                 letterSpacing: '0.2em',
                 mb: 2
@@ -52,7 +52,7 @@ function AboutWhyChooseSection() {
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 800,
                 fontSize: { xs: '2.2rem', md: '3.5rem' },
-                color: '#0F172A',
+                color: '#2b2b2b',
                 lineHeight: 1.2,
                 maxWidth: '800px',
                 mx: 'auto'
@@ -71,19 +71,19 @@ function AboutWhyChooseSection() {
                   sx={{
                     p: { xs: 4, md: 5 },
                     height: '100%',
-                    bgcolor: '#f8fafc',
+                    bgcolor: '#fff9f3',
                     borderRadius: '24px',
-                    border: '1px solid #e2e8f0',
+                    border: '1px solid #d3deea',
                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
                       bgcolor: '#fff',
                       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
                       transform: 'translateY(-10px)',
-                      borderColor: '#3b82f6'
+                      borderColor: '#f39a1e'
                     }
                   }}
                 >
-                  <Box sx={{ color: '#3b82f6', mb: 3 }}>
+                  <Box sx={{ color: '#f39a1e', mb: 3 }}>
                     {feature.icon}
                   </Box>
                   <Typography
@@ -91,7 +91,7 @@ function AboutWhyChooseSection() {
                       fontFamily: '"Poppins", sans-serif',
                       fontWeight: 700,
                       fontSize: '1.25rem',
-                      color: '#0F172A',
+                      color: '#2b2b2b',
                       mb: 2
                     }}
                   >
@@ -101,7 +101,7 @@ function AboutWhyChooseSection() {
                     sx={{
                       fontFamily: '"Plus Jakarta Sans", sans-serif',
                       fontSize: '1rem',
-                      color: '#64748b',
+                      color: '#5b5b5b',
                       lineHeight: 1.6
                     }}
                   >
@@ -118,3 +118,5 @@ function AboutWhyChooseSection() {
 }
 
 export default AboutWhyChooseSection
+
+

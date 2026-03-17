@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material'
+﻿import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material'
 import CustomButton from './CustomButton'
 
 interface CustomCardProps {
@@ -24,12 +24,12 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
         display: 'flex',
         flexDirection: 'column',
         borderRadius: '16px',
-        border: '1px solid #f1f5f9',
+        border: '1px solid #f3e4d2',
         bgcolor: '#ffffff',
         transition: 'all 0.3s ease',
         '&:hover': {
           transform: 'translateY(-4px)',
-          borderColor: '#e2e8f0',
+          borderColor: '#d3deea',
           boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05)',
         },
       }}
@@ -40,7 +40,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
             width: '100%',
             height: 220,
             borderRadius: '12px',
-            bgcolor: '#e9eff6', // Placeholder color as seen in screenshot
+            bgcolor: '#f3e4d2', // Placeholder color as seen in screenshot
             overflow: 'hidden',
           }}
         >
@@ -62,7 +62,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
               top: 16,
               left: 16,
               bgcolor: 'rgba(255, 255, 255, 0.9)',
-              color: '#0F172A',
+              color: '#2b2b2b',
               fontWeight: 600,
             }}
           />
@@ -75,7 +75,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
               top: 16,
               right: 16,
               bgcolor: 'rgba(255, 255, 255, 0.9)',
-              color: '#0F172A',
+              color: '#2b2b2b',
               fontWeight: 600,
             }}
           />
@@ -88,7 +88,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
             fontFamily: '"Poppins", sans-serif',
             fontWeight: 700,
             fontSize: '1.25rem',
-            color: '#0F172A',
+            color: '#2b2b2b',
             mb: 0.5,
           }}
         >
@@ -99,7 +99,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
           sx={{
             fontFamily: '"Plus Jakarta Sans", sans-serif',
             fontSize: '1rem',
-            color: '#64748b',
+            color: '#5b5b5b',
             mb: 1,
             fontWeight: 400,
           }}
@@ -115,11 +115,11 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: '0.875rem',
-                  color: '#475569',
+                  color: '#5b5b5b',
                   mb: 0.5,
                 }}
               >
-                • {spec}
+                â€¢ {spec}
               </Typography>
             ))}
           </Box>
@@ -130,7 +130,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
             fontFamily: '"Plus Jakarta Sans", sans-serif',
             fontSize: '1.15rem',
             fontWeight: 700,
-            color: '#0F172A',
+            color: '#2b2b2b',
             mb: 2,
           }}
         >
@@ -142,8 +142,8 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
         ) : (
           <CustomButton
             fullWidth
-            bgColor={btnBgColor || "#f1f5f9"}
-            textColor={btnTextColor || "#0F172A"}
+            bgColor={btnBgColor || "#f3e4d2"}
+            textColor={btnTextColor || "#2b2b2b"}
             onClick={onBookNow}
             sx={{ 
               fontWeight: 600,
@@ -159,3 +159,5 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
 }
 
 export default CustomCard
+
+

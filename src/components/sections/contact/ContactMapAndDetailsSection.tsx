@@ -1,4 +1,4 @@
-import { Box, Paper } from '@mui/material'
+﻿import { Box, Paper } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function ContactMapAndDetailsSection() {
@@ -10,7 +10,7 @@ function ContactMapAndDetailsSection() {
           sx={{ 
             overflow: 'hidden', 
             borderRadius: { xs: '24px', md: '40px' },
-            border: '1px solid #e2e8f0',
+            border: '1px solid #d3deea',
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.08)'
           }}
         >
@@ -33,3 +33,4 @@ function ContactMapAndDetailsSection() {
 }
 
 export default ContactMapAndDetailsSection
+

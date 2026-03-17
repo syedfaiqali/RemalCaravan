@@ -1,4 +1,4 @@
-import { Box, Grid, Paper, Stack, TextField, Typography, IconButton } from '@mui/material'
+﻿import { Box, Grid, Paper, Stack, TextField, Typography, IconButton } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -20,25 +20,25 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
   }
 
   const iconBoxStyle = {
-    bgcolor: '#eff6ff',
+    bgcolor: '#fdebd2',
     p: 1.5,
     borderRadius: '16px',
     display: 'flex',
-    color: '#3b82f6',
+    color: '#f39a1e',
   }
 
   const labelStyle = {
     fontFamily: '"Poppins", sans-serif',
     fontWeight: 700,
     fontSize: '1.1rem',
-    color: '#0F172A',
+    color: '#2b2b2b',
     mb: 0.2,
   }
 
   const valueStyle = {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1rem',
-    color: '#64748b',
+    color: '#5b5b5b',
   }
 
   return (
@@ -51,7 +51,7 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: '2.2rem',
-              color: '#0F172A',
+              color: '#2b2b2b',
               mb: 6
             }}
           >
@@ -97,7 +97,7 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
                 fontSize: '1.2rem',
-                color: '#0F172A',
+                color: '#2b2b2b',
                 mb: 3
               }}
             >
@@ -108,12 +108,12 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
                 <IconButton
                   key={index}
                   sx={{
-                    bgcolor: '#f1f5f9',
-                    color: '#64748b',
+                    bgcolor: '#f3e4d2',
+                    color: '#5b5b5b',
                     p: 1.5,
                     transition: '0.3s',
                     '&:hover': {
-                      bgcolor: '#3b82f6',
+                      bgcolor: '#f39a1e',
                       color: '#fff',
                       transform: 'translateY(-4px)'
                     }
@@ -135,7 +135,7 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
             sx={{
               p: { xs: 4, md: 6 },
               borderRadius: '24px',
-              border: '1px solid #e2e8f0',
+              border: '1px solid #d3deea',
               background: '#fff',
               boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)'
             }}
@@ -172,7 +172,7 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
                     fontSize: '1.1rem', 
                     borderRadius: '14px',
                     textTransform: 'none',
-                    bgcolor: '#0F172A',
+                    bgcolor: '#2b2b2b',
                     '&:hover': { bgcolor: '#1e293b' }
                   }}
                 >
@@ -188,3 +188,5 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
 }
 
 export default ContactEnquirySection
+
+

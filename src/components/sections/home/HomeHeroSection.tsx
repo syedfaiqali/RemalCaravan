@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from '@mui/material'
+﻿import { Box, Container, Stack, Typography } from '@mui/material'
 import CustomButton from '../../common/CustomButton'
 
 interface HomeHeroSectionProps {
@@ -10,7 +10,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
     <Box
       sx={{
         py: { xs: 8, md: 15 },
-        bgcolor: '#f2f7fb',
+        bgcolor: '#fff9f3',
         backgroundImage: 'none',
         textAlign: 'center',
       }}
@@ -22,7 +22,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             maxWidth: 1000,
             mx: 'auto',
             mb: 6,
-            color: '#0F172A',
+            color: '#2b2b2b',
             fontWeight: 800,
             fontSize: { xs: '2rem', md: '4.7rem' },
             fontFamily: '"Poppins", sans-serif',
@@ -38,7 +38,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             sx={{
               fontSize: { xs: '1rem', md: '1.6rem' },
               fontWeight: 400,
-              color: '#475569',
+              color: '#5b5b5b',
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               mb: 1.5
             }}
@@ -49,7 +49,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             sx={{
               fontSize: { xs: '1.1rem', md: '1.6rem' },
               fontWeight: 400,
-              color: '#64748b',
+              color: '#5b5b5b',
               fontFamily: '"Plus Jakarta Sans", sans-serif',
             }}
           >
@@ -64,7 +64,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
               px: 8,
               py: 2.5,
               fontSize: '1.25rem',
-              bgcolor: '#141414',
+              bgcolor: '#fea116',
             }}
           >
             BOOK YOUR RV NOW
@@ -76,3 +76,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
 }
 
 export default HomeHeroSection
+
+
+
+

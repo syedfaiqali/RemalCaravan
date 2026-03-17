@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Link, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Link, Stack } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 import EmailIcon from '@mui/icons-material/Email'
 import RvHookupIcon from '@mui/icons-material/RvHookup'
@@ -23,7 +23,7 @@ function Footer() {
       left: 0,
       width: '30px',
       height: '3px',
-      bgcolor: '#3b82f6',
+      bgcolor: '#f39a1e',
       borderRadius: '2px'
     }
   }
@@ -31,13 +31,13 @@ function Footer() {
   const linkStyle = {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1.05rem',
-    color: '#64748b',
+    color: '#5b5b5b',
     textDecoration: 'none',
     display: 'block',
     mb: 2,
     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     '&:hover': {
-      color: '#3b82f6',
+      color: '#f39a1e',
       transform: 'translateX(6px)'
     },
   }
@@ -45,7 +45,7 @@ function Footer() {
   const infoStyle = {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1.05rem',
-    color: '#64748b',
+    color: '#5b5b5b',
     lineHeight: 1.8,
   }
 
@@ -59,8 +59,8 @@ function Footer() {
         justifyContent: 'center',
         pt: { xs: 10, md: 10 },
         pb: { xs: 8 },
-        background: 'radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.04) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 40%), #f8fafc',
-        borderTop: '1px solid #e2e8f0',
+        background: 'radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.04) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 40%), #fff9f3',
+        borderTop: '1px solid #d3deea',
         position: 'relative',
         overflow: 'hidden',
         '&::before': {
@@ -70,7 +70,7 @@ function Footer() {
           left: 0,
           right: 0,
           height: '6px',
-          background: 'linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6)',
+          background: 'linear-gradient(90deg, #f39a1e, #ffb84d, #f39a1e)',
           opacity: 0.1,
         }
       }}
@@ -83,7 +83,7 @@ function Footer() {
               <Stack direction="row" spacing={2.5} alignItems="center" sx={{ mb: 4 }}>
                 <Box
                   sx={{
-                    bgcolor: '#3b82f6',
+                    bgcolor: '#f39a1e',
                     p: 1.5,
                     borderRadius: '16px',
                     display: 'flex',
@@ -100,7 +100,7 @@ function Footer() {
                     fontWeight: 800,
                     fontSize: { xs: '1.6rem', md: '2.4rem' },
                     lineHeight: 1,
-                    color: '#0F172A',
+                    color: '#2b2b2b',
                     letterSpacing: '-0.02em'
                   }}
                 >
@@ -113,7 +113,7 @@ function Footer() {
                   fontSize: '1.1rem',
                   maxWidth: 340,
                   mb: 4,
-                  color: '#475569'
+                  color: '#5b5b5b'
                 }}
               >
                 Making memories on the road since 2010. We provide premium RV experiences for unforgettable journeys across the country. Your adventure starts here.
@@ -137,12 +137,12 @@ function Footer() {
               <Stack spacing={3}>
                 <Stack direction="row" spacing={2} alignItems="center">
                   <Box sx={{
-                    bgcolor: '#eff6ff',
+                    bgcolor: '#fdebd2',
                     p: 1.2,
                     borderRadius: '12px',
                     display: 'flex'
                   }}>
-                    <LocalPhoneIcon sx={{ color: '#3b82f6', fontSize: '1.4rem' }} />
+                    <LocalPhoneIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
                   </Box>
                   <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
                     +971 XX XXX XXXX
@@ -150,12 +150,12 @@ function Footer() {
                 </Stack>
                 <Stack direction="row" spacing={2} alignItems="center">
                   <Box sx={{
-                    bgcolor: '#eff6ff',
+                    bgcolor: '#fdebd2',
                     p: 1.2,
                     borderRadius: '12px',
                     display: 'flex'
                   }}>
-                    <EmailIcon sx={{ color: '#3b82f6', fontSize: '1.4rem' }} />
+                    <EmailIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
                   </Box>
                   <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
                     info@remalcaravan.ae
@@ -167,7 +167,7 @@ function Footer() {
             {/* Office Address */}
             <Grid size={{ xs: 12, md: 3 }}>
               <Typography sx={headingStyle}>Office Address</Typography>
-              <Typography sx={{ ...infoStyle, fontSize: '1.1rem', color: '#475569' }}>
+              <Typography sx={{ ...infoStyle, fontSize: '1.1rem', color: '#5b5b5b' }}>
                 Business Bay, <br />
                 Dubai, United Arab Emirates <br />
                 P.O. Box - 00000
@@ -179,7 +179,7 @@ function Footer() {
           <Box
             sx={{
               mt: { xs: 12, md: 10 },
-              borderTop: '1px solid #e2e8f0',
+              borderTop: '1px solid #d3deea',
               textAlign: 'center',
             }}
           >
@@ -187,11 +187,11 @@ function Footer() {
               sx={{
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontSize: '1rem',
-                color: '#94a3b8',
+                color: '#ffb84d',
                 letterSpacing: '0.05em'
               }}
             >
-              © {currentYear} Remal RV Caravan. All rights reserved. <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' }, ml: 1 }}>Crafted with passion for modern travelers.</Box>
+              Â© {currentYear} Remal RV Caravan. All rights reserved. <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' }, ml: 1 }}>Crafted with passion for modern travelers.</Box>
             </Typography>
           </Box>
         </Container>
@@ -201,3 +201,5 @@ function Footer() {
 }
 
 export default Footer
+
+

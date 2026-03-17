@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+﻿import { Box, Container, Grid, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote'
 
@@ -13,7 +13,7 @@ function AboutExperienceSection({ image }: AboutExperienceSectionProps) {
         <MotionSection delay={100}>
           <Box
             sx={{
-              bgcolor: '#0F172A',
+              bgcolor: '#2b2b2b',
               borderRadius: '48px',
               overflow: 'hidden',
               p: { xs: 6, md: 10 },
@@ -34,7 +34,7 @@ function AboutExperienceSection({ image }: AboutExperienceSectionProps) {
                   }}
                 >
                   Creating Memorable <br />
-                  <Box component="span" sx={{ color: '#3b82f6' }}>Travel Experiences</Box>
+                  <Box component="span" sx={{ color: '#f39a1e' }}>Travel Experiences</Box>
                 </Typography>
                 <Typography
                   sx={{
@@ -84,10 +84,10 @@ function AboutExperienceSection({ image }: AboutExperienceSectionProps) {
                     sx={{
                       fontFamily: '"Poppins", sans-serif',
                       fontWeight: 700,
-                      color: '#3b82f6'
+                      color: '#f39a1e'
                     }}
                   >
-                    — The Henderson Family
+                    â€” The Henderson Family
                   </Typography>
                 </Box>
               </Grid>
@@ -116,3 +116,5 @@ function AboutExperienceSection({ image }: AboutExperienceSectionProps) {
 }
 
 export default AboutExperienceSection
+
+

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack, Typography } from '@mui/material'
+﻿import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 interface AboutJourneySectionProps {
@@ -15,13 +15,13 @@ function AboutJourneySection({ images }: AboutJourneySectionProps) {
   const bodyStyle = {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1.05rem',
-    color: '#64748b',
+    color: '#5b5b5b',
     lineHeight: 1.8,
     mb: 3
   }
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#f8fafc' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <Grid container spacing={{ xs: 8, md: 12 }} alignItems="center">
           <Grid size={{ xs: 12, md: 6 }}>
@@ -31,7 +31,7 @@ function AboutJourneySection({ images }: AboutJourneySectionProps) {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 700,
                   fontSize: '0.9rem',
-                  color: '#3b82f6',
+                  color: '#f39a1e',
                   textTransform: 'uppercase',
                   letterSpacing: '0.25em',
                   mb: 2.5
@@ -44,7 +44,7 @@ function AboutJourneySection({ images }: AboutJourneySectionProps) {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.2rem', md: '3.2rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   lineHeight: 1.1,
                   mb: 4
                 }}
@@ -151,3 +151,5 @@ function AboutJourneySection({ images }: AboutJourneySectionProps) {
 }
 
 export default AboutJourneySection
+
+

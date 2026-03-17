@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Link } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Link } from '@mui/material'
 import { DestinationItem } from '../../../data/homeContent'
 
 interface PopularDestinationsSectionProps {
@@ -15,7 +15,7 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2.2rem', md: '2.8rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               lineHeight: 1.1,
               mb: 1.5,
             }}
@@ -26,7 +26,7 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: '1.1rem',
-              color: '#64748b',
+              color: '#5b5b5b',
               fontWeight: 400,
             }}
           >
@@ -66,7 +66,7 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
                   <Box sx={{
                     width: '100%',
                     height: '100%',
-                    background: 'linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%)'
+                    background: 'linear-gradient(135deg, #e0c8a8 0%, #ffb84d 100%)'
                   }} />
                 )}
 
@@ -125,3 +125,5 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
 }
 
 export default PopularDestinationsSection
+
+

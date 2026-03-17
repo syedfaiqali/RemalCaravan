@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Button, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Button, Stack } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import KitchenIcon from '@mui/icons-material/Kitchen'
 import AcUnitIcon from '@mui/icons-material/AcUnit'
@@ -51,7 +51,7 @@ function AboutFleetSection() {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   mb: 1
                 }}
               >
@@ -61,7 +61,7 @@ function AboutFleetSection() {
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: { xs: '1.1rem', md: '1.2rem' },
-                  color: '#64748b',
+                  color: '#5b5b5b',
                 }}
               >
                 Choose the perfect companion for your next trip.
@@ -71,12 +71,12 @@ function AboutFleetSection() {
               sx={{
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
-                color: '#0F172A',
+                color: '#2b2b2b',
                 textTransform: 'none',
-                borderBottom: '2px solid #0F172A',
+                borderBottom: '2px solid #2b2b2b',
                 borderRadius: 0,
                 pb: 0.5,
-                '&:hover': { bgcolor: 'transparent', color: '#3b82f6', borderColor: '#3b82f6' }
+                '&:hover': { bgcolor: 'transparent', color: '#f39a1e', borderColor: '#f39a1e' }
               }}
             >
               View All RVs
@@ -90,15 +90,15 @@ function AboutFleetSection() {
               <MotionSection delay={200 + index * 100}>
                 <Box
                   sx={{
-                    bgcolor: '#f8fafc',
+                    bgcolor: '#fff9f3',
                     borderRadius: '32px',
                     overflow: 'hidden',
-                    border: '1px solid #e2e8f0',
+                    border: '1px solid #d3deea',
                     transition: '0.3s',
                     '&:hover': {
                       transform: 'translateY(-10px)',
                       boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
-                      borderColor: '#3b82f6'
+                      borderColor: '#f39a1e'
                     }
                   }}
                 >
@@ -114,7 +114,7 @@ function AboutFleetSection() {
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
                         fontSize: '1.5rem',
-                        color: '#0F172A',
+                        color: '#2b2b2b',
                         mb: 3
                       }}
                     >
@@ -124,8 +124,8 @@ function AboutFleetSection() {
                       {item.amenities.map(a => (
                         <Grid key={a} size={{ xs: 6 }}>
                           <Stack direction="row" spacing={1.5} alignItems="center">
-                            <Box sx={{ color: '#94a3b8' }}>{getIcon(a)}</Box>
-                            <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontSize: '0.9rem', color: '#64748b' }}>
+                            <Box sx={{ color: '#ffb84d' }}>{getIcon(a)}</Box>
+                            <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontSize: '0.9rem', color: '#5b5b5b' }}>
                               {a}
                             </Typography>
                           </Stack>
@@ -141,12 +141,12 @@ function AboutFleetSection() {
                         textTransform: 'none',
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 600,
-                        borderColor: '#e2e8f0',
-                        color: '#0F172A',
+                        borderColor: '#d3deea',
+                        color: '#2b2b2b',
                         '&:hover': {
-                          borderColor: '#3b82f6',
-                          bgcolor: '#eff6ff',
-                          color: '#3b82f6'
+                          borderColor: '#f39a1e',
+                          bgcolor: '#fdebd2',
+                          color: '#f39a1e'
                         }
                       }}
                     >
@@ -164,3 +164,5 @@ function AboutFleetSection() {
 }
 
 export default AboutFleetSection
+
+

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+﻿import { Box, Container, Grid, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function FeaturedRoadTripsSection() {
@@ -9,7 +9,7 @@ function FeaturedRoadTripsSection() {
   ]
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#f8fafc' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <MotionSection delay={100}>
           <Box sx={{ textAlign: 'center', mb: 8 }}>
@@ -18,7 +18,7 @@ function FeaturedRoadTripsSection() {
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 800,
                 fontSize: { xs: '2.5rem', md: '3.5rem' },
-                color: '#0F172A',
+                color: '#2b2b2b',
                 mb: 2
               }}
             >
@@ -28,7 +28,7 @@ function FeaturedRoadTripsSection() {
               sx={{
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontSize: '1.2rem',
-                color: '#64748b',
+                color: '#5b5b5b',
                 maxWidth: '700px',
                 mx: 'auto'
               }}
@@ -104,3 +104,5 @@ function FeaturedRoadTripsSection() {
 }
 
 export default FeaturedRoadTripsSection
+
+

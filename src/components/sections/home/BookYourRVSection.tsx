@@ -1,4 +1,4 @@
-import { Box, Container, Typography, TextField, MenuItem, Grid, Paper } from '@mui/material'
+﻿import { Box, Container, Typography, TextField, MenuItem, Grid, Paper } from '@mui/material'
 import CustomButton from '../../common/CustomButton'
 
 function BookYourRVSection() {
@@ -16,17 +16,17 @@ function BookYourRVSection() {
       borderRadius: '10px',
       bgcolor: '#ffffff',
       '& fieldset': {
-        borderColor: '#e2e8f0',
+        borderColor: '#d3deea',
       },
       '&:hover fieldset': {
-        borderColor: '#cbd5e1',
+        borderColor: '#e0c8a8',
       },
     },
     '& .MuiInputLabel-root': {
       fontFamily: '"Plus Jakarta Sans", sans-serif',
       fontWeight: 700,
       fontSize: '0.9rem',
-      color: '#475569',
+      color: '#5b5b5b',
       textTransform: 'uppercase',
       mb: 1,
       position: 'relative',
@@ -36,7 +36,7 @@ function BookYourRVSection() {
   }
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#f8fafc' }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
@@ -44,7 +44,7 @@ function BookYourRVSection() {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2.2rem', md: '2.8rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               textTransform: 'uppercase',
               lineHeight: 1.1,
               mb: 2,
@@ -56,7 +56,7 @@ function BookYourRVSection() {
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: '1.1rem',
-              color: '#64748b',
+              color: '#5b5b5b',
               fontWeight: 400,
             }}
           >
@@ -69,7 +69,7 @@ function BookYourRVSection() {
           sx={{
             p: { xs: 4, md: 8 },
             borderRadius: '24px',
-            border: '1px solid #f1f5f9',
+            border: '1px solid #f3e4d2',
             maxWidth: 1000,
             mx: 'auto',
           }}
@@ -148,7 +148,7 @@ function BookYourRVSection() {
             <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
               <CustomButton
                 fullWidth
-                bgColor="#141414"
+                bgColor="#fea116"
                 textColor="#FFFFFF"
                 sx={{
                   py: 2.2,
@@ -169,3 +169,7 @@ function BookYourRVSection() {
 }
 
 export default BookYourRVSection
+
+
+
+

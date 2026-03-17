@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+﻿import { useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {
   Box,
@@ -110,7 +110,7 @@ function CaravanDetailsPage() {
                   borderRadius: 1.5,
                   objectFit: 'cover',
                   cursor: 'pointer',
-                  border: index === activeIndex ? '2px solid #1976d2' : '2px solid transparent',
+                  border: index === activeIndex ? '2px solid #f39a1e' : '2px solid transparent',
                   opacity: index === activeIndex ? 1 : 0.84,
                 }}
               />

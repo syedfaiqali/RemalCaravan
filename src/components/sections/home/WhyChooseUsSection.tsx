@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Stack } from '@mui/material'
 import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined'
 import HeadsetMicOutlinedIcon from '@mui/icons-material/HeadsetMicOutlined'
@@ -9,22 +9,22 @@ function WhyChooseUsSection() {
     {
       title: 'Personalized Service',
       description: 'Tailored rental plans to suit your specific trip needs.',
-      icon: <AutoAwesomeOutlinedIcon sx={{ fontSize: '2rem', color: '#0F172A' }} />,
+      icon: <AutoAwesomeOutlinedIcon sx={{ fontSize: '2rem', color: '#2b2b2b' }} />,
     },
     {
       title: 'Destination Knowledge',
       description: 'Expert advice on the best routes and hidden spots.',
-      icon: <MapOutlinedIcon sx={{ fontSize: '2rem', color: '#0F172A' }} />,
+      icon: <MapOutlinedIcon sx={{ fontSize: '2rem', color: '#2b2b2b' }} />,
     },
     {
       title: 'Hassle-Free Planning',
       description: 'Easy booking system and seamless paperwork.',
-      icon: <CalendarTodayOutlinedIcon sx={{ fontSize: '2rem', color: '#0F172A' }} />,
+      icon: <CalendarTodayOutlinedIcon sx={{ fontSize: '2rem', color: '#2b2b2b' }} />,
     },
     {
       title: '24/7 Support',
       description: 'We are always a call away for any roadside assistance.',
-      icon: <HeadsetMicOutlinedIcon sx={{ fontSize: '2rem', color: '#0F172A' }} />,
+      icon: <HeadsetMicOutlinedIcon sx={{ fontSize: '2rem', color: '#2b2b2b' }} />,
     },
   ]
 
@@ -37,7 +37,7 @@ function WhyChooseUsSection() {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2.2rem', md: '2.8rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               textTransform: 'uppercase',
               lineHeight: 1.1,
               mb: 2.5,
@@ -49,7 +49,7 @@ function WhyChooseUsSection() {
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: { xs: '1rem', md: '1.25rem' },
-              color: '#64748b',
+              color: '#5b5b5b',
               fontWeight: 400,
               maxWidth: 800,
               mx: 'auto',
@@ -69,7 +69,7 @@ function WhyChooseUsSection() {
                     width: 80,
                     height: 80,
                     borderRadius: '50%',
-                    bgcolor: '#f1f5f9',
+                    bgcolor: '#f3e4d2',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -83,7 +83,7 @@ function WhyChooseUsSection() {
                     fontFamily: '"Plus Jakarta Sans", sans-serif',
                     fontWeight: 700,
                     fontSize: '1.25rem',
-                    color: '#0F172A',
+                    color: '#2b2b2b',
                   }}
                 >
                   {feature.title}
@@ -92,7 +92,7 @@ function WhyChooseUsSection() {
                   sx={{
                     fontFamily: '"Plus Jakarta Sans", sans-serif',
                     fontSize: '1.1rem',
-                    color: '#64748b',
+                    color: '#5b5b5b',
                     lineHeight: 1.6,
                     px: { md: 2 },
                   }}
@@ -109,3 +109,5 @@ function WhyChooseUsSection() {
 }
 
 export default WhyChooseUsSection
+
+

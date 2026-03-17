@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box } from '@mui/material'
+﻿import { Container, Grid, Typography, Box } from '@mui/material'
 import { CaravanItem } from '../../../data/caravans'
 import CustomCard from '../../common/CustomCard'
 
@@ -17,7 +17,7 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2rem', md: '2.5rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               mb: 1,
             }}
           >
@@ -27,7 +27,7 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: '1.2rem',
-              color: '#64748b',
+              color: '#5b5b5b',
               fontWeight: 400,
             }}
           >
@@ -43,6 +43,8 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
                 description={caravan.sleeps} // Using sleeps count as description to match screenshot
                 image={caravan.image}
                 price={caravan.pricePerDay}
+                btnBgColor="#fea116" // Solid black as seen in screenshot
+                btnTextColor="#FFFFFF"
                 onBookNow={() => onBookNow(caravan.id)}
               />
             </Grid>
@@ -54,3 +56,5 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
 }
 
 export default FeaturedCaravansSection
+
+

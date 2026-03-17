@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+﻿import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 interface ContactHeroSectionProps {
@@ -15,7 +15,7 @@ function ContactHeroSection({ image }: ContactHeroSectionProps) {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
-        borderBottom: '1px solid #e2e8f0',
+        borderBottom: '1px solid #d3deea',
       }}
     >
       <Container maxWidth="md">
@@ -25,19 +25,19 @@ function ContactHeroSection({ image }: ContactHeroSectionProps) {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2.5rem', md: '4rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               lineHeight: 1.1,
               mb: 3,
               letterSpacing: '-0.02em'
             }}
           >
-            Get in <Box component="span" sx={{ color: '#3b82f6' }}>Touch</Box>
+            Get in <Box component="span" sx={{ color: '#f39a1e' }}>Touch</Box>
           </Typography>
           <Typography
             sx={{
               fontFamily: '"Plus Jakarta Sans", sans-serif',
               fontSize: { xs: '1.1rem', md: '1.25rem' },
-              color: '#64748b',
+              color: '#5b5b5b',
               maxWidth: 600,
               mx: 'auto',
               lineHeight: 1.6
@@ -52,3 +52,5 @@ function ContactHeroSection({ image }: ContactHeroSectionProps) {
 }
 
 export default ContactHeroSection
+
+

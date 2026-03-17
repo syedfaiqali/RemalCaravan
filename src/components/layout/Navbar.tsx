@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -30,7 +30,7 @@ function Navbar() {
           <Box sx={{ width: 32, height: 32, borderRadius: '50%', bgcolor: 'primary.main', display: 'grid', placeItems: 'center', color: '#fff' }}>
             <DirectionsCarFilledIcon fontSize="small" />
           </Box>
-          <Typography sx={{ color: '#0F172A', fontWeight: 800, fontSize: '1.1rem', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+          <Typography sx={{ color: '#2b2b2b', fontWeight: 800, fontSize: '1.1rem', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
             Remal Caravan
           </Typography>
         </Box>
@@ -48,8 +48,8 @@ function Navbar() {
             sx={{ 
               px: 0, 
               py: 2, 
-              color: location.pathname === item.path ? 'primary.main' : '#0F172A',
-              borderBottom: '1px solid #f1f5f9'
+              color: location.pathname === item.path ? 'primary.main' : '#2b2b2b',
+              borderBottom: '1px solid #f3e4d2'
             }}
           >
             <ListItemText 
@@ -64,7 +64,7 @@ function Navbar() {
         ))}
       </List>
       <Stack spacing={2} sx={{ mt: 4 }}>
-        <CustomButton fullWidth bgColor="#f1f5f9" textColor="#0F172A">
+        <CustomButton fullWidth bgColor="#f3e4d2" textColor="#2b2b2b">
           RV on Rent in City
         </CustomButton>
         <CustomButton fullWidth>
@@ -107,7 +107,7 @@ function Navbar() {
             <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
               <Typography
                 sx={{
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   fontWeight: 800,
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
@@ -118,7 +118,7 @@ function Navbar() {
               </Typography>
               <Typography
                 sx={{
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   fontWeight: 800,
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
@@ -149,7 +149,7 @@ function Navbar() {
                   fontWeight: 700,
                   px: 0.5,
                   fontSize: '0.95rem',
-                  color: location.pathname === item.path ? 'primary.main' : '#0F172A',
+                  color: location.pathname === item.path ? 'primary.main' : '#2b2b2b',
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   textTransform: 'none',
                   '&:hover': { bgcolor: 'transparent', color: 'primary.main' },
@@ -163,7 +163,7 @@ function Navbar() {
           {/* Destkop CTA / Mobile Toggle */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Box sx={{ display: { xs: 'none', xl: 'flex' }, alignItems: 'center', gap: 2 }}>
-              <CustomButton bgColor="#f1f5f9" textColor="#0F172A" sx={{ px: 3, fontWeight: 600 }}>
+              <CustomButton bgColor="#f3e4d2" textColor="#2b2b2b" sx={{ px: 3, fontWeight: 600 }}>
                 RV on Rent in City
               </CustomButton>
               <CustomButton sx={{ px: 3, fontWeight: 600 }}>
@@ -175,7 +175,7 @@ function Navbar() {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ display: { lg: 'none' }, color: '#0F172A' }}
+              sx={{ display: { lg: 'none' }, color: '#2b2b2b' }}
             >
               <MenuIcon />
             </IconButton>
@@ -202,3 +202,5 @@ function Navbar() {
 }
 
 export default Navbar
+
+

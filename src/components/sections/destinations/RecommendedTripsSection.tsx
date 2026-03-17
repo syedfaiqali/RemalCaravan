@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Button, Stack, Chip } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Button, Stack, Chip } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MotionSection from '../../common/MotionSection'
 
@@ -27,7 +27,7 @@ function RecommendedTripsSection() {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   mb: 1
                 }}
               >
@@ -37,7 +37,7 @@ function RecommendedTripsSection() {
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: { xs: '1.1rem', md: '1.2rem' },
-                  color: '#64748b',
+                  color: '#5b5b5b',
                 }}
               >
                 Curated itineraries based on traveler reviews.
@@ -48,11 +48,11 @@ function RecommendedTripsSection() {
               sx={{
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
-                color: '#0F172A',
+                color: '#2b2b2b',
                 textTransform: 'none',
                 fontSize: '1.1rem',
                 p: { xs: 0, sm: 1 },
-                '&:hover': { bgcolor: 'transparent', color: '#3b82f6' }
+                '&:hover': { bgcolor: 'transparent', color: '#f39a1e' }
               }}
             >
               View All Trips
@@ -69,12 +69,12 @@ function RecommendedTripsSection() {
                     bgcolor: '#fff',
                     borderRadius: '24px',
                     overflow: 'hidden',
-                    border: '1px solid #e2e8f0',
+                    border: '1px solid #d3deea',
                     transition: '0.3s',
                     '&:hover': {
                       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
                       transform: 'translateY(-5px)',
-                      borderColor: '#3b82f6'
+                      borderColor: '#f39a1e'
                     }
                   }}
                 >
@@ -90,7 +90,7 @@ function RecommendedTripsSection() {
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
                         fontSize: '1.4rem',
-                        color: '#0F172A',
+                        color: '#2b2b2b',
                         mb: 1
                       }}
                     >
@@ -99,7 +99,7 @@ function RecommendedTripsSection() {
                     <Typography
                       sx={{
                         fontFamily: '"Plus Jakarta Sans", sans-serif',
-                        color: '#64748b',
+                        color: '#5b5b5b',
                         fontSize: '0.9rem',
                         mb: 3,
                         lineHeight: 1.5,
@@ -116,8 +116,8 @@ function RecommendedTripsSection() {
                         sx={{ 
                           fontFamily: '"Plus Jakarta Sans", sans-serif', 
                           fontWeight: 600,
-                          bgcolor: '#f1f5f9',
-                          color: '#0F172A',
+                          bgcolor: '#f3e4d2',
+                          color: '#2b2b2b',
                           borderRadius: '8px'
                         }} 
                       />
@@ -126,10 +126,10 @@ function RecommendedTripsSection() {
                           textTransform: 'none',
                           fontFamily: '"Poppins", sans-serif',
                           fontWeight: 700,
-                          color: '#0F172A',
+                          color: '#2b2b2b',
                           minWidth: 0,
                           p: 0,
-                          '&:hover': { bgcolor: 'transparent', color: '#3b82f6' }
+                          '&:hover': { bgcolor: 'transparent', color: '#f39a1e' }
                         }}
                       >
                         Plan Trip
@@ -147,3 +147,5 @@ function RecommendedTripsSection() {
 }
 
 export default RecommendedTripsSection
+
+

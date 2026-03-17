@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Stack } from '@mui/material'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import CustomButton from '../../common/CustomButton'
 
@@ -23,7 +23,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
               sx={{
                 width: '100%',
                 aspectRatio: '1.1 / 1',
-                bgcolor: '#e9eff6',
+                bgcolor: '#f3e4d2',
                 borderRadius: '24px',
                 overflow: 'hidden',
               }}
@@ -47,7 +47,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontSize: '0.9rem',
                 fontWeight: 700,
-                color: '#94a3b8',
+                color: '#ffb84d',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
                 mb: 1.5,
@@ -55,14 +55,14 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
             >
               About Us
             </Typography>
-            
+
             <Typography
               variant="h2"
               sx={{
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 800,
-                fontSize: { xs: '2.2rem', md: '3rem' },
-                color: '#0F172A',
+                fontSize: { xs: '2.2rem', md: '2.7rem' },
+                color: '#2b2b2b',
                 lineHeight: 1.2,
                 mb: 3,
               }}
@@ -74,7 +74,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
               sx={{
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontSize: '1.1rem',
-                color: '#64748b',
+                color: '#5b5b5b',
                 lineHeight: 1.7,
                 mb: 4,
               }}
@@ -85,13 +85,13 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
             <Stack spacing={2} sx={{ mb: 5 }}>
               {features.map((feature) => (
                 <Stack key={feature} direction="row" spacing={2} alignItems="center">
-                  <CheckCircleOutlineIcon sx={{ color: '#94a3b8', fontSize: '1.5rem' }} />
+                  <CheckCircleOutlineIcon sx={{ color: '#ffb84d', fontSize: '1.5rem' }} />
                   <Typography
                     sx={{
                       fontFamily: '"Plus Jakarta Sans", sans-serif',
                       fontSize: '1.05rem',
                       fontWeight: 600,
-                      color: '#334155',
+                      color: '#5b5b5b',
                     }}
                   >
                     {feature}
@@ -102,7 +102,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
 
             <CustomButton
               onClick={onLearnMore}
-              bgColor="#141414"
+              bgColor="#fea116"
               textColor="#FFFFFF"
               sx={{ px: 4, py: 1.8, fontWeight: 700 }}
             >
@@ -116,3 +116,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
 }
 
 export default CaravanForYouSection
+
+
+
+

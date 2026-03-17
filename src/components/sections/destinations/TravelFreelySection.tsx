@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Stack } from '@mui/material'
+﻿import { Box, Container, Grid, Typography, Stack } from '@mui/material'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import MotionSection from '../../common/MotionSection'
 
@@ -20,7 +20,7 @@ function TravelFreelySection() {
                 sx={{
                   width: '100%',
                   height: { xs: '300px', sm: '450px', md: '650px' },
-                  bgcolor: '#f1f5f9',
+                  bgcolor: '#f3e4d2',
                   borderRadius: { xs: '24px', md: '40px' },
                   display: 'flex',
                   alignItems: 'center',
@@ -47,7 +47,7 @@ function TravelFreelySection() {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.2rem', sm: '3rem', md: '4rem' },
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   lineHeight: 1.1,
                   mb: { xs: 3, md: 4 }
                 }}
@@ -59,25 +59,25 @@ function TravelFreelySection() {
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: '1.2rem',
-                  color: '#64748b',
+                  color: '#5b5b5b',
                   lineHeight: 1.8,
                   mb: 6,
                   maxWidth: '550px'
                 }}
               >
-                Experience the ultimate freedom of the open road. Our RVs are more than just vehicles; they are your mobile homes equipped with all the essentials. No more hotel bookings or rigid schedules — just you and the horizon.
+                Experience the ultimate freedom of the open road. Our RVs are more than just vehicles; they are your mobile homes equipped with all the essentials. No more hotel bookings or rigid schedules â€” just you and the horizon.
               </Typography>
 
               <Stack spacing={3}>
                 {features.map((feature) => (
                   <Stack key={feature} direction="row" spacing={2} alignItems="center">
-                    <CheckCircleOutlineIcon sx={{ color: '#0F172A', fontSize: 24 }} />
+                    <CheckCircleOutlineIcon sx={{ color: '#2b2b2b', fontSize: 24 }} />
                     <Typography
                       sx={{
                         fontFamily: '"Plus Jakarta Sans", sans-serif',
                         fontWeight: 600,
                         fontSize: '1.1rem',
-                        color: '#0F172A'
+                        color: '#2b2b2b'
                       }}
                     >
                       {feature}
@@ -94,3 +94,5 @@ function TravelFreelySection() {
 }
 
 export default TravelFreelySection
+
+

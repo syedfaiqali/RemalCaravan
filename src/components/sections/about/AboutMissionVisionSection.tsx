@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+﻿import { Box, Container, Grid, Typography } from '@mui/material'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import MotionSection from '../../common/MotionSection'
@@ -8,13 +8,13 @@ function AboutMissionVisionSection() {
     p: { xs: 5, md: 6 },
     height: '100%',
     borderRadius: '24px',
-    background: '#f8fafc',
-    border: '1px solid #e2e8f0',
+    background: '#fff9f3',
+    border: '1px solid #d3deea',
     transition: 'all 0.3s ease',
     '&:hover': {
       transform: 'translateY(-10px)',
       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.05)',
-      borderColor: '#3b82f6'
+      borderColor: '#f39a1e'
     }
   }
 
@@ -22,14 +22,14 @@ function AboutMissionVisionSection() {
     fontFamily: '"Poppins", sans-serif',
     fontWeight: 700,
     fontSize: '1.5rem',
-    color: '#0F172A',
+    color: '#2b2b2b',
     mb: 2.5
   }
 
   const bodyStyle = {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1rem',
-    color: '#64748b',
+    color: '#5b5b5b',
     lineHeight: 1.7
   }
 
@@ -40,7 +40,7 @@ function AboutMissionVisionSection() {
           <Grid size={{ xs: 12, md: 6 }}>
             <MotionSection delay={100}>
               <Box sx={cardStyle}>
-                <Box sx={{ color: '#0F172A', mb: 3 }}>
+                <Box sx={{ color: '#2b2b2b', mb: 3 }}>
                   <RocketLaunchIcon sx={{ fontSize: 40 }} />
                 </Box>
                 <Typography sx={titleStyle}>Our Mission</Typography>
@@ -53,7 +53,7 @@ function AboutMissionVisionSection() {
           <Grid size={{ xs: 12, md: 6 }}>
             <MotionSection delay={300}>
               <Box sx={cardStyle}>
-                <Box sx={{ color: '#0F172A', mb: 3 }}>
+                <Box sx={{ color: '#2b2b2b', mb: 3 }}>
                   <VisibilityIcon sx={{ fontSize: 40 }} />
                 </Box>
                 <Typography sx={titleStyle}>Our Vision</Typography>
@@ -70,3 +70,5 @@ function AboutMissionVisionSection() {
 }
 
 export default AboutMissionVisionSection
+
+

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Box, Container, Grid, Typography, Stack, Button, Chip } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import { destinations, destinationCategories } from '../../../data/destinationsContent'
@@ -25,7 +25,7 @@ function DestinationsGridSection() {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 700,
               fontSize: '1.25rem',
-              color: '#0F172A',
+              color: '#2b2b2b',
               whiteSpace: 'nowrap'
             }}
           >
@@ -49,10 +49,10 @@ function DestinationsGridSection() {
                   fontSize: '0.9rem',
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontWeight: 600,
-                  bgcolor: activeCategory === cat ? '#0F172A' : '#f1f5f9',
-                  color: activeCategory === cat ? '#fff' : '#64748b',
+                  bgcolor: activeCategory === cat ? '#2b2b2b' : '#f3e4d2',
+                  color: activeCategory === cat ? '#fff' : '#5b5b5b',
                   '&:hover': {
-                    bgcolor: activeCategory === cat ? '#0F172A' : '#e2e8f0',
+                    bgcolor: activeCategory === cat ? '#2b2b2b' : '#d3deea',
                   },
                   transition: '0.3s'
                 }}
@@ -67,9 +67,9 @@ function DestinationsGridSection() {
             fontFamily: '"Poppins", sans-serif',
             fontWeight: 800,
             fontSize: { xs: '2rem', md: '2.5rem' },
-            color: '#0F172A',
+            color: '#2b2b2b',
             mb: 1,
-            borderBottom: '4px solid #0F172A',
+            borderBottom: '4px solid #2b2b2b',
             display: 'inline-block',
             lineHeight: 1
           }}
@@ -86,12 +86,12 @@ function DestinationsGridSection() {
                     bgcolor: '#fff',
                     borderRadius: '24px',
                     overflow: 'hidden',
-                    border: '1px solid #e2e8f0',
+                    border: '1px solid #d3deea',
                     transition: '0.3s',
                     '&:hover': {
                       transform: 'translateY(-10px)',
                       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
-                      borderColor: '#3b82f6'
+                      borderColor: '#f39a1e'
                     }
                   }}
                 >
@@ -103,7 +103,7 @@ function DestinationsGridSection() {
                       width: '100%',
                       height: 280,
                       objectFit: 'cover',
-                      bgcolor: '#cbd5e1' // Placeholder color
+                      bgcolor: '#e0c8a8' // Placeholder color
                     }}
                   />
                   <Box sx={{ p: 4, textAlign: 'left' }}>
@@ -112,7 +112,7 @@ function DestinationsGridSection() {
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
                         fontSize: '1.5rem',
-                        color: '#0F172A',
+                        color: '#2b2b2b',
                         mb: 1.5
                       }}
                     >
@@ -121,7 +121,7 @@ function DestinationsGridSection() {
                     <Typography
                       sx={{
                         fontFamily: '"Plus Jakarta Sans", sans-serif',
-                        color: '#64748b',
+                        color: '#5b5b5b',
                         fontSize: '0.95rem',
                         lineHeight: 1.6,
                         mb: 4,
@@ -139,12 +139,12 @@ function DestinationsGridSection() {
                         textTransform: 'none',
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
-                        borderColor: '#0F172A',
-                        color: '#0F172A',
+                        borderColor: '#2b2b2b',
+                        color: '#2b2b2b',
                         '&:hover': {
-                          borderColor: '#3b82f6',
-                          bgcolor: '#eff6ff',
-                          color: '#3b82f6'
+                          borderColor: '#f39a1e',
+                          bgcolor: '#fdebd2',
+                          color: '#f39a1e'
                         }
                       }}
                     >
@@ -162,3 +162,5 @@ function DestinationsGridSection() {
 }
 
 export default DestinationsGridSection
+
+

@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+﻿import { Box, Container, Typography } from '@mui/material'
 import CustomButton from '../common/CustomButton'
 import MotionSection from './MotionSection'
 
@@ -15,7 +15,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
       <MotionSection delay={100}>
         <Box
           sx={{
-            bgcolor: '#141414',
+            bgcolor: '#fea116',
             borderRadius: '32px',
             py: { xs: 8, md: 10 },
             px: { xs: 3, md: 6 },
@@ -31,8 +31,8 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
           <Box>
             <Typography
               sx={{
-                fontFamily: '"Poppins", sans-serif',
-                fontWeight: 800,
+                fontFamily: '"Sora", sans-serif',
+                fontWeight: 700,
                 fontSize: { xs: '2.2rem', md: '3.5rem' },
                 lineHeight: 1.1,
                 mb: 2,
@@ -42,12 +42,12 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
             </Typography>
             <Typography
               sx={{
-                fontFamily: '"Plus Jakarta Sans", sans-serif',
+                fontFamily: '"Manrope", sans-serif',
                 fontSize: { xs: '1rem', md: '1.25rem' },
-                color: 'rgba(255, 255, 255, 0.7)',
+                color: 'rgba(255, 255, 255, 0.85)',
                 fontWeight: 400,
                 maxWidth: '700px',
-                mx: 'auto'
+                mx: 'auto',
               }}
             >
               {subtitle}
@@ -56,7 +56,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
 
           <CustomButton
             bgColor="#ffffff"
-            textColor="#141414"
+            textColor="#fea116"
             onClick={onAction}
             sx={{
               px: { xs: 4, md: 6 },
@@ -65,13 +65,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
               fontWeight: 700,
               borderRadius: '16px',
               textTransform: 'none',
-              '&:hover': {
-                bgcolor: 'transparent',
-                borderColor: '#ffffff',
-                color: '#ffffff',
-                transform: 'translateY(-3px)'
-              },
-              transition: '0.3s'
+              transition: '0.3s',
             }}
           >
             {buttonText}

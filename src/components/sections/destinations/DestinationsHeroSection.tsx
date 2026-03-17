@@ -1,11 +1,11 @@
-import { Box, Container, Typography } from '@mui/material'
+﻿import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function DestinationsHeroSection() {
   return (
     <Box
       sx={{
-        bgcolor: '#94a3b8',
+        bgcolor: '#ffb84d',
         minHeight: '60vh',
         display: 'flex',
         alignItems: 'center',
@@ -60,3 +60,5 @@ function DestinationsHeroSection() {
 }
 
 export default DestinationsHeroSection
+
+

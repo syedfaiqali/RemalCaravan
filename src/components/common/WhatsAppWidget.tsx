@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Box, IconButton, Tooltip, Zoom, Typography, Stack, keyframes } from '@mui/material'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 
@@ -56,7 +56,7 @@ function WhatsAppWidget() {
             borderRadius: '20px 20px 20px 4px',
             boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
             whiteSpace: 'nowrap',
-            border: '1px solid #e2e8f0',
+            border: '1px solid #d3deea',
             backdropFilter: 'blur(10px)',
             background: 'rgba(255, 255, 255, 0.9)',
             animation: `${float} 3s infinite ease-in-out`
@@ -78,7 +78,7 @@ function WhatsAppWidget() {
                   fontFamily: '"Plus Jakarta Sans", sans-serif', 
                   fontWeight: 800, 
                   fontSize: '0.9rem',
-                  color: '#0F172A',
+                  color: '#2b2b2b',
                   lineHeight: 1
                 }}
               >
@@ -88,7 +88,7 @@ function WhatsAppWidget() {
                 sx={{ 
                   fontFamily: '"Plus Jakarta Sans", sans-serif', 
                   fontSize: '0.8rem',
-                  color: '#64748b',
+                  color: '#5b5b5b',
                   mt: 0.5
                 }}
               >
@@ -128,3 +128,5 @@ function WhatsAppWidget() {
 }
 
 export default WhatsAppWidget
+
+

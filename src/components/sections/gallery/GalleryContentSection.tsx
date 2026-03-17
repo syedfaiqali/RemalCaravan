@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Box, Container, Grid, Typography, Stack, Chip } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import { galleryImages } from '../../../data/caravans'
@@ -34,7 +34,7 @@ function GalleryContentSection() {
   ]
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#f8fafc' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         {/* Categories Section */}
         <MotionSection delay={100}>
@@ -57,11 +57,11 @@ function GalleryContentSection() {
                   fontSize: '0.95rem',
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontWeight: 600,
-                  bgcolor: activeCategory === cat ? '#0F172A' : '#eff6ff',
-                  color: activeCategory === cat ? '#fff' : '#64748b',
+                  bgcolor: activeCategory === cat ? '#2b2b2b' : '#fdebd2',
+                  color: activeCategory === cat ? '#fff' : '#5b5b5b',
                   border: 'none',
                   '&:hover': {
-                    bgcolor: activeCategory === cat ? '#0F172A' : '#e0e7ff',
+                    bgcolor: activeCategory === cat ? '#2b2b2b' : '#e0e7ff',
                   },
                   transition: '0.3s'
                 }}
@@ -77,7 +77,7 @@ function GalleryContentSection() {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2rem', md: '2.5rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               textAlign: 'center',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
@@ -109,7 +109,7 @@ function GalleryContentSection() {
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
                         fontSize: '1.5rem',
-                        color: '#0F172A',
+                        color: '#2b2b2b',
                         mb: 1
                       }}
                     >
@@ -118,7 +118,7 @@ function GalleryContentSection() {
                     <Typography
                       sx={{
                         fontFamily: '"Plus Jakarta Sans", sans-serif',
-                        color: '#64748b',
+                        color: '#5b5b5b',
                         fontSize: '1rem'
                       }}
                     >
@@ -138,7 +138,7 @@ function GalleryContentSection() {
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
               fontSize: { xs: '2rem', md: '2.5rem' },
-              color: '#0F172A',
+              color: '#2b2b2b',
               textAlign: 'center',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
@@ -179,3 +179,5 @@ function GalleryContentSection() {
 }
 
 export default GalleryContentSection
+
+
