@@ -11,7 +11,7 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
   // To match screenshot exactly, we could mock the labels, 
   // but we'll map the actual data with specific variants
   return (
-    <Box sx={{ py: 10, bgcolor: '#ffffff' }}>
+    <Box sx={{ py: 10, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography
@@ -44,7 +44,7 @@ function RecommendedCaravansSection({ caravans, onBookNow }: RecommendedCaravans
             // but for now using the passed data structure
             const mockupTitles = ['RV Model E', 'RV Model F', 'RV Model G', 'RV Model H']
             const mockupDesc = ['Premium Explorer', 'Compact Travel', 'Offroad Special', 'Luxury Liner']
-            
+
             return (
               <Grid key={caravan.id} size={{ xs: 12, sm: 6, md: 3 }}>
                 <CustomCard

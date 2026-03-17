@@ -33,7 +33,7 @@ function ExperienceBannerSection({ image, onBook, onLearnMore }: ExperienceBanne
           </Typography>
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.3}>
             <CustomButton onClick={onBook}>Book Your Caravan</CustomButton>
-            <CustomButton color="primary" variant="outlined" onClick={onLearnMore}>
+            <CustomButton variant="outlined" onClick={onLearnMore}>
               Learn More
             </CustomButton>
           </Stack>

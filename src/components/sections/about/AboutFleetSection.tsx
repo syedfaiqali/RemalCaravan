@@ -35,13 +35,13 @@ function AboutFleetSection() {
   }
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff' }}>
+    <Box sx={{ py: { xs: 10, md: 15 }, bgcolor: '#fff9f3' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <MotionSection delay={100}>
-          <Stack 
-            direction={{ xs: 'column', sm: 'row' }} 
-            justifyContent="space-between" 
-            alignItems={{ xs: 'flex-start', sm: 'flex-end' }} 
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            justifyContent="space-between"
+            alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
             spacing={2}
             sx={{ mb: 8 }}
           >

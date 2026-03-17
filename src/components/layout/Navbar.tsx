@@ -24,7 +24,7 @@ function Navbar() {
   }
 
   const drawer = (
-    <Box sx={{ p: 3, height: '100%', bgcolor: '#fff' }}>
+    <Box sx={{ p: 3, height: '100%', bgcolor: '#fff9f3' }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 4 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
           <Box sx={{ width: 32, height: 32, borderRadius: '50%', bgcolor: 'primary.main', display: 'grid', placeItems: 'center', color: '#fff' }}>
@@ -40,35 +40,32 @@ function Navbar() {
       </Stack>
       <List sx={{ pt: 0 }}>
         {navItems.map((item) => (
-          <ListItem 
-            key={item.path} 
-            component={RouterLink} 
-            to={item.path} 
+          <ListItem
+            key={item.path}
+            component={RouterLink}
+            to={item.path}
             onClick={handleDrawerToggle}
-            sx={{ 
-              px: 0, 
-              py: 2, 
+            sx={{
+              px: 0,
+              py: 2,
               color: location.pathname === item.path ? 'primary.main' : '#2b2b2b',
               borderBottom: '1px solid #f3e4d2'
             }}
           >
-            <ListItemText 
-              primary={item.label} 
-              primaryTypographyProps={{ 
-                fontFamily: '"Plus Jakarta Sans", sans-serif', 
+            <ListItemText
+              primary={item.label}
+              primaryTypographyProps={{
+                fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontWeight: 700,
                 fontSize: '1.2rem'
-              }} 
+              }}
             />
           </ListItem>
         ))}
       </List>
       <Stack spacing={2} sx={{ mt: 4 }}>
-        <CustomButton fullWidth bgColor="#f3e4d2" textColor="#2b2b2b">
-          RV on Rent in City
-        </CustomButton>
         <CustomButton fullWidth>
-          +91 XXX XXX XXXX
+          RV on Rent in City
         </CustomButton>
       </Stack>
     </Box>
@@ -82,7 +79,7 @@ function Navbar() {
       sx={{
         borderBottom: '1px solid rgba(0,0,0,0.04)',
         backdropFilter: 'blur(14px)',
-        background: 'rgba(255, 255, 255, 0.95)',
+        background: '#fff9f3',
         zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
@@ -98,7 +95,7 @@ function Navbar() {
                 bgcolor: 'primary.main',
                 display: 'grid',
                 placeItems: 'center',
-                color: '#fff',
+                color: '#fff9f3',
                 boxShadow: '0 8px 20px rgba(25,118,210,0.28)',
               }}
             >
@@ -163,11 +160,8 @@ function Navbar() {
           {/* Destkop CTA / Mobile Toggle */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Box sx={{ display: { xs: 'none', xl: 'flex' }, alignItems: 'center', gap: 2 }}>
-              <CustomButton bgColor="#f3e4d2" textColor="#2b2b2b" sx={{ px: 3, fontWeight: 600 }}>
-                RV on Rent in City
-              </CustomButton>
               <CustomButton sx={{ px: 3, fontWeight: 600 }}>
-                +91 XXX XXX XXXX
+                RV on Rent in City
               </CustomButton>
             </Box>
             <IconButton

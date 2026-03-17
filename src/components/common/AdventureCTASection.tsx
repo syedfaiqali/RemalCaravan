@@ -33,6 +33,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
               sx={{
                 fontFamily: '"Sora", sans-serif',
                 fontWeight: 700,
+                color: '#ffffff',
                 fontSize: { xs: '2.2rem', md: '3.5rem' },
                 lineHeight: 1.1,
                 mb: 2,
@@ -55,9 +56,11 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
           </Box>
 
           <CustomButton
-            bgColor="#ffffff"
-            textColor="#fea116"
+            bgColor="#f3e4d2"
+            textColor="#2b2b2b"
             onClick={onAction}
+            hovercolor="#f3e4c6"
+            hoverTextcolor='#000'
             sx={{
               px: { xs: 4, md: 6 },
               py: 2,

@@ -3,9 +3,11 @@
 interface CustomButtonProps extends ButtonProps {
   bgColor?: string
   textColor?: string
+  hovercolor?: string
+  hoverTextcolor?: string
 }
 
-function CustomButton({ bgColor, textColor, sx, ...props }: CustomButtonProps) {
+function CustomButton({ bgColor, textColor, hovercolor, hoverTextcolor, sx, ...props }: CustomButtonProps) {
   const isLightBg = bgColor === '#FFFFFF' || bgColor === '#f3e4d2' || bgColor === 'white'
 
   return (
@@ -25,8 +27,8 @@ function CustomButton({ bgColor, textColor, sx, ...props }: CustomButtonProps) {
         border: isLightBg ? '1.5px solid #fea116' : '1.5px solid transparent', // Prevent jumping on hover
         transition: 'all 0.25s ease-in-out',
         '&:hover': {
-          backgroundColor: '#f29407',
-          color: '#FFFFFF',
+          backgroundColor: hovercolor || '#f29407',
+          color: hoverTextcolor || '#FFFFFF',
           borderColor: '#f29407',
           boxShadow: 'none',
           opacity: 1,

@@ -1,4 +1,5 @@
-﻿import { Box, Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Stack, Typography } from '@mui/material'
+import heroImage from '../../../assets/busimage2.jpeg'
 import CustomButton from '../../common/CustomButton'
 
 interface HomeHeroSectionProps {
@@ -10,24 +11,30 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
     <Box
       sx={{
         py: { xs: 8, md: 15 },
-        bgcolor: '#fff9f3',
-        backgroundImage: 'none',
+        px: { xs: 2, md: 3 },
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundImage: `linear-gradient(180deg, rgba(14, 14, 14, 0.68) 0%, rgba(14, 14, 14, 0.58) 45%, rgba(14, 14, 14, 0.7) 100%), url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         textAlign: 'center',
       }}
     >
-      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
+      <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 }, position: 'relative', zIndex: 1 }}>
         <Typography
           variant="h1"
           sx={{
             maxWidth: 1000,
             mx: 'auto',
             mb: 6,
-            color: '#2b2b2b',
+            color: '#ffffff',
             fontWeight: 800,
             fontSize: { xs: '2rem', md: '4.7rem' },
             fontFamily: '"Poppins", sans-serif',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
+            textShadow: '0 10px 30px rgba(0, 0, 0, 0.28)',
           }}
         >
           Explore an unforgettable ride in Motor Home (RV)
@@ -38,9 +45,10 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             sx={{
               fontSize: { xs: '1rem', md: '1.6rem' },
               fontWeight: 400,
-              color: '#5b5b5b',
+              color: 'rgba(255, 255, 255, 0.92)',
               fontFamily: '"Plus Jakarta Sans", sans-serif',
-              mb: 1.5
+              mb: 1.5,
+              textShadow: '0 6px 18px rgba(0, 0, 0, 0.24)',
             }}
           >
             Make Tour & Explore Incredible Destinations With RV/Caravan
@@ -49,8 +57,9 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             sx={{
               fontSize: { xs: '1.1rem', md: '1.6rem' },
               fontWeight: 400,
-              color: '#5b5b5b',
+              color: 'rgba(255, 255, 255, 0.92)',
               fontFamily: '"Plus Jakarta Sans", sans-serif',
+              textShadow: '0 6px 18px rgba(0, 0, 0, 0.24)',
             }}
           >
             Fully equipped vehicles for comfortable road trips.
@@ -76,7 +85,3 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
 }
 
 export default HomeHeroSection
-
-
-
-

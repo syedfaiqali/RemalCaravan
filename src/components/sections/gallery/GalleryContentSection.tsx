@@ -57,11 +57,11 @@ function GalleryContentSection() {
                   fontSize: '0.95rem',
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontWeight: 600,
-                  bgcolor: activeCategory === cat ? '#2b2b2b' : '#fdebd2',
+                  bgcolor: activeCategory === cat ? '#fea116' : '#fdebd2',
                   color: activeCategory === cat ? '#fff' : '#5b5b5b',
                   border: 'none',
                   '&:hover': {
-                    bgcolor: activeCategory === cat ? '#2b2b2b' : '#e0e7ff',
+                    bgcolor: activeCategory === cat ? '#fea116' : '#e0e7ff',
                   },
                   transition: '0.3s'
                 }}

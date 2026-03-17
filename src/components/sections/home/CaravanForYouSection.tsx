@@ -15,7 +15,7 @@ function CaravanForYouSection({ image, onLearnMore }: CaravanForYouSectionProps)
   ]
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#ffffff' }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff9f3f' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         <Grid container spacing={8} alignItems="center">
           <Grid size={{ xs: 12, md: 6 }}>

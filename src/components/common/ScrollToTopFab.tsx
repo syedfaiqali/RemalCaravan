@@ -29,6 +29,8 @@ function ScrollToTopFab() {
           right: { xs: 16, md: 24 },
           bottom: { xs: 84, md: 92 },
           zIndex: 1399,
+          color: '#fff',
+          borderRadius: '25%',
           boxShadow: '0 10px 28px rgba(25,118,210,0.32)',
         }}
       >

@@ -109,6 +109,8 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
                       pb: 0.5,
                       '&:hover': {
                         opacity: 1,
+                        color: '#f39a1e',
+                        borderBottom: '2px solid #f39a1e',
                       }
                     }}
                   >
