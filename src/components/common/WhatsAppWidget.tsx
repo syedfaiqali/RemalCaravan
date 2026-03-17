@@ -1,6 +1,7 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Box, IconButton, Tooltip, Zoom, Typography, Stack, keyframes } from '@mui/material'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import CallIcon from '@mui/icons-material/Call'
 
 const pulse = keyframes`
   0% {
@@ -28,6 +29,7 @@ function WhatsAppWidget() {
   const whatsappNumber = "+971500000000" // Placeholder for UAE number
   const message = "Hi Remal Caravan! I'm interested in renting an RV."
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
+  const phoneUrl = `tel:${whatsappNumber}`
 
   useEffect(() => {
     // Show tooltop after 3 seconds to grab attention
@@ -99,30 +101,54 @@ function WhatsAppWidget() {
         </Box>
       </Zoom>
 
-      <Tooltip title="Chat on WhatsApp" placement="right" arrow>
-        <IconButton
-          component="a"
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{
-            width: { xs: 60, md: 70 },
-            height: { xs: 60, md: 70 },
-            bgcolor: '#25D366',
-            color: '#fff',
-            boxShadow: '0 12px 24px rgba(37, 211, 102, 0.35)',
-            animation: `${pulse} 2s infinite ease-out`,
-            transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-            '&:hover': {
-              bgcolor: '#128C7E',
-              transform: 'scale(1.1) rotate(10deg)',
-              boxShadow: '0 15px 32px rgba(37, 211, 102, 0.45)',
-            },
-          }}
-        >
-          <WhatsAppIcon sx={{ fontSize: { xs: 30, md: 38 } }} />
-        </IconButton>
-      </Tooltip>
+      <Stack spacing={2}>
+        <Tooltip title="Chat on WhatsApp" placement="right" arrow>
+          <IconButton
+            component="a"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              width: { xs: 60, md: 70 },
+              height: { xs: 60, md: 70 },
+              bgcolor: '#25D366',
+              color: '#fff',
+              boxShadow: '0 12px 24px rgba(37, 211, 102, 0.35)',
+              animation: `${pulse} 2s infinite ease-out`,
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              '&:hover': {
+                bgcolor: '#128C7E',
+                transform: 'scale(1.1) rotate(10deg)',
+                boxShadow: '0 15px 32px rgba(37, 211, 102, 0.45)',
+              },
+            }}
+          >
+            <WhatsAppIcon sx={{ fontSize: { xs: 30, md: 38 } }} />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Call Us" placement="right" arrow>
+          <IconButton
+            component="a"
+            href={phoneUrl}
+            sx={{
+              width: { xs: 60, md: 70 },
+              height: { xs: 60, md: 70 },
+              bgcolor: '#f39a1e',
+              color: '#fff',
+              boxShadow: '0 12px 24px rgba(243, 154, 30, 0.35)',
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              '&:hover': {
+                bgcolor: '#e08a0d',
+                transform: 'scale(1.1) rotate(-10deg)',
+                boxShadow: '0 15px 32px rgba(243, 154, 30, 0.45)',
+              },
+            }}
+          >
+            <CallIcon sx={{ fontSize: { xs: 30, md: 38 } }} />
+          </IconButton>
+        </Tooltip>
+      </Stack>
     </Box>
   )
 }
