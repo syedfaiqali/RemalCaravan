@@ -1,11 +1,11 @@
-import image1s from '../assets/1s.jpg'
 import image2s from '../assets/2s.jpg'
-import image3s from '../assets/3s.jpg'
-import image4s from '../assets/4s.jpg'
-import image5s from '../assets/5s.jpg'
 import image6s from '../assets/6s.jpg'
 import image7s from '../assets/7s.jpg'
 import image8s from '../assets/8s.jpg'
+import jebelHafeetImg from '../assets/jebel_hafeet.png'
+import liwaDesertImg from '../assets/liwa_desert.png'
+import hattaMountainsImg from '../assets/hatta_mountains.png'
+import alQudraLakesImg from '../assets/al_qudra_lakes.png'
 
 export interface Destination {
   id: string
@@ -20,7 +20,7 @@ export const destinations: Destination[] = [
     id: 'jebel-hafeet',
     title: 'Jebel Hafeet',
     description: 'Experience the crisp mountain air and panoramic views of the high altitude retreats in Al Ain.',
-    image: image1s,
+    image: jebelHafeetImg,
     category: 'Mountains'
   },
   {
@@ -34,21 +34,21 @@ export const destinations: Destination[] = [
     id: 'liwa-desert',
     title: 'Liwa Desert',
     description: 'Discover the stark beauty of the dunes and camp under a canopy of endless stars in the Empty Quarter.',
-    image: image3s,
+    image: liwaDesertImg,
     category: 'Desert'
   },
   {
     id: 'hatta-mountains',
     title: 'Hatta Mountains',
     description: 'For the bold explorers seeking steep climbs and high-altitude base camps with stunning turquoise pools.',
-    image: image4s,
+    image: hattaMountainsImg,
     category: 'Mountains'
   },
   {
     id: 'al-qudra-lakes',
     title: 'Al Qudra Lakes',
     description: 'Peaceful mornings and bird watching right outside your RV door at the lake\'s edge in the heart of the desert.',
-    image: image5s,
+    image: alQudraLakesImg,
     category: 'Lakes'
   },
   {

@@ -1,13 +1,17 @@
 import { Box, Container, Grid, Typography, Button, Stack, Chip } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MotionSection from '../../common/MotionSection'
+import jebelHafeet from '../../../assets/jebel_hafeet.png'
+import liwaDesert from '../../../assets/liwa_desert.png'
+import hattaMountains from '../../../assets/hatta_mountains.png'
+import alQudraLakes from '../../../assets/al_qudra_lakes.png'
 
 function RecommendedTripsSection() {
   const trips = [
-    { title: 'Jebel Hafeet', description: 'Scenic mountain drive with sunset views over Al Ain.', days: '2 Days', image: 'https://images.unsplash.com/photo-1582234033056-34a0eb5eeb43' },
-    { title: 'Liwa Desert', description: 'Stunning dunes and starry nights in the Empty Quarter.', days: '3 Days', image: 'https://images.unsplash.com/photo-1542401886-65d6c60db275' },
-    { title: 'Hatta Lake', description: 'Adventure and calm waters in the Hajar Mountains.', days: '2 Days', image: 'https://images.unsplash.com/photo-1707343843437-caacff5cfa74' },
-    { title: 'Al Qudra', description: 'Desert lakes, wildlife, and perfect camping spots.', days: '1 Day', image: 'https://images.unsplash.com/photo-1551882547-ff43c6146c85' },
+    { title: 'Jebel Hafeet', description: 'Scenic mountain drive with sunset views over Al Ain.', days: '2 Days', image: jebelHafeet },
+    { title: 'Liwa Desert', description: 'Stunning dunes and starry nights in the Empty Quarter.', days: '3 Days', image: liwaDesert },
+    { title: 'Hatta Lake', description: 'Adventure and calm waters in the Hajar Mountains.', days: '2 Days', image: hattaMountains },
+    { title: 'Al Qudra', description: 'Desert lakes, wildlife, and perfect camping spots.', days: '1 Day', image: alQudraLakes },
   ]
 
   return (

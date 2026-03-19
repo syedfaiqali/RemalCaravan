@@ -11,6 +11,10 @@ import image1b from '../assets/1b.jpg'
 import image2b from '../assets/2b.jpg'
 import image3b from '../assets/3b.jpg'
 import image4b from '../assets/4b.jpg'
+import jebelHafeet from '../assets/jebel_hafeet.png'
+import liwaDesert from '../assets/liwa_desert.png'
+import hattaMountains from '../assets/hatta_mountains.png'
+import alQudraLakes from '../assets/al_qudra_lakes.png'
 
 export interface DestinationItem {
   name: string
@@ -20,10 +24,10 @@ export interface DestinationItem {
 export const caravanForYouImages = [image1b, image2b]
 
 export const recommendedDestinations: DestinationItem[] = [
-  { name: 'Jebel Hafeet', image: image4s },
-  { name: 'Liwa Desert', image: image3s },
-  { name: 'Hatta Mountains', image: image2s },
-  { name: 'Al Qudra Lakes', image: image1s },
+  { name: 'Jebel Hafeet', image: jebelHafeet },
+  { name: 'Liwa Desert', image: liwaDesert },
+  { name: 'Hatta Mountains', image: hattaMountains },
+  { name: 'Al Qudra Lakes', image: alQudraLakes },
   { name: 'Saadiyat Beach', image: image5s },
   { name: 'Dubai Marina', image: image6s },
 ]
