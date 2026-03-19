@@ -20,19 +20,19 @@ export interface DestinationItem {
 export const caravanForYouImages = [image1b, image2b]
 
 export const recommendedDestinations: DestinationItem[] = [
-  { name: 'Hunza Valley', image: image4s },
-  { name: 'Skardu', image: image3s },
-  { name: 'Swat Valley', image: image2s },
-  { name: 'Neelum Valley', image: image1s },
-  { name: 'Lahore', image: image5s },
-  { name: 'Fairy Meadows', image: image6s },
+  { name: 'Jebel Hafeet', image: image4s },
+  { name: 'Liwa Desert', image: image3s },
+  { name: 'Hatta Mountains', image: image2s },
+  { name: 'Al Qudra Lakes', image: image1s },
+  { name: 'Saadiyat Beach', image: image5s },
+  { name: 'Dubai Marina', image: image6s },
 ]
 
 export const popularDestinations: DestinationItem[] = [
-  { name: 'Hill Station', image: image1s },
-  { name: 'Beach Side', image: image2s },
-  { name: 'Desert Safari', image: image3s },
-  { name: 'Forest Trail', image: image4s },
+  { name: 'Jebel Jais', image: image1s },
+  { name: 'Abu Dhabi Corniche', image: image2s },
+  { name: 'Rub Al Khali', image: image3s },
+  { name: 'Mleiha Desert', image: image4s },
 ]
 
 export const aboutPreviewImages = {

@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Box } from '@mui/material'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -22,25 +22,15 @@ function App() {
       <ScrollToTopOnRoute />
       <Navbar />
       <Box key={location.pathname} component="main" sx={{ flexGrow: 1 }}>
-        <Suspense fallback={loader}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/fleet" element={<FleetPage />} />
-            <Route path="/gallery" element={<GalleryPage />} />
-            <Route path="/destinations" element={<DestinationsPage />} />
-            <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            {/* <Route
-              path="/booking"
-              element={
-                <BookingGuard>
-                  <BookingPage />
-                </BookingGuard>
-              }
-            /> */}
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/fleet" element={<FleetPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
       </Box>
       <Footer />
       <ScrollToTopFab />

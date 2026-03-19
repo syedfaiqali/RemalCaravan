@@ -38,7 +38,7 @@ export const featuredCaravans: CaravanItem[] = [
     description: 'Stylish interior with lounge seating and practical kitchen setup.',
     image: image1b,
     gallery: [image1b, image1s, image2s, image3s],
-    pricePerDay: 'PKR 18,000/day',
+    pricePerDay: 'AED 1,200/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Automatic', 'Kitchenette', 'AC'],
     specs: [
@@ -56,7 +56,7 @@ export const featuredCaravans: CaravanItem[] = [
     description: 'Balanced comfort and mobility for long roads and short escapes.',
     image: image2b,
     gallery: [image2b, image4s, image5s, image6s],
-    pricePerDay: 'PKR 22,000/day',
+    pricePerDay: 'AED 1,500/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Family Friendly', 'Rear Camera', 'AC'],
     specs: [
@@ -74,7 +74,7 @@ export const featuredCaravans: CaravanItem[] = [
     description: 'Premium fit-out with expanded storage and upgraded amenities.',
     image: image3b,
     gallery: [image3b, image7s, image8s, image9s],
-    pricePerDay: 'PKR 28,000/day',
+    pricePerDay: 'AED 1,800/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Premium Interior', 'Large Storage', 'AC'],
     specs: [
@@ -92,7 +92,7 @@ export const featuredCaravans: CaravanItem[] = [
     description: 'Premium fit-out with expanded storage and upgraded amenities.',
     image: image3b,
     gallery: [image3b, image7s, image8s, image9s],
-    pricePerDay: 'PKR 28,000/day',
+    pricePerDay: 'AED 1,800/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Premium Interior', 'Large Storage', 'AC'],
     specs: [
@@ -114,7 +114,7 @@ export const premiumCaravans: CaravanItem[] = [
     description: 'Ideal for bigger groups with improved sleeping and dining space.',
     image: image4b,
     gallery: [image4b, image10s, image4s, image2s],
-    pricePerDay: 'PKR 33,000/day',
+    pricePerDay: 'AED 2,200/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['6 Berths', 'Dining Booth', 'USB Ports'],
     specs: [
@@ -132,7 +132,7 @@ export const premiumCaravans: CaravanItem[] = [
     description: 'Flagship experience with refined design and premium finishes.',
     image: image5b,
     gallery: [image5b, image1s, image6s, image10s],
-    pricePerDay: 'PKR 39,000/day',
+    pricePerDay: 'AED 2,800/day',
     sleeps: 'Sleeps 7',
     quickSpecs: ['Luxury Line', 'Smart TV', 'Shower Cabin'],
     specs: [

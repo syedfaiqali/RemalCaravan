@@ -16,7 +16,7 @@ interface ContactEnquirySectionProps { }
 function ContactEnquirySection({ }: ContactEnquirySectionProps) {
   const selectedCaravanId = useAppSelector((state) => state.booking.selectedCaravan)
   const selectedCaravan = premiumCaravans.find(c => c.id === selectedCaravanId)
-  
+
   const detailItemStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -156,12 +156,12 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Subject</Typography>
-                <TextField 
-                  fullWidth 
-                  placeholder="Message subject" 
+                <TextField
+                  fullWidth
+                  placeholder="Message subject"
                   defaultValue={selectedCaravan ? `Booking Inquiry: ${selectedCaravan.title}` : ''}
-                  variant="outlined" 
-                  sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} 
+                  variant="outlined"
+                  sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }}
                 />
               </Grid>
               <Grid size={{ xs: 12 }}>
@@ -183,8 +183,6 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
                     fontSize: '1.1rem',
                     borderRadius: '14px',
                     textTransform: 'none',
-                    bgcolor: '#2b2b2b',
-                    '&:hover': { bgcolor: '#1e293b' }
                   }}
                 >
                   Send Message

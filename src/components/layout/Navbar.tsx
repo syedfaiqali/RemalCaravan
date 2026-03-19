@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -64,8 +64,8 @@ function Navbar() {
         ))}
       </List>
       <Stack spacing={2} sx={{ mt: 4 }}>
-        <CustomButton fullWidth>
-          RV on Rent in City
+        <CustomButton fullWidth onClick={() => navigate('/contact')}>
+          Book Now
         </CustomButton>
       </Stack>
     </Box>
@@ -157,11 +157,39 @@ function Navbar() {
             ))}
           </Box>
 
-          {/* Destkop CTA / Mobile Toggle */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Box sx={{ display: { xs: 'none', xl: 'flex' }, alignItems: 'center', gap: 2 }}>
-              <CustomButton sx={{ px: 3, fontWeight: 600 }}>
-                RV on Rent in City
+          {/* Desktop CTA / Mobile Toggle */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+            <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', gap: 3 }}>
+              <Box sx={{ textAlign: 'right' }}>
+                <Typography
+                  sx={{
+                    fontSize: '0.65rem',
+                    fontWeight: 700,
+                    color: '#5b5b5b',
+                    fontFamily: '"Poppins", sans-serif',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    mb: -0.2
+                  }}
+                >
+                  RV on Rent in City
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: '0.95rem',
+                    fontWeight: 800,
+                    color: '#f39a1e',
+                    fontFamily: '"Poppins", sans-serif',
+                  }}
+                >
+                  +91 XXX XXX XXXX
+                </Typography>
+              </Box>
+              <CustomButton
+                component={RouterLink}
+                to="/contact"
+              >
+                Book Now
               </CustomButton>
             </Box>
             <IconButton

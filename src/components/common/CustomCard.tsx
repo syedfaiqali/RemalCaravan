@@ -1,4 +1,4 @@
-﻿import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material'
 import CustomButton from './CustomButton'
 
 interface CustomCardProps {
@@ -119,7 +119,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
                   mb: 0.5,
                 }}
               >
-                â€¢ {spec}
+                - {spec}
               </Typography>
             ))}
           </Box>
