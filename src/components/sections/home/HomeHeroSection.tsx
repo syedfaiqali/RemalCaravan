@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from '@mui/material'
+﻿import { Box, Container, Stack, Typography } from '@mui/material'
 import heroImage from '../../../assets/busimage2.jpeg'
 import CustomButton from '../../common/CustomButton'
 
@@ -28,7 +28,7 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
             maxWidth: 1000,
             mx: 'auto',
             mb: 6,
-            color: '#ffffff',
+            color: '#f39a1e',
             fontWeight: 800,
             fontSize: { xs: '2rem', md: '4.7rem' },
             fontFamily: '"Poppins", sans-serif',

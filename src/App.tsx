@@ -1,25 +1,18 @@
-import { Suspense, lazy } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { Box, CircularProgress } from '@mui/material'
+import { useLocation } from 'react-router-dom'
+import { Box } from '@mui/material'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import WhatsAppWidget from './components/common/WhatsAppWidget'
 import ScrollToTopFab from './components/common/ScrollToTopFab'
 import ScrollToTopOnRoute from './components/common/ScrollToTopOnRoute'
 
-const HomePage = lazy(() => import('./pages/HomePage'))
-const ServicesPage = lazy(() => import('./pages/ServicesPage'))
-const GalleryPage = lazy(() => import('./pages/GalleryPage'))
-const DestinationsPage = lazy(() => import('./pages/DestinationsPage'))
-const AboutPage = lazy(() => import('./pages/AboutPage'))
-const ContactPage = lazy(() => import('./pages/ContactPage'))
-const CaravanDetailsPage = lazy(() => import('./pages/CaravanDetailsPage'))
-
-const loader = (
-  <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-    <CircularProgress />
-  </Box>
-)
+import HomePage from './pages/HomePage'
+import GalleryPage from './pages/GalleryPage'
+import DestinationsPage from './pages/DestinationsPage'
+import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
+import FleetPage from './pages/FleetPage'
+import CaravanDetailsPage from './pages/CaravanDetailsPage'
 
 function App() {
   const location = useLocation()
@@ -32,7 +25,7 @@ function App() {
         <Suspense fallback={loader}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/fleet" element={<FleetPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/destinations" element={<DestinationsPage />} />
             <Route path="/caravan/:id" element={<CaravanDetailsPage />} />

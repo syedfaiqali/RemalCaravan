@@ -1,21 +1,21 @@
 ﻿import { Box, Container, Typography, Button } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import MotionSection from '../../common/MotionSection'
+import heroImage from '../../../assets/busimage2.jpeg'
 
 function GalleryHeroSection() {
   return (
     <Box
       sx={{
-        bgcolor: '#ffb84d',
-        minHeight: '70vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-        pt: { xs: 15, md: 20 },
-        pb: { xs: 8, md: 12 },
+        py: { xs: 8, md: 15 },
+        px: { xs: 2, md: 3 },
         position: 'relative',
-        color: '#fff'
+        overflow: 'hidden',
+        backgroundImage: `linear-gradient(180deg, rgba(14, 14, 14, 0.68) 0%, rgba(14, 14, 14, 0.58) 45%, rgba(14, 14, 14, 0.7) 100%), url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        textAlign: 'center',
       }}
     >
       <Container maxWidth="lg">
@@ -24,6 +24,7 @@ function GalleryHeroSection() {
             sx={{
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 800,
+              color: '#f39a1e',
               fontSize: { xs: '3rem', md: '5rem' },
               lineHeight: 1.1,
               mb: 3,

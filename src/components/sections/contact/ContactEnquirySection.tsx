@@ -1,4 +1,4 @@
-﻿import { Box, Grid, Paper, Stack, TextField, Typography, IconButton } from '@mui/material'
+import { Box, Grid, Paper, Stack, TextField, Typography, IconButton } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -8,10 +8,15 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import CustomButton from '../../common/CustomButton'
 import MotionSection from '../../common/MotionSection'
+import { useAppSelector } from '../../../store/hooks'
+import { premiumCaravans } from '../../../data/caravans'
 
-interface ContactEnquirySectionProps {}
+interface ContactEnquirySectionProps { }
 
-function ContactEnquirySection({}: ContactEnquirySectionProps) {
+function ContactEnquirySection({ }: ContactEnquirySectionProps) {
+  const selectedCaravanId = useAppSelector((state) => state.booking.selectedCaravan)
+  const selectedCaravan = premiumCaravans.find(c => c.id === selectedCaravanId)
+  
   const detailItemStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -151,7 +156,13 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Subject</Typography>
-                <TextField fullWidth placeholder="Message subject" variant="outlined" sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} />
+                <TextField 
+                  fullWidth 
+                  placeholder="Message subject" 
+                  defaultValue={selectedCaravan ? `Booking Inquiry: ${selectedCaravan.title}` : ''}
+                  variant="outlined" 
+                  sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} 
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Message</Typography>
@@ -165,11 +176,11 @@ function ContactEnquirySection({}: ContactEnquirySectionProps) {
                 />
               </Grid>
               <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
-                <CustomButton 
-                  fullWidth 
-                  sx={{ 
-                    py: 2, 
-                    fontSize: '1.1rem', 
+                <CustomButton
+                  fullWidth
+                  sx={{
+                    py: 2,
+                    fontSize: '1.1rem',
                     borderRadius: '14px',
                     textTransform: 'none',
                     bgcolor: '#2b2b2b',

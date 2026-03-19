@@ -1,4 +1,4 @@
-﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -8,7 +8,7 @@ import CustomButton from '../common/CustomButton'
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Our RV fleet', path: '/services' },
+  { label: 'Our RV fleet', path: '/fleet' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Our Destinations', path: '/destinations' },
   { label: 'Contact', path: '/contact' },
