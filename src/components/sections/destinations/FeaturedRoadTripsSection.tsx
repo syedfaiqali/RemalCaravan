@@ -1,11 +1,11 @@
-﻿import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function FeaturedRoadTripsSection() {
   const trips = [
-    { title: 'Mountain Escape', duration: '7 Days through the peaks', image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b' },
-    { title: 'Coastal Drive', duration: '10 Days ocean view journey', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e' },
-    { title: 'Desert Journey', duration: '5 Days golden sands trek', image: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35' },
+    { title: 'Jebel Jais Peak', duration: '3 Days mountain adventure', image: 'https://images.unsplash.com/photo-1582234033056-34a0eb5eeb43' },
+    { title: 'Dubai Coastline', duration: '5 Days luxury urban journey', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c' },
+    { title: 'Liwa Safari', duration: '4 Days deep desert trek', image: 'https://images.unsplash.com/photo-1542401886-65d6c60db275' },
   ]
 
   return (
