@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { toast } from 'sonner'
 import { Box, Grid, MenuItem, Paper, TextField, Typography } from '@mui/material'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import dayjs, { Dayjs } from 'dayjs'
@@ -40,7 +41,7 @@ function BookingForm() {
     setName('')
     setEmail('')
     setTravelers(2)
-    alert('Booking submitted successfully.')
+    toast.success('Booking submitted successfully.')
   }
 
   return (
