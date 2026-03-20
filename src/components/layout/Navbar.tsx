@@ -1,8 +1,8 @@
-﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
-import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled'
+import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+import RvHookupIcon from '@mui/icons-material/RvHookup'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import { Link as RouterLink, useLocation } from 'react-router-dom'
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import CustomButton from '../common/CustomButton'
 
@@ -18,7 +18,7 @@ const navItems = [
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
-
+  const navigate = useNavigate()
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
@@ -27,8 +27,8 @@ function Navbar() {
     <Box sx={{ p: 3, height: '100%', bgcolor: '#fff9f3' }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 4 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box sx={{ width: 32, height: 32, borderRadius: '50%', bgcolor: 'primary.main', display: 'grid', placeItems: 'center', color: '#fff' }}>
-            <DirectionsCarFilledIcon fontSize="small" />
+          <Box sx={{ width: 36, height: 36, borderRadius: '12px', bgcolor: '#f39a1e', display: 'grid', placeItems: 'center', color: '#fff' }}>
+            <RvHookupIcon fontSize="small" />
           </Box>
           <Typography sx={{ color: '#2b2b2b', fontWeight: 800, fontSize: '1.1rem', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
             Remal Caravan
@@ -91,15 +91,15 @@ function Navbar() {
               sx={{
                 width: { xs: 32, md: 36 },
                 height: { xs: 32, md: 36 },
-                borderRadius: '50%',
-                bgcolor: 'primary.main',
+                borderRadius: '12px',
+                bgcolor: '#f39a1e',
                 display: 'grid',
                 placeItems: 'center',
                 color: '#fff9f3',
-                boxShadow: '0 8px 20px rgba(25,118,210,0.28)',
+                boxShadow: '0 8px 16px rgba(243, 154, 30, 0.25)',
               }}
             >
-              <DirectionsCarFilledIcon fontSize="small" />
+              <RvHookupIcon fontSize="small" />
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
               <Typography
@@ -186,8 +186,7 @@ function Navbar() {
                 </Typography>
               </Box>
               <CustomButton
-                component={RouterLink}
-                to="/contact"
+                onClick={() => navigate('/contact')}
               >
                 Book Now
               </CustomButton>

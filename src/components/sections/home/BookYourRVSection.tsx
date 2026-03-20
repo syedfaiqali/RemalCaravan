@@ -2,8 +2,9 @@ import { Box, Container, Typography, TextField, MenuItem, Grid, Paper } from '@m
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-import dayjs from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 import CustomButton from '../../common/CustomButton'
+import { useState } from 'react'
 
 function BookYourRVSection() {
   const rvTypes = [
@@ -39,6 +40,65 @@ function BookYourRVSection() {
     },
   }
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    rvType: 'Luxury 4-berth',
+    pickupDate: dayjs() as Dayjs | null,
+    returnDate: dayjs().add(3, 'days') as Dayjs | null,
+    specialRequests: ''
+  })
+
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    phone: false
+  })
+
+  const validateEmail = (email: string) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  }
+
+  const handleInputChange = (field: string, value: any) => {
+    setFormData(prev => ({ ...prev, [field]: value }))
+    // Clear error
+    if (errors[field as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [field]: false }))
+    }
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const newErrors = {
+      name: !formData.name.trim(),
+      email: !formData.email.trim() || !validateEmail(formData.email),
+      phone: !formData.phone.trim()
+    }
+
+    setErrors(newErrors)
+
+    if (Object.values(newErrors).some(error => error)) {
+      return
+    }
+
+    alert('Booking request submitted successfully! We will contact you shortly.')
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      rvType: 'Luxury 4-berth',
+      pickupDate: dayjs(),
+      returnDate: dayjs().add(3, 'days'),
+      specialRequests: ''
+    })
+  }
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff9f3' }}>
@@ -71,6 +131,8 @@ function BookYourRVSection() {
 
           <Paper
             elevation={0}
+            component="form"
+            onSubmit={handleSubmit}
             sx={{
               p: { xs: 4, md: 8 },
               borderRadius: '24px',
@@ -82,27 +144,42 @@ function BookYourRVSection() {
             <Grid container spacing={4}>
               <Grid size={{ xs: 12, md: 6 }}>
                 <Typography sx={inputStyles['& .MuiInputLabel-root']}>Full Name</Typography>
-                <TextField 
-                  fullWidth 
-                  placeholder="John Doe" 
+                <TextField
+                  fullWidth
+                  name="name"
+                  value={formData.name}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
+                  error={errors.name}
+                  helperText={errors.name ? 'Name is required' : ''}
+                  placeholder="John Doe"
                   variant="outlined"
                   sx={inputStyles}
                 />
               </Grid>
               <Grid size={{ xs: 12, md: 6 }}>
                 <Typography sx={inputStyles['& .MuiInputLabel-root']}>Email Address</Typography>
-                <TextField 
-                  fullWidth 
-                  placeholder="john@example.com" 
+                <TextField
+                  fullWidth
+                  name="email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  error={errors.email}
+                  helperText={errors.email ? 'Valid email is required' : ''}
+                  placeholder="john@example.com"
                   variant="outlined"
                   sx={inputStyles}
                 />
               </Grid>
               <Grid size={{ xs: 12, md: 6 }}>
                 <Typography sx={inputStyles['& .MuiInputLabel-root']}>Phone Number</Typography>
-                <TextField 
-                  fullWidth 
-                  placeholder="+91 XXX XXX XXXX" 
+                <TextField
+                  fullWidth
+                  name="phone"
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  error={errors.phone}
+                  helperText={errors.phone ? 'Phone number is required' : ''}
+                  placeholder="+91 XXX XXX XXXX"
                   variant="outlined"
                   sx={inputStyles}
                 />
@@ -112,7 +189,9 @@ function BookYourRVSection() {
                 <TextField
                   select
                   fullWidth
-                  defaultValue="Luxury 4-berth"
+                  name="rvType"
+                  value={formData.rvType}
+                  onChange={(e) => handleInputChange('rvType', e.target.value)}
                   sx={inputStyles}
                 >
                   {rvTypes.map((option) => (
@@ -127,13 +206,12 @@ function BookYourRVSection() {
                 <DatePicker
                   sx={{ width: '100%', ...inputStyles }}
                   format="DD/MM/YYYY"
+                  value={formData.pickupDate}
+                  onChange={(date) => handleInputChange('pickupDate', date)}
                   slotProps={{
                     textField: {
                       fullWidth: true,
                       variant: 'outlined',
-                    },
-                    actionBar: {
-                      actions: ['today', 'clear'],
                     },
                   }}
                   minDate={dayjs()}
@@ -144,16 +222,15 @@ function BookYourRVSection() {
                 <DatePicker
                   sx={{ width: '100%', ...inputStyles }}
                   format="DD/MM/YYYY"
+                  value={formData.returnDate}
+                  onChange={(date) => handleInputChange('returnDate', date)}
                   slotProps={{
                     textField: {
                       fullWidth: true,
                       variant: 'outlined',
                     },
-                    actionBar: {
-                      actions: ['today', 'clear'],
-                    },
                   }}
-                  minDate={dayjs()}
+                  minDate={formData.pickupDate || dayjs()}
                 />
               </Grid>
               <Grid size={{ xs: 12 }}>
@@ -162,6 +239,9 @@ function BookYourRVSection() {
                   fullWidth
                   multiline
                   rows={4}
+                  name="specialRequests"
+                  value={formData.specialRequests}
+                  onChange={(e) => handleInputChange('specialRequests', e.target.value)}
                   placeholder="Tell us about any specific requirements or destinations..."
                   sx={inputStyles}
                 />
@@ -169,6 +249,7 @@ function BookYourRVSection() {
               <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
                 <CustomButton
                   fullWidth
+                  type="submit"
                   bgColor="#fea116"
                   textColor="#FFFFFF"
                   sx={{

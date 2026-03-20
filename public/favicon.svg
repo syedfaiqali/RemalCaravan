@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#f39a1e"/>
+  <g fill="white">
+    <!-- Body -->
+    <path d="M25 45h35v25h-35z" />
+    <path d="M60 55h15v15h-15z" />
+    <!-- Wheels -->
+    <circle cx="35" cy="73" r="5" />
+    <circle cx="55" cy="73" r="5" />
+    <!-- Arrows -->
+    <path d="M35 32h35 M70 32l-6-6 M70 32l-6 6" stroke="white" stroke-width="2" fill="none" />
+    <path d="M65 40h-35 M30 40l6-6 M30 40l6 6" stroke="white" stroke-width="2" fill="none" />
+  </g>
+</svg>

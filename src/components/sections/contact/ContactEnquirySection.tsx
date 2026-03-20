@@ -10,6 +10,7 @@ import CustomButton from '../../common/CustomButton'
 import MotionSection from '../../common/MotionSection'
 import { useAppSelector } from '../../../store/hooks'
 import { premiumCaravans } from '../../../data/caravans'
+import { useState } from 'react'
 
 interface ContactEnquirySectionProps { }
 
@@ -44,6 +45,61 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
     fontFamily: '"Plus Jakarta Sans", sans-serif',
     fontSize: '1rem',
     color: '#5b5b5b',
+  }
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: selectedCaravan ? `Booking Inquiry: ${selectedCaravan.title}` : '',
+    message: ''
+  })
+
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: false
+  })
+
+  const validateEmail = (email: string) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    // Clear error when user types
+    if (errors[name as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [name]: false }))
+    }
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const newErrors = {
+      name: !formData.name.trim(),
+      email: !formData.email.trim() || !validateEmail(formData.email),
+      message: !formData.message.trim()
+    }
+
+    setErrors(newErrors)
+
+    if (Object.values(newErrors).some(error => error)) {
+      return
+    }
+
+    alert('Message sent successfully! We will get back to you soon.')
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
   }
 
   return (
@@ -137,6 +193,8 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
         <MotionSection delay={400}>
           <Paper
             elevation={0}
+            component="form"
+            onSubmit={handleSubmit}
             sx={{
               p: { xs: 4, md: 6 },
               borderRadius: '24px',
@@ -148,18 +206,40 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
             <Grid container spacing={3}>
               <Grid size={{ xs: 12, sm: 6 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Name</Typography>
-                <TextField fullWidth placeholder="Your name" variant="outlined" sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} />
+                <TextField
+                  fullWidth
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  error={errors.name}
+                  helperText={errors.name ? 'Name is required' : ''}
+                  placeholder="Your name"
+                  variant="outlined"
+                  sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 6 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Email</Typography>
-                <TextField fullWidth placeholder="Your email" variant="outlined" sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }} />
+                <TextField
+                  fullWidth
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  error={errors.email}
+                  helperText={errors.email ? 'Valid email is required' : ''}
+                  placeholder="Your email"
+                  variant="outlined"
+                  sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }}
+                />
               </Grid>
               <Grid size={{ xs: 12 }}>
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Subject</Typography>
                 <TextField
                   fullWidth
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   placeholder="Message subject"
-                  defaultValue={selectedCaravan ? `Booking Inquiry: ${selectedCaravan.title}` : ''}
                   variant="outlined"
                   sx={{ '& .MuiOutlinedInput-root': { borderRadius: '12px' } }}
                 />
@@ -168,6 +248,11 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
                 <Typography sx={{ ...labelStyle, fontSize: '0.9rem', mb: 1.5 }}>Message</Typography>
                 <TextField
                   fullWidth
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  error={errors.message}
+                  helperText={errors.message ? 'Message is required' : ''}
                   multiline
                   rows={5}
                   placeholder="How can we help?"
@@ -178,6 +263,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
               <Grid size={{ xs: 12 }} sx={{ mt: 2 }}>
                 <CustomButton
                   fullWidth
+                  type="submit"
                   sx={{
                     py: 2,
                     fontSize: '1.1rem',
