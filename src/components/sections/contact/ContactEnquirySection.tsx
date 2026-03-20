@@ -11,6 +11,8 @@ import MotionSection from '../../common/MotionSection'
 import { useAppSelector } from '../../../store/hooks'
 import { premiumCaravans } from '../../../data/caravans'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast } from 'sonner'
 
 interface ContactEnquirySectionProps { }
 
@@ -60,6 +62,8 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
     message: false
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const validateEmail = (email: string) => {
     return String(email)
       .toLowerCase()
@@ -77,7 +81,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     const newErrors = {
@@ -92,14 +96,41 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
       return
     }
 
-    alert('Message sent successfully! We will get back to you soon.')
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+    setIsSubmitting(true)
+
+    // Updated with your real EmailJS IDs
+    const SERVICE_ID = "service_6l2k1k9";
+    const TEMPLATE_ID = "template_5jyv2h6"; // Reminder: Make sure this is your Contact Template ID!
+    const PUBLIC_KEY = "yFMFYlO4Y0j259hfO";
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: "Remal Caravan Admin",
+        },
+        PUBLIC_KEY
+      );
+      
+      toast.success('Message sent successfully! We will get back to you soon.')
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+    } catch (error) {
+      console.error('EmailJS error:', error)
+      toast.error('Something went wrong. Please try again later or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -264,6 +295,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
                 <CustomButton
                   fullWidth
                   type="submit"
+                  disabled={isSubmitting}
                   sx={{
                     py: 2,
                     fontSize: '1.1rem',
@@ -271,7 +303,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
                     textTransform: 'none',
                   }}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </CustomButton>
               </Grid>
             </Grid>

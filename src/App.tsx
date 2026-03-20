@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import WhatsAppWidget from './components/common/WhatsAppWidget'
 import ScrollToTopFab from './components/common/ScrollToTopFab'
 import ScrollToTopOnRoute from './components/common/ScrollToTopOnRoute'
+import { Toaster } from 'sonner'
 
 import HomePage from './pages/HomePage'
 import GalleryPage from './pages/GalleryPage'
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Toaster position="top-right" richColors />
       <ScrollToTopOnRoute />
       <Navbar />
       <Box key={location.pathname} component="main" sx={{ flexGrow: 1 }}>

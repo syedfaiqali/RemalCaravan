@@ -5,6 +5,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import dayjs, { Dayjs } from 'dayjs'
 import CustomButton from '../../common/CustomButton'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast } from 'sonner'
 
 function BookYourRVSection() {
   const rvTypes = [
@@ -56,6 +58,8 @@ function BookYourRVSection() {
     phone: false
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const validateEmail = (email: string) => {
     return String(email)
       .toLowerCase()
@@ -72,7 +76,7 @@ function BookYourRVSection() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     const newErrors = {
@@ -87,16 +91,46 @@ function BookYourRVSection() {
       return
     }
 
-    alert('Booking request submitted successfully! We will contact you shortly.')
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      rvType: 'Luxury 4-berth',
-      pickupDate: dayjs(),
-      returnDate: dayjs().add(3, 'days'),
-      specialRequests: ''
-    })
+    setIsSubmitting(true)
+
+    // Replace these placeholder IDs with your actual EmailJS ones
+    const SERVICE_ID = "service_6l2k1k9";
+    const TEMPLATE_ID = "template_5jyv2h6";
+    const PUBLIC_KEY = "yFMFYlO4Y0j259hfO";
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          rv_type: formData.rvType,
+          pickup_date: formData.pickupDate?.format('DD/MM/YYYY'),
+          return_date: formData.returnDate?.format('DD/MM/YYYY'),
+          special_requests: formData.specialRequests || 'None',
+          to_name: "Remal Caravan Admin",
+        },
+        PUBLIC_KEY
+      );
+
+      toast.success('Booking request submitted successfully! We will contact you shortly.')
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        rvType: 'Luxury 4-berth',
+        pickupDate: dayjs(),
+        returnDate: dayjs().add(3, 'days'),
+        specialRequests: ''
+      })
+    } catch (error) {
+      console.error('EmailJS booking error:', error)
+      toast.error('Something went wrong. Please try again later.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -250,6 +284,7 @@ function BookYourRVSection() {
                 <CustomButton
                   fullWidth
                   type="submit"
+                  disabled={isSubmitting}
                   bgColor="#fea116"
                   textColor="#FFFFFF"
                   sx={{
@@ -260,7 +295,7 @@ function BookYourRVSection() {
                     letterSpacing: '0.05em'
                   }}
                 >
-                  Submit Booking
+                  {isSubmitting ? 'Submitting...' : 'Submit Booking'}
                 </CustomButton>
               </Grid>
             </Grid>
@@ -272,7 +307,3 @@ function BookYourRVSection() {
 }
 
 export default BookYourRVSection
-
-
-
-
