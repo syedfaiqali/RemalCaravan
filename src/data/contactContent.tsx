@@ -2,8 +2,9 @@ import { ReactNode } from 'react'
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import NearMeIcon from '@mui/icons-material/NearMe'
-import image3b from '../assets/3b.jpg'
-import image4b from '../assets/4b.jpg'
+import image3b from '../assets/For Rent 2/1.jpg'
+import image4b from '../assets/For Rent 3/1.jpg'
+
 
 export interface ContactCardItem {
   icon: ReactNode

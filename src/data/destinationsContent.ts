@@ -1,7 +1,8 @@
-import image2s from '../assets/2s.jpg'
-import image6s from '../assets/6s.jpg'
-import image7s from '../assets/7s.jpg'
-import image8s from '../assets/8s.jpg'
+import image2s from '../assets/WhatsApp Image 2026-03-08 at 8.22.50 AM.jpeg'
+import image6s from '../assets/WhatsApp Image 2026-03-08 at 8.22.51 AM.jpeg'
+import image7s from '../assets/WhatsApp Image 2026-03-08 at 8.22.52 AM.jpeg'
+import image8s from '../assets/WhatsApp Image 2026-03-08 at 8.22.54 AM.jpeg'
+
 import jebelHafeetImg from '../assets/jebel_hafeet.png'
 import liwaDesertImg from '../assets/liwa_desert.png'
 import hattaMountainsImg from '../assets/hatta_mountains.png'

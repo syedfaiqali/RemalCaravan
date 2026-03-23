@@ -3,13 +3,14 @@ import PaymentsIcon from '@mui/icons-material/Payments'
 import GppGoodIcon from '@mui/icons-material/GppGood'
 import SupportAgentIcon from '@mui/icons-material/SupportAgent'
 import WalletIcon from '@mui/icons-material/Wallet'
-import image2b from '../assets/2b.jpg'
-import image3b from '../assets/3b.jpg'
-import image4b from '../assets/4b.jpg'
-import image5s from '../assets/5s.jpg'
-import image6s from '../assets/6s.jpg'
-import image7s from '../assets/7s.jpg'
-import image8s from '../assets/8s.jpg'
+import imageHero from '../assets/WhatsApp Image 2026-03-08 at 8.23.10 AM.jpeg'
+import liwaDesert from '../assets/liwa_desert.png'
+import alQudraLakes from '../assets/al_qudra_lakes.png'
+import hattaMountains from '../assets/hatta_mountains.png'
+import jebelHafeet from '../assets/jebel_hafeet.png'
+import busImage from '../assets/busimage2.jpeg'
+import whatsAppImageFooter from '../assets/WhatsApp Image 2026-03-08 at 8.23.33 AM.jpeg'
+
 
 export interface AboutHighlight {
   icon: ReactNode
@@ -17,7 +18,7 @@ export interface AboutHighlight {
   text: string
 }
 
-export const aboutHeroImage = image2b
+export const aboutHeroImage = imageHero
 
 export const aboutHighlights: AboutHighlight[] = [
   {
@@ -43,11 +44,11 @@ export const aboutHighlights: AboutHighlight[] = [
 ]
 
 export const aboutJourneyImages = {
-  large: image3b,
-  sideTop: image5s,
-  sideBottom: image6s,
-  bottomWide: image7s,
-  bottomTall: image8s,
+  large: liwaDesert,
+  sideTop: alQudraLakes,
+  sideBottom: hattaMountains,
+  bottomWide: jebelHafeet,
+  bottomTall: busImage,
 }
 
-export const aboutFooterImage = image4b
+export const aboutFooterImage = whatsAppImageFooter
