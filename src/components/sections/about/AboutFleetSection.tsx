@@ -1,29 +1,18 @@
-﻿import { Box, Container, Grid, Typography, Button, Stack } from '@mui/material'
+import { Box, Container, Grid, Typography, Button, Stack } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import KitchenIcon from '@mui/icons-material/Kitchen'
 import AcUnitIcon from '@mui/icons-material/AcUnit'
 import WifiIcon from '@mui/icons-material/Wifi'
 import TvIcon from '@mui/icons-material/Tv'
 import HotelIcon from '@mui/icons-material/Hotel'
+import { premiumCaravans } from '../../../data/caravans'
 
 function AboutFleetSection() {
-  const fleet = [
-    {
-      name: 'Explorer Elite',
-      image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop', // Placeholder
-      amenities: ['Fridge', 'AC', 'WiFi', 'TV', 'Sleeps 4'],
-    },
-    {
-      name: 'Nomad Van',
-      image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop', // Placeholder
-      amenities: ['Fridge', 'WiFi', 'Sleeps 2'],
-    },
-    {
-      name: 'Family Cruiser',
-      image: 'https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=800&auto=format&fit=crop', // Placeholder
-      amenities: ['Fridge', 'AC', 'WiFi', 'TV', 'Sleeps 6'],
-    }
-  ]
+  const fleet = premiumCaravans.map(c => ({
+    name: c.title,
+    image: c.image,
+    amenities: [...c.quickSpecs, c.sleeps]
+  }))
 
   const getIcon = (amenity: string) => {
     if (amenity.includes('Fridge')) return <KitchenIcon sx={{ fontSize: 18 }} />
