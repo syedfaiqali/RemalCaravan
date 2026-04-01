@@ -17,26 +17,26 @@ function DestinationsGridSection() {
         <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={3}
-          alignItems="center"
+          alignItems={{ xs: 'flex-start', md: 'center' }}
           sx={{ mb: 8 }}
         >
           <Typography
             sx={{
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 700,
-              fontSize: '1.25rem',
+              fontSize: { xs: '1.05rem', sm: '1.15rem', md: '1.25rem' },
               color: '#2b2b2b',
-              whiteSpace: 'nowrap'
+              whiteSpace: 'normal'
             }}
           >
             Filter Destinations:
           </Typography>
           <Stack
             direction="row"
-            spacing={1.5}
+            spacing={{ xs: 1, sm: 1.5 }}
             flexWrap="wrap"
             useFlexGap
-            justifyContent={{ xs: 'center', md: 'flex-start' }}
+            justifyContent={{ xs: 'flex-start', md: 'flex-start' }}
           >
             {destinationCategories.map((cat) => (
               <Chip
@@ -44,15 +44,25 @@ function DestinationsGridSection() {
                 label={cat}
                 onClick={() => setActiveCategory(cat)}
                 sx={{
-                  px: 1,
-                  py: 2.5,
-                  fontSize: '0.9rem',
+                  px: { xs: 0.75, sm: 1 },
+                  py: { xs: 2, sm: 2.25, md: 2.5 },
+                  minHeight: { xs: 40, sm: 44 },
+                  fontSize: { xs: '0.82rem', sm: '0.88rem', md: '0.9rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontWeight: 600,
-                  bgcolor: activeCategory === cat ? '#2b2b2b' : '#f3e4d2',
-                  color: activeCategory === cat ? '#fff' : '#5b5b5b',
+                  maxWidth: '100%',
+                  border: '1px solid',
+                  borderColor: activeCategory === cat ? '#fea116' : '#f3e4d2',
+                  '& .MuiChip-label': {
+                    px: { xs: 1.25, sm: 1.5 },
+                    whiteSpace: 'normal',
+                    textAlign: 'center',
+                  },
+                  bgcolor: activeCategory === cat ? '#fea116' : '#fff4e5',
+                  color: activeCategory === cat ? '#ffffff' : '#5b5b5b',
                   '&:hover': {
-                    bgcolor: activeCategory === cat ? '#2b2b2b' : '#d3deea',
+                    bgcolor: activeCategory === cat ? '#f29407' : '#fdebd2',
+                    borderColor: activeCategory === cat ? '#f29407' : '#fdebd2',
                   },
                   transition: '0.3s'
                 }}
@@ -135,12 +145,14 @@ function DestinationsGridSection() {
                       variant="outlined"
                       sx={{
                         borderRadius: '12px',
-                        py: 1.5,
+                        py: { xs: 1.25, sm: 1.5 },
+                        minHeight: { xs: 44, sm: 48 },
                         textTransform: 'none',
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 700,
-                        borderColor: '#2b2b2b',
-                        color: '#2b2b2b',
+                        fontSize: { xs: '0.92rem', sm: '0.98rem' },
+                        borderColor: '#fea116',
+                        color: '#fea116',
                         '&:hover': {
                           borderColor: '#f39a1e',
                           bgcolor: '#fdebd2',

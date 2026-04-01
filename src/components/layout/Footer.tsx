@@ -54,7 +54,7 @@ function Footer() {
     <Box
       component="footer"
       sx={{
-        minHeight: '100vh',
+        minHeight: { xs: 'auto', md: '100vh' },
         display: 'flex',
         flexDirection: 'column',
         pt: { xs: 10, md: 10 },
@@ -81,7 +81,7 @@ function Footer() {
     >
       <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <MotionSection delay={100}>
-          <Container maxWidth="xl" sx={{ px: { xs: 4, md: 10 } }}>
+          <Container maxWidth="xl" sx={{ px: { xs: 3, sm: 4, md: 10 } }}>
             <Grid container spacing={{ xs: 6, md: 10 }} alignItems="flex-start">
               {/* Brand Info */}
               <Grid size={{ xs: 12, md: 4 }}>
@@ -185,7 +185,7 @@ function Footer() {
 
       {/* Copyright Bar */}
       <MotionSection delay={200}>
-        <Container maxWidth="xl" sx={{ px: { xs: 4, md: 10 } }}>
+        <Container maxWidth="xl" sx={{ px: { xs: 3, sm: 4, md: 10 } }}>
           <Box
             sx={{
               mt: { xs: 8, md: 0 },

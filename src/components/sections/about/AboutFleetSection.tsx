@@ -60,12 +60,12 @@ function AboutFleetSection() {
               sx={{
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
-                color: '#2b2b2b',
+                color: '#fea116',
                 textTransform: 'none',
-                borderBottom: '2px solid #2b2b2b',
+                borderBottom: '2px solid #fea116',
                 borderRadius: 0,
                 pb: 0.5,
-                '&:hover': { bgcolor: 'transparent', color: '#f39a1e', borderColor: '#f39a1e' }
+                '&:hover': { bgcolor: 'transparent', color: '#f29407', borderColor: '#f29407' }
               }}
             >
               View All RVs
@@ -130,8 +130,8 @@ function AboutFleetSection() {
                         textTransform: 'none',
                         fontFamily: '"Poppins", sans-serif',
                         fontWeight: 600,
-                        borderColor: '#d3deea',
-                        color: '#2b2b2b',
+                        borderColor: '#fea116',
+                        color: '#fea116',
                         '&:hover': {
                           borderColor: '#f39a1e',
                           bgcolor: '#fdebd2',

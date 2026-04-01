@@ -108,15 +108,18 @@ function SupportWidget() {
           startIcon={<WhatsAppIcon />}
           sx={{
             borderRadius: 999,
-            px: { xs: 1.6, sm: 2.2 },
-            py: 1.1,
+            px: { xs: 1.35, sm: 2.2 },
+            py: { xs: 0.95, sm: 1.1 },
             color: '#fff',
             bgcolor: '#25d366',
-            fontSize: { xs: 16, sm: 20 },
+            minHeight: { xs: 42, sm: 48 },
+            fontSize: { xs: 14, sm: 18, md: 20 },
             maxWidth: '100%',
             textTransform: 'none',
             fontWeight: 600,
-            whiteSpace: 'nowrap',
+            whiteSpace: { xs: 'normal', sm: 'nowrap' },
+            textAlign: 'center',
+            lineHeight: 1.2,
             boxShadow: '0 12px 30px rgba(37,211,102,0.35)',
             '&:hover': { bgcolor: '#1fb75a' },
           }}

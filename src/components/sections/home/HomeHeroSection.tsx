@@ -70,9 +70,11 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
           <CustomButton
             onClick={onViewGallery}
             sx={{
-              px: 8,
-              py: 2.5,
-              fontSize: '1.25rem',
+              px: { xs: 4.5, sm: 5.5, md: 8 },
+              py: { xs: 1.5, sm: 1.8, md: 2.5 },
+              minHeight: { xs: 52, sm: 56, md: 64 },
+              fontSize: { xs: '0.95rem', sm: '1.05rem', md: '1.25rem' },
+              lineHeight: 1.15,
               bgcolor: '#fea116',
             }}
           >

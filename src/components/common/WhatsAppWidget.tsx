@@ -44,6 +44,7 @@ function WhatsAppWidget() {
         left: { xs: 24, md: 32 },
         bottom: { xs: 24, md: 32 },
         zIndex: 1400,
+        maxWidth: { xs: 'calc(100vw - 48px)', md: 'none' },
       }}
     >
       {/* Welcome Bubble */}
@@ -54,10 +55,13 @@ function WhatsAppWidget() {
             bottom: 'calc(100% + 15px)',
             left: 0,
             bgcolor: '#ffffff',
-            p: 2,
+            p: { xs: 1.5, sm: 2 },
             borderRadius: '20px 20px 20px 4px',
             boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
-            whiteSpace: 'nowrap',
+            width: { xs: 'min(240px, calc(100vw - 48px))', sm: 'max-content' },
+            maxWidth: 'calc(100vw - 48px)',
+            whiteSpace: 'normal',
+            wordBreak: 'break-word',
             border: '1px solid #d3deea',
             backdropFilter: 'blur(10px)',
             background: 'rgba(255, 255, 255, 0.9)',
@@ -79,7 +83,7 @@ function WhatsAppWidget() {
                 sx={{ 
                   fontFamily: '"Plus Jakarta Sans", sans-serif', 
                   fontWeight: 800, 
-                  fontSize: '0.9rem',
+                  fontSize: { xs: '0.82rem', sm: '0.9rem' },
                   color: '#2b2b2b',
                   lineHeight: 1
                 }}
@@ -89,7 +93,7 @@ function WhatsAppWidget() {
               <Typography 
                 sx={{ 
                   fontFamily: '"Plus Jakarta Sans", sans-serif', 
-                  fontSize: '0.8rem',
+                  fontSize: { xs: '0.75rem', sm: '0.8rem' },
                   color: '#5b5b5b',
                   mt: 0.5
                 }}

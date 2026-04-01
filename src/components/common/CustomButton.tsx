@@ -15,16 +15,18 @@ function CustomButton({ bgColor, textColor, hovercolor, hoverTextcolor, sx, ...p
       variant="contained"
       sx={{
         fontWeight: 700,
-        px: 3,
-        py: 1.2,
+        px: { xs: 2.25, sm: 2.75, md: 3 },
+        py: { xs: 1.1, sm: 1.2 },
+        minHeight: { xs: 44, sm: 48 },
         backgroundColor: bgColor || '#fea116',
         color: textColor || '#FFFFFF',
         fontFamily: '"Manrope", sans-serif',
-        borderRadius: '12px', // Explicit 12px for consistent moderate rounding
+        borderRadius: '12px',
         textTransform: 'none',
-        fontSize: '1rem',
+        fontSize: { xs: '0.95rem', sm: '1rem' },
+        lineHeight: 1.2,
         boxShadow: 'none',
-        border: isLightBg ? '1.5px solid #fea116' : '1.5px solid transparent', // Prevent jumping on hover
+        border: isLightBg ? '1.5px solid #fea116' : '1.5px solid transparent',
         transition: 'all 0.25s ease-in-out',
         '&:hover': {
           backgroundColor: hovercolor || '#f29407',

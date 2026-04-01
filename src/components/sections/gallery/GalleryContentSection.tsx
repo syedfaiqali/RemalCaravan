@@ -40,8 +40,8 @@ function GalleryContentSection() {
         <MotionSection delay={100}>
           <Stack
             direction="row"
-            spacing={1.5}
-            justifyContent="center"
+            spacing={{ xs: 1, sm: 1.5 }}
+            justifyContent={{ xs: 'flex-start', md: 'center' }}
             flexWrap="wrap"
             useFlexGap
             sx={{ mb: { xs: 6, md: 12 } }}
@@ -52,11 +52,18 @@ function GalleryContentSection() {
                 label={cat}
                 onClick={() => setActiveCategory(cat)}
                 sx={{
-                  px: 2,
-                  py: 3,
-                  fontSize: '0.95rem',
+                  px: { xs: 1, sm: 1.5, md: 2 },
+                  py: { xs: 2, sm: 2.4, md: 3 },
+                  minHeight: { xs: 40, sm: 44 },
+                  fontSize: { xs: '0.82rem', sm: '0.9rem', md: '0.95rem' },
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontWeight: 600,
+                  maxWidth: '100%',
+                  '& .MuiChip-label': {
+                    px: { xs: 1.25, sm: 1.5 },
+                    whiteSpace: 'normal',
+                    textAlign: 'center',
+                  },
                   bgcolor: activeCategory === cat ? '#fea116' : '#fdebd2',
                   color: activeCategory === cat ? '#fff' : '#5b5b5b',
                   border: 'none',

@@ -45,7 +45,7 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                 size="large"
                 endIcon={<ArrowForwardIcon />}
                 sx={{
-                  bgcolor: '#1e293b',
+                  bgcolor: '#fea116',
                   color: '#fff',
                   px: 4,
                   py: 2,
@@ -55,7 +55,7 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                   textTransform: 'none',
                   fontSize: '1.1rem',
                   '&:hover': {
-                    bgcolor: '#0f172a',
+                    bgcolor: '#f29407',
                     transform: 'translateY(-2px)',
                     boxShadow: '0 10px 20px -5px rgba(0,0,0,0.2)'
                   },

@@ -20,7 +20,7 @@ function FleetGridSection({ onBookNow }: FleetGridSectionProps) {
                 // No price as per user request
                 badge={caravan.sleeps}
                 specs={caravan.quickSpecs}
-                btnBgColor="#2b2b2b" // Premium dark button as in screenshot
+                btnBgColor="#fea116"
                 btnTextColor="#ffffff"
                 onBookNow={() => onBookNow(caravan.id)}
               />

@@ -24,13 +24,22 @@ function Navbar() {
   }
 
   const drawer = (
-    <Box sx={{ p: 3, height: '100%', bgcolor: '#fff9f3' }}>
-      <Stack direction="row" justifyContent="space-between" alignItems="center" sx={{ mb: 4 }}>
+    <Box sx={{ p: { xs: 2.5, sm: 3 }, height: '100%', bgcolor: '#fff9f3' }}>
+      <Stack
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        sx={{
+          mb: 3,
+          pb: 2,
+          borderBottom: '1px solid #f3e4d2',
+        }}
+      >
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
           <Box sx={{ width: 36, height: 36, borderRadius: '12px', bgcolor: '#f39a1e', display: 'grid', placeItems: 'center', color: '#fff' }}>
             <RvHookupIcon fontSize="small" />
           </Box>
-          <Typography sx={{ color: '#2b2b2b', fontWeight: 800, fontSize: '1.1rem', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+          <Typography sx={{ color: '#2b2b2b', fontWeight: 800, fontSize: { xs: '1rem', sm: '1.05rem' }, lineHeight: 1.05, fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
             Remal Caravan
           </Typography>
         </Box>
@@ -57,7 +66,8 @@ function Navbar() {
               primaryTypographyProps={{
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontWeight: 700,
-                fontSize: '1.2rem'
+                fontSize: { xs: '1rem', sm: '1.08rem' },
+                lineHeight: 1.3,
               }}
             />
           </ListItem>
@@ -77,14 +87,29 @@ function Navbar() {
       color="inherit"
       elevation={0}
       sx={{
+        borderRadius: { xs: 0, md: '0 0 28px 28px' },
         borderBottom: '1px solid rgba(0,0,0,0.04)',
         backdropFilter: 'blur(14px)',
         background: '#fff9f3',
+        backgroundImage: 'none',
         zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
-      <Container maxWidth="xl" sx={{ px: { xs: 2.5, md: 8 } }}>
-        <Toolbar disableGutters sx={{ py: { xs: 1.5, md: 2 }, justifyContent: 'space-between' }}>
+      <Container
+        maxWidth="xl"
+        sx={{
+          px: { xs: 0, md: 8 },
+        }}
+      >
+        <Toolbar
+          disableGutters
+          sx={{
+            py: { xs: 1.5, md: 2 },
+            px: { xs: 2.5, md: 0 },
+            justifyContent: 'space-between',
+            borderRadius: { xs: 0, md: '0 0 28px 28px' },
+          }}
+        >
           {/* Logo */}
           <Box component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 1.5, textDecoration: 'none' }}>
             <Box
@@ -213,7 +238,14 @@ function Navbar() {
         ModalProps={{ keepMounted: true }}
         sx={{
           display: { xs: 'block', lg: 'none' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: '100%', maxWidth: 350 },
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
+            width: '100%',
+            maxWidth: 350,
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 24,
+            backgroundImage: 'none',
+          },
         }}
       >
         {drawer}
