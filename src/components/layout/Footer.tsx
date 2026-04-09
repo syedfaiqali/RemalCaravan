@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, Link, Stack } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 import EmailIcon from '@mui/icons-material/Email'
-import RvHookupIcon from '@mui/icons-material/RvHookup'
+import Logo from '../common/Logo'
 import MotionSection from '../common/MotionSection'
 import { heroImage } from '../../data/caravans'
 
@@ -85,33 +85,9 @@ function Footer() {
             <Grid container spacing={{ xs: 6, md: 10 }} alignItems="flex-start">
               {/* Brand Info */}
               <Grid size={{ xs: 12, md: 4 }}>
-                <Stack direction="row" spacing={2.5} alignItems="center" sx={{ mb: 4 }}>
-                  <Box
-                    sx={{
-                      bgcolor: '#f39a1e',
-                      p: 1.5,
-                      borderRadius: '16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 10px 15px -3px rgba(59, 130, 246, 0.2)'
-                    }}
-                  >
-                    <RvHookupIcon sx={{ color: '#fff', fontSize: { xs: '2rem', md: '2.5rem' } }} />
-                  </Box>
-                  <Typography
-                    sx={{
-                      fontFamily: '"Poppins", sans-serif',
-                      fontWeight: 800,
-                      fontSize: { xs: '1.6rem', md: '2.4rem' },
-                      lineHeight: 1,
-                      color: '#2b2b2b',
-                      letterSpacing: '-0.02em'
-                    }}
-                  >
-                    Remal Caravan
-                  </Typography>
-                </Stack>
+                <Box sx={{ mb: 4 }}>
+                  <Logo height={120} />
+                </Box>
                 <Typography
                   sx={{
                     ...infoStyle,
@@ -132,6 +108,8 @@ function Footer() {
                   <Link href="/" sx={linkStyle}>Home</Link>
                   <Link href="/about" sx={linkStyle}>About Us</Link>
                   <Link href="/gallery" sx={linkStyle}>Gallery</Link>
+                  <Link href="/fleet" sx={linkStyle}>Our Fleet</Link>
+                  <Link href="/contact" sx={linkStyle}>Contact Us</Link>
                   <Link href="/destinations" sx={linkStyle}>Our Destinations</Link>
                 </Stack>
               </Grid>
