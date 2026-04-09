@@ -34,10 +34,10 @@ export const recommendedDestinations: DestinationItem[] = [
 ]
 
 export const popularDestinations: DestinationItem[] = [
-  { name: 'Jebel Jais', image: image1s },
-  { name: 'Abu Dhabi Corniche', image: image2s },
-  { name: 'Rub Al Khali', image: image3s },
-  { name: 'Mleiha Desert', image: image4s },
+  { name: 'Jebel Hafeet', image: jebelHafeet },
+  { name: 'Hatta Mountains', image: hattaMountains },
+  { name: 'Liwa Desert', image: liwaDesert },
+  { name: 'Al Qudra Lakes', image: alQudraLakes },
 ]
 
 export const aboutPreviewImages = {
