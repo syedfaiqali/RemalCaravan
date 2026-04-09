@@ -19,7 +19,8 @@ const MotionSection: React.FC<MotionSectionProps> = ({ children, delay = 0 }) =>
         }
       })
     }, {
-      threshold: 0.1
+      threshold: 0,
+      rootMargin: '100px'
     })
 
     const current = domRef.current
