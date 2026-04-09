@@ -70,6 +70,42 @@ function CaravanForYouSection({ onLearnMore }: CaravanForYouSectionProps) {
                   />
                 </Fade>
               ))}
+              {/* Navigation Dots */}
+              <Stack
+                direction="row"
+                spacing={1.2}
+                sx={{
+                  position: 'absolute',
+                  bottom: 24,
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  zIndex: 10,
+                  bgcolor: 'rgba(255, 255, 255, 0.2)',
+                  backdropFilter: 'blur(4px)',
+                  px: 2,
+                  py: 1,
+                  borderRadius: '20px'
+                }}
+              >
+                {sliderImages.map((_, idx) => (
+                  <Box
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    sx={{
+                      width: currentIndex === idx ? 12 : 8,
+                      height: 8,
+                      borderRadius: '4px',
+                      bgcolor: currentIndex === idx ? '#ffb84d' : 'rgba(255, 255, 255, 0.6)',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        bgcolor: '#ffb84d',
+                        transform: 'scale(1.2)'
+                      }
+                    }}
+                  />
+                ))}
+              </Stack>
             </Box>
           </Grid>
 
