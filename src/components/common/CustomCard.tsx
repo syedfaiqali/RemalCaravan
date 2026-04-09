@@ -13,9 +13,23 @@ interface CustomCardProps {
   subBadge?: string
   specs?: string[]
   children?: React.ReactNode
+  buttonText?: string
 }
 
-function CustomCard({ title, description, image, price, btnBgColor, btnTextColor, onBookNow, badge, subBadge, specs, children }: CustomCardProps) {
+function CustomCard({ 
+  title, 
+  description, 
+  image, 
+  price, 
+  btnBgColor, 
+  btnTextColor, 
+  onBookNow, 
+  badge, 
+  subBadge, 
+  specs, 
+  children,
+  buttonText = "Book Now"
+}: CustomCardProps) {
   return (
     <Card
       elevation={0}
@@ -150,7 +164,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
               py: 1.5,
             }}
           >
-            Book Now
+            {buttonText}
           </CustomButton>
         )}
       </CardContent>

@@ -39,8 +39,8 @@ function HomePage() {
 
       <MotionSection delay={100}>
         <FeaturedCaravansSection
-          caravans={featuredCaravans}
-          onBookNow={handleBookNow}
+          caravans={premiumCaravans}
+          onViewDetails={(id) => navigate(`/caravan/${id}`)}
         />
       </MotionSection>
 

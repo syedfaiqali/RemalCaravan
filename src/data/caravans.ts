@@ -1,42 +1,111 @@
-import image1b from '../assets/WhatsApp Image 2026-03-08 at 8.23.10 AM.jpeg'
-import image2b from '../assets/For Rent 1/1.jpg'
-import image3b from '../assets/For Rent 2/1.jpg'
-import image4b from '../assets/For Rent 3/1.jpg'
-import image5b from '../assets/For Rent 4/1.jpg'
-import image1s from '../assets/For Rent 1/2.jpg'
-import image2s from '../assets/For Rent 1/3.jpg'
-import image3s from '../assets/For Rent 1/4.jpg'
-import image4s from '../assets/For Rent 2/2.jpg'
-import image5s from '../assets/For Rent 2/3.jpg'
-import image6s from '../assets/For Rent 2/4.jpg'
-import image7s from '../assets/For Rent 3/2.jpg'
-import image8s from '../assets/For Rent 3/3.jpg'
-import image9s from '../assets/For Rent 3/4.jpg'
-import image10s from '../assets/For Rent 4/2.jpg'
+// RV Gallery Imports
+// Star light
+import starLight1 from '../assets/Star light/IMG-20250812-WA0030.jpg'
+import starLight2 from '../assets/Star light/IMG-20250518-WA0022.jpg'
+import starLight3 from '../assets/Star light/IMG-20250812-WA0030.jpg'
+import starLight4 from '../assets/Star light/file_00000000b98871f49020eef362975ff7.png'
+import starLight5 from '../assets/Star light/IMG-20260108-WA0034.jpg'
+import starLight6 from '../assets/Star light/IMG-20260108-WA0035.jpg'
+import starLight7 from '../assets/Star light/remal_caravan_enhanced.png'
+import starLight8 from '../assets/Star light/IMG-20260118-WA0087.jpg'
 
-// New Imports
-import rent5_1 from '../assets/For Rent 5/1.jpg'
-import rent5_2 from '../assets/For Rent 5/2.jpg'
-import rent5_3 from '../assets/For Rent 5/3.jpg'
-import rent5_4 from '../assets/For Rent 5/4.jpg'
+// Sunshine
+import sunshine1 from '../assets/Sunshine/file_00000000c7e0720abaca7f32946cddbf.png'
+import sunshine2 from '../assets/Sunshine/file_00000000dfb87243900043e99091c9b7.png'
+import sunshine3 from '../assets/Sunshine/file_0000000097ac71f49017620744c7185b.png'
+import sunshine4 from '../assets/Sunshine/file_0000000011dc720a9ba6904b0f993214.png'
 
+// Oasis
+import oasis1 from '../assets/Oasis/IMG-20260104-WA0016.jpg'
+import oasis2 from '../assets/Oasis/IMG-20260104-WA0017.jpg'
+import oasis3 from '../assets/Oasis/IMG-20260104-WA0018.jpg'
+import oasis4 from '../assets/Oasis/IMG-20260104-WA0019.jpg'
+
+// Falcon Rover
+import falconRover1 from '../assets/Falcon Rover/IMG-20260120-WA0024.jpg'
+import falconRover2 from '../assets/Falcon Rover/IMG-20260120-WA0019.jpg'
+import falconRover3 from '../assets/Falcon Rover/IMG-20260120-WA0020.jpg'
+import falconRover4 from '../assets/Falcon Rover/IMG-20260120-WA0021.jpg'
+
+// Apex Blazer
+import apexBlazer1 from '../assets/Apex Blazer/file_00000000fe8472468e789b5c56b9e2c0.png'
+import apexBlazer2 from '../assets/Apex Blazer/file_000000005e307243b5985b4647529284.png'
+import apexBlazer3 from '../assets/Apex Blazer/file_0000000063f0720abdd4d94325d6cdb9.png'
+import apexBlazer4 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.png'
+import apexBlazer5 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.png'
+
+// Desert Glory
+import desertGlory3 from '../assets/Desert Glory/IMG-20260121-WA0018.jpg'
+import desertGlory2 from '../assets/Desert Glory/IMG-20260121-WA0022.jpg'
+import desertGlory1 from '../assets/Desert Glory/IMG-20260121-WA0023.jpg'
+
+// Rainbow
+import rainbow1 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.png'
+import rainbow2 from '../assets/Rainbow/IMG-20260118-WA0101.jpg'
+import rainbow3 from '../assets/Rainbow/IMG-20260118-WA0102.jpg'
+import rainbow4 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.png'
+
+// Terra
+import terra1 from '../assets/Terra/file_00000000b09c7243859f672d035ec067.png'
+import terra2 from '../assets/Terra/file_00000000552c720a869683ddeb6f8f48.png'
+import terra3 from '../assets/Terra/IMG-20260120-WA0025.jpg'
+import terra4 from '../assets/Terra/IMG-20260120-WA0027.jpg'
+import terra5 from '../assets/Terra/IMG-20260120-WA0029.jpg'
+
+// Fallback Imports
+import rent1_1 from '../assets/For Rent 1/1.jpg'
+import rent1_2 from '../assets/For Rent 1/2.jpg'
+import rent1_3 from '../assets/For Rent 1/3.jpg'
+import rent1_4 from '../assets/For Rent 1/4.jpg'
+
+import rent4_1 from '../assets/For Rent 4/1.jpg'
+import rent4_2 from '../assets/For Rent 4/2.jpg'
+import rent4_3 from '../assets/For Rent 4/3.jpg'
+import rent4_4 from '../assets/For Rent 4/4.jpg'
+
+// For Rent 6
 import rent6_1 from '../assets/For Rent 6/1.jpeg'
 import rent6_2 from '../assets/For Rent 6/2.jpeg'
 import rent6_3 from '../assets/For Rent 6/3.jpeg'
 import rent6_4 from '../assets/For Rent 6/4.jpeg'
 
+// For Rent 7
+import rent7_1 from '../assets/For Rent 7/1.jpeg'
+import rent7_2 from '../assets/For Rent 7/2.jpeg'
+
+// For Rent 8
+import rent8_1 from '../assets/For Rent 8/1.jpeg'
+import rent8_2 from '../assets/For Rent 8/2.jpeg'
+
+// For Sale 9
 import sale9_1 from '../assets/For Sale 9/1.jpg'
 import sale9_2 from '../assets/For Sale 9/2.jpg'
 import sale9_3 from '../assets/For Sale 9/3.jpg'
 import sale9_4 from '../assets/For Sale 9/4.jpg'
 
-import rent7_1 from '../assets/For Rent 7/1.jpeg'
-import rent7_2 from '../assets/For Rent 7/2.jpeg'
-import rent8_1 from '../assets/For Rent 8/1.jpeg'
+// For sale 1
 import sale1_1 from '../assets/For sale 1/1.jpg'
+import sale1_2 from '../assets/For sale 1/2.jpg'
+import sale1_3 from '../assets/For sale 1/3.jpg'
+import sale1_4 from '../assets/For sale 1/4.jpg'
+
+// For sale 2
 import sale2_1 from '../assets/For sale 2/1.jpg'
+import sale2_2 from '../assets/For sale 2/2.jpg'
+import sale2_3 from '../assets/For sale 2/3.jpg'
+import sale2_4 from '../assets/For sale 2/4.jpg'
+
+// For sale 4
 import sale4_1 from '../assets/For sale 4/1.jpg'
+import sale4_2 from '../assets/For sale 4/2.jpg'
+import sale4_3 from '../assets/For sale 4/3.jpg'
+import sale4_4 from '../assets/For sale 4/4.jpg'
+
+// For Sale 18
 import sale18_1 from '../assets/For Sale 18/1.jpg'
+import sale18_2 from '../assets/For Sale 18/2.jpg'
+import sale18_3 from '../assets/For Sale 18/3.jpg'
+import sale18_4 from '../assets/For Sale 18/4.jpg'
 
 
 export interface CaravanSpec {
@@ -48,12 +117,22 @@ export interface CaravanItem {
   id: string
   title: string
   description: string
+  fullDescription?: string
   image: string
   gallery: string[]
   pricePerDay: string
   sleeps: string
   quickSpecs: string[]
   specs: CaravanSpec[]
+  specificationSummary?: {
+    fuel: string
+    kids: string
+    adults: string
+    vehicleType: string
+  }
+  inclusions?: string[]
+  exclusions?: string[]
+  services?: string[]
 }
 
 export const featuredCaravans: CaravanItem[] = [
@@ -61,11 +140,64 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'star-light',
     title: 'Star Light',
     description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
-    image: rent5_1,
-    gallery: [rent5_1, rent5_2, rent5_3, rent5_4],
-    pricePerDay: 'Staring from AED 950/day',
-    sleeps: 'Sleeps 5',
+    fullDescription: 'Experience unparalleled comfort evokes the sensation of a level of ease and relaxation that transcends ordinary comfort, offering a truly exceptional and memorable experience. This phrase suggests a state of being where every aspect of comfort is optimized to its fullest potential, creating an environment or sensation that feels uniquely tailored to the individual, surpassing all expectations.',
+    image: starLight1,
+    gallery: [starLight1, starLight2, starLight3, starLight4, starLight5, starLight6, starLight7, starLight8],
+    pricePerDay: 'Starting from AED 950/day',
+    sleeps: '',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
+    specificationSummary: {
+      fuel: 'Diesel',
+      kids: '2 Kids',
+      adults: '4 Adults',
+      vehicleType: 'Light Passenger Vehicle'
+    },
+    inclusions: [
+      'Driver',
+      'One Queen Size Bed with Linens, Quilt & Partition & Door Lock',
+      'One 3 Seater Motorised Sofa cum Bed with Linens & Quilt',
+      'Two 2 Seater Sofa set',
+      '1(One) Queen Size over head bed with Linens & Quilt & Curtain',
+      'Air Conditioners (Hot & Cold)',
+      'One Smart TV',
+      'Sony Surround Sound System',
+      'Mobile Charging Points',
+      'Intercom System to communicate with Driver',
+      'Electrical Marine Toilet with Washbasin & Shower',
+      'Shampoo & Shower Gel',
+      'Safety Vault',
+      'Water Geyser',
+      'Kitchenette with Hot Plate',
+      'Electric Kettle',
+      'Pull out Fridge & Sink',
+      'Outdoor Pullout Kitchen with Gas Burner & Sink',
+      'Camping Chairs & Table with Awning & Camping Lights',
+      'Cooking Utensils',
+      '5Kg LPG Cylinder',
+      'Mood Lighting & Emergency Light',
+      'Fire Extinguishers',
+      '3 KVA Honda Silent Genset',
+      'Umbrella',
+      'Fuel up to 250 kms (Free Run/per Day)',
+      'Night Parking at our Authorised Campsites'
+    ],
+    exclusions: [
+      'Fuel Cost post 250 kms of free run @ Rs. 100 per km',
+      'Breakfast, Lunch & Dinner',
+      'Special Permits & Local Passes',
+      'Miscellaneous Personal Expenses',
+      'Day Halting Charges (Engine is ON) @ Rs. 1500/- per hour'
+    ],
+    services: [
+      '5Kg extra LPG Cylinder',
+      'Archery Set',
+      'Badminton Set',
+      'Barbeque',
+      'Bicycle',
+      'Bonfire',
+      'Fishing Rod',
+      'Hammock'
+    ],
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -79,8 +211,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'sunshine',
     title: 'Sunshine',
     description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
-    image: rent5_1,
-    gallery: [rent5_1, rent5_2, rent5_3, rent5_4],
+    image: sunshine1,
+    gallery: [sunshine1, sunshine2, sunshine3, sunshine4],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
@@ -97,8 +229,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'oasis',
     title: 'Oasis',
     description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
-    image: rent5_1,
-    gallery: [rent5_1, rent5_2, rent5_3, rent5_4],
+    image: oasis1,
+    gallery: [oasis1, oasis2, oasis3, oasis4],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
@@ -115,8 +247,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'falcon-rover',
     title: 'Falcon Rover',
     description: 'Premium fit-out with expanded storage and upgraded amenities.',
-    image: image3b,
-    gallery: [image3b, image7s, image8s, image9s],
+    image: falconRover1,
+    gallery: [falconRover1, falconRover2, falconRover3, falconRover4],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Premium Interior', 'Large Storage', 'AC'],
@@ -133,8 +265,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'apex-blazer',
     title: 'Apex Blazer',
     description: 'Stylish interior with lounge seating and practical kitchen setup.',
-    image: image1b,
-    gallery: [image1b, image1s, image2s, image3s],
+    image: apexBlazer1,
+    gallery: [apexBlazer1, apexBlazer2, apexBlazer3, apexBlazer4, apexBlazer5],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Automatic', 'Kitchenette', 'AC'],
@@ -151,8 +283,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'desert-glory',
     title: 'Desert Glory',
     description: 'Balanced comfort and mobility for long roads and short escapes.',
-    image: image2b,
-    gallery: [image2b, image4s, image5s, image6s],
+    image: desertGlory1,
+    gallery: [desertGlory1, desertGlory2, desertGlory3],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Family Friendly', 'Rear Camera', 'AC'],
@@ -169,8 +301,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'rainbow',
     title: 'Rainbow',
     description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
-    image: rent5_1,
-    gallery: [rent5_1, rent5_2, rent5_3, rent5_4],
+    image: rainbow1,
+    gallery: [rainbow1, rainbow2, rainbow3, rainbow4],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
@@ -187,8 +319,8 @@ export const featuredCaravans: CaravanItem[] = [
     id: 'terra',
     title: 'Terra',
     description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
-    image: rent5_1,
-    gallery: [rent5_1, rent5_2, rent5_3, rent5_4],
+    image: terra1,
+    gallery: [terra1, terra2, terra3, terra4, terra5],
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
@@ -209,8 +341,8 @@ export const premiumCaravans: CaravanItem[] = [
     id: 'remal-family-max',
     title: 'Remal Family Max',
     description: 'Ideal for bigger groups with improved sleeping and dining space.',
-    image: image4b,
-    gallery: [image4b, image10s, image4s, image2s],
+    image: rent4_1,
+    gallery: [rent4_1, rent4_2, rent4_3, rent4_4],
     pricePerDay: 'AED 2,200/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['6 Berths', 'Dining Booth', 'USB Ports'],
@@ -227,8 +359,8 @@ export const premiumCaravans: CaravanItem[] = [
     id: 'remal-lux-cruise',
     title: 'Remal Lux Cruise',
     description: 'Flagship experience with refined design and premium finishes.',
-    image: image5b,
-    gallery: [image5b, image1s, image6s, image10s],
+    image: rent1_1,
+    gallery: [rent1_1, rent1_2, rent1_3, rent1_4],
     pricePerDay: 'AED 2,800/day',
     sleeps: 'Sleeps 7',
     quickSpecs: ['Luxury Line', 'Smart TV', 'Shower Cabin'],
@@ -299,7 +431,7 @@ export const premiumCaravans: CaravanItem[] = [
     title: 'Remal Urban Escaper',
     description: 'Compact and versatile for quick weekend getaways and urban discoveries.',
     image: rent8_1,
-    gallery: [rent8_1],
+    gallery: [rent8_1, rent8_2],
     pricePerDay: 'AED 1,300/day',
     sleeps: 'Sleeps 3',
     quickSpecs: ['City Friendly', 'Compact', 'Easy Parking'],
@@ -315,7 +447,7 @@ export const premiumCaravans: CaravanItem[] = [
     title: 'Remal Majestic Rover',
     description: 'A premium sanctuary on wheels with expanded space and high-end finishes.',
     image: sale1_1,
-    gallery: [sale1_1],
+    gallery: [sale1_1, sale1_2, sale1_3, sale1_4],
     pricePerDay: 'AED 3,500/day',
     sleeps: 'Sleeps 8',
     quickSpecs: ['Full Luxury', '8 Berths', 'Gourmet Kitchen'],
@@ -331,7 +463,7 @@ export const premiumCaravans: CaravanItem[] = [
     title: 'Remal Grand Nomad',
     description: 'Designed for long-haul journeys with ultimate comfort and storage efficiency.',
     image: sale2_1,
-    gallery: [sale2_1],
+    gallery: [sale2_1, sale2_2, sale2_3, sale2_4],
     pricePerDay: 'AED 2,800/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Long Haul', 'Max Storage', 'Comfort+'],
@@ -347,7 +479,7 @@ export const premiumCaravans: CaravanItem[] = [
     title: 'Remal Sunset Voyager',
     description: 'Breathtaking views and elegant interiors for unforgettable experiences.',
     image: sale4_1,
-    gallery: [sale4_1],
+    gallery: [sale4_1, sale4_2, sale4_3, sale4_4],
     pricePerDay: 'AED 3,000/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Panoramic View', 'Elegant', 'AC'],
@@ -362,7 +494,7 @@ export const premiumCaravans: CaravanItem[] = [
     title: 'Remal Royal Suite',
     description: 'The pinnacle of luxury RV living with every possible amenity.',
     image: sale18_1,
-    gallery: [sale18_1],
+    gallery: [sale18_1, sale18_2, sale18_3, sale18_4],
     pricePerDay: 'AED 4,500/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Ultra Luxury', '4 Berths', 'Full Tech'],
@@ -374,8 +506,8 @@ export const premiumCaravans: CaravanItem[] = [
   },
 ]
 
-export const galleryImages = [image1s, image2s, image3s, image4s, image5s, image6s, image7s, image8s, image9s, image10s]
+export const galleryImages = [starLight1, sunshine1, oasis1, falconRover1, apexBlazer1, desertGlory1, rainbow1, terra1, sale9_1, sale18_1]
 
-export const heroImage = image10s
+export const heroImage = starLight1
 
 export const getCaravanById = (id: string) => premiumCaravans.find((caravan) => caravan.id === id)

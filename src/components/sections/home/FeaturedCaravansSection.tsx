@@ -1,13 +1,13 @@
-﻿import { Container, Grid, Typography, Box } from '@mui/material'
+import { Container, Grid, Typography, Box } from '@mui/material'
 import { CaravanItem } from '../../../data/caravans'
 import CustomCard from '../../common/CustomCard'
 
 interface FeaturedCaravansSectionProps {
   caravans: CaravanItem[]
-  onBookNow: (id: string) => void
+  onViewDetails: (id: string) => void
 }
 
-function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectionProps) {
+function FeaturedCaravansSection({ caravans, onViewDetails }: FeaturedCaravansSectionProps) {
   return (
     <Box sx={{ py: 10, bgcolor: '#ffffff' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
@@ -37,14 +37,16 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
 
         <Grid container spacing={4}>
           {caravans.slice(0, 8).map((caravan) => (
-            <Grid key={caravan.id} size={{ xs: 12, sm: 6, md: 3 }}>
+            <Grid key={caravan.id} size={{ xs: 12, sm: 12, md: 6, lg: 4 }}>
               <CustomCard
                 title={caravan.title}
+                description={caravan.description}
                 image={caravan.image}
                 price={caravan.pricePerDay}
-                btnBgColor="#fea116" // Solid black as seen in screenshot
+                btnBgColor="#fea116"
                 btnTextColor="#FFFFFF"
-                onBookNow={() => onBookNow(caravan.id)}
+                buttonText="Details"
+                onBookNow={() => onViewDetails(caravan.id)}
               />
             </Grid>
           ))}

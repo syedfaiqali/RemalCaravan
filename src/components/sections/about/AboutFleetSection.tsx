@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Typography, Button, Stack } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import MotionSection from '../../common/MotionSection'
 import KitchenIcon from '@mui/icons-material/Kitchen'
 import AcUnitIcon from '@mui/icons-material/AcUnit'
@@ -8,7 +9,9 @@ import HotelIcon from '@mui/icons-material/Hotel'
 import { premiumCaravans } from '../../../data/caravans'
 
 function AboutFleetSection() {
+  const navigate = useNavigate()
   const fleet = premiumCaravans.map(c => ({
+    id: c.id,
     name: c.title,
     image: c.image,
     amenities: [...c.quickSpecs, c.sleeps]
@@ -57,6 +60,7 @@ function AboutFleetSection() {
               </Typography>
             </Box>
             <Button
+              onClick={() => navigate('/fleet')}
               sx={{
                 fontFamily: '"Poppins", sans-serif',
                 fontWeight: 700,
@@ -124,6 +128,7 @@ function AboutFleetSection() {
                     <Button
                       fullWidth
                       variant="outlined"
+                      onClick={() => navigate(`/caravan/${item.id}`)}
                       sx={{
                         borderRadius: '12px',
                         py: 1.5,
@@ -153,5 +158,3 @@ function AboutFleetSection() {
 }
 
 export default AboutFleetSection
-
-

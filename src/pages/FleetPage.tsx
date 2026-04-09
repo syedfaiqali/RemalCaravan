@@ -9,10 +9,6 @@ function FleetPage() {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
-  const handleBookNow = (id: string) => {
-    dispatch(selectCaravan(id))
-    navigate('/contact')
-  }
 
   return (
     <>
@@ -21,7 +17,7 @@ function FleetPage() {
       </MotionSection>
 
       <MotionSection delay={100}>
-        <FleetGridSection onBookNow={handleBookNow} />
+        <FleetGridSection onViewDetails={(id) => navigate(`/caravan/${id}`)} />
       </MotionSection>
     </>
   )

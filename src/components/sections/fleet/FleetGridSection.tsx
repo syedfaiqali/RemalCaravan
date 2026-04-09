@@ -3,10 +3,10 @@ import { premiumCaravans } from '../../../data/caravans'
 import CustomCard from '../../common/CustomCard'
 
 interface FleetGridSectionProps {
-  onBookNow: (id: string) => void
+  onViewDetails: (id: string) => void
 }
 
-function FleetGridSection({ onBookNow }: FleetGridSectionProps) {
+function FleetGridSection({ onViewDetails }: FleetGridSectionProps) {
   return (
     <Box sx={{ pb: 10, bgcolor: '#ffffff' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
@@ -17,12 +17,13 @@ function FleetGridSection({ onBookNow }: FleetGridSectionProps) {
                 title={caravan.title}
                 description={caravan.description}
                 image={caravan.image}
-                // No price as per user request
-                badge={caravan.sleeps}
+                price={caravan.pricePerDay}
+                // badge={caravan.sleeps}
                 specs={caravan.quickSpecs}
                 btnBgColor="#fea116"
                 btnTextColor="#ffffff"
-                onBookNow={() => onBookNow(caravan.id)}
+                buttonText="Details"
+                onBookNow={() => onViewDetails(caravan.id)}
               />
             </Grid>
           ))}
