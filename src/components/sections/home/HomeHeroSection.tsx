@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Typography, keyframes } from '@mui/material'
 import heroVideo from '../../../assets/s.mp4'
+
+const marqueeAnimation = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+`
+
 interface HomeHeroSectionProps {
   onViewGallery: () => void
 }
@@ -10,6 +16,9 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
   const [isDeleting, setIsDeleting] = useState(false)
   const [loopNum, setLoopNum] = useState(0)
   const [typingSpeed, setTypingSpeed] = useState(150)
+
+  const marqueeText = "• For Bookings related enquiries please Call @ +91 9038389666 or mail us at info@remalcaravan.com "
+  const fullMarquee = marqueeText.repeat(10)
 
   const messages = useMemo(() => [
     "Explore an unforgettable ride in Motor Home (RV)",
@@ -61,6 +70,35 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
         bgcolor: '#000'
       }}
     >
+      {/* Top Marquee Bar */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bgcolor: '#f39a1e',
+          py: 1,
+          zIndex: 10,
+          overflow: 'hidden',
+          whiteSpace: 'nowrap'
+        }}
+      >
+        <Typography
+          sx={{
+            display: 'inline-block',
+            animation: `${marqueeAnimation} 40s linear infinite`,
+            color: '#fff',
+            fontWeight: 700,
+            fontSize: { xs: '0.8rem', md: '0.95rem' },
+            fontFamily: '"Plus Jakarta Sans", sans-serif',
+            letterSpacing: '0.05em'
+          }}
+        >
+          {fullMarquee}
+        </Typography>
+      </Box>
+
       {/* Background Video */}
       <Box
         component="video"
