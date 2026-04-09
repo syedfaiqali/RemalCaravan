@@ -1,12 +1,52 @@
-﻿import { Box, Container, Stack, Typography } from '@mui/material'
-import heroImage from '../../../assets/busimage2.jpeg'
-import CustomButton from '../../common/CustomButton'
-
+import { useState, useEffect, useMemo } from 'react'
+import { Box, Container, Typography } from '@mui/material'
+import heroVideo from '../../../assets/s.mp4'
 interface HomeHeroSectionProps {
   onViewGallery: () => void
 }
 
 function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
+  const [text, setText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [loopNum, setLoopNum] = useState(0)
+  const [typingSpeed, setTypingSpeed] = useState(150)
+
+  const messages = useMemo(() => [
+    "Explore an unforgettable ride in Motor Home (RV)",
+    "Welcome to the Land of Adventure",
+    "Explore the unexplored beauty of UAE",
+    "Experience Luxury on the Road"
+  ], [])
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>
+
+    const handleType = () => {
+      const i = loopNum % messages.length
+      const fullText = messages[i]
+
+      setText(isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1)
+      )
+
+      setTypingSpeed(isDeleting ? 40 : 80)
+
+      if (!isDeleting && text === fullText) {
+        timer = setTimeout(() => setIsDeleting(true), 2500)
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false)
+        setLoopNum(loopNum + 1)
+        setTypingSpeed(500)
+      } else {
+        timer = setTimeout(handleType, typingSpeed)
+      }
+    }
+
+    timer = setTimeout(handleType, typingSpeed)
+    return () => clearTimeout(timer)
+  }, [text, isDeleting, loopNum, typingSpeed, messages])
+
   return (
     <Box
       sx={{
@@ -14,73 +54,99 @@ function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
         px: { xs: 2, md: 3 },
         position: 'relative',
         overflow: 'hidden',
-        backgroundImage: `linear-gradient(180deg, rgba(14, 14, 14, 0.68) 0%, rgba(14, 14, 14, 0.58) 45%, rgba(14, 14, 14, 0.7) 100%), url(${heroImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
         textAlign: 'center',
+        minHeight: '90vh',
+        display: 'flex',
+        alignItems: 'center',
+        bgcolor: '#000'
       }}
     >
+      {/* Background Video */}
+      <Box
+        component="video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        src={heroVideo}
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(180deg, rgba(14, 14, 14, 0.45) 0%, rgba(14, 14, 14, 0.35) 45%, rgba(14, 14, 14, 0.5) 100%)',
+          zIndex: 1
+        }}
+      />
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 }, position: 'relative', zIndex: 1 }}>
         <Typography
           variant="h1"
           sx={{
-            maxWidth: 1000,
+            maxWidth: 1100,
             mx: 'auto',
-            mb: 6,
-            color: '#f39a1e',
+            mb: 4,
+            color: '#fff',
             fontWeight: 800,
-            fontSize: { xs: '2rem', md: '4.7rem' },
+            fontSize: { xs: '2.2rem', md: '4.8rem' },
             fontFamily: '"Poppins", sans-serif',
-            lineHeight: 1.1,
-            letterSpacing: '-0.02em',
-            textShadow: '0 10px 30px rgba(0, 0, 0, 0.28)',
+            lineHeight: 1.2,
+            letterSpacing: '-0.01em',
+            textShadow: '0 4px 20px rgba(0, 0, 0, 0.4)',
+            minHeight: { xs: '6rem', md: '12rem' },
+            textAlign: 'center',
+            position: 'relative'
           }}
         >
-          Explore an unforgettable ride in Motor Home (RV)
+          {text}
+          <Box
+            component="span"
+            sx={{
+              display: 'inline-block',
+              width: { xs: '3px', md: '6px' },
+              height: { xs: '2.2rem', md: '4.2rem' },
+              bgcolor: '#f39a1e',
+              ml: 1.5,
+              animation: 'blink 1s step-end infinite',
+              verticalAlign: 'middle',
+              '@keyframes blink': {
+                'from, to': { opacity: 1 },
+                '50%': { opacity: 0 },
+              },
+            }}
+          />
         </Typography>
 
-        <Box sx={{ mb: 6 }}>
-          <Typography
-            sx={{
-              fontSize: { xs: '1rem', md: '1.6rem' },
-              fontWeight: 400,
-              color: 'rgba(255, 255, 255, 0.92)',
-              fontFamily: '"Plus Jakarta Sans", sans-serif',
-              mb: 1.5,
-              textShadow: '0 6px 18px rgba(0, 0, 0, 0.24)',
-            }}
-          >
-            Make Tour & Explore Incredible Destinations With RV/Caravan
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: '1.1rem', md: '1.6rem' },
-              fontWeight: 400,
-              color: 'rgba(255, 255, 255, 0.92)',
-              fontFamily: '"Plus Jakarta Sans", sans-serif',
-              textShadow: '0 6px 18px rgba(0, 0, 0, 0.24)',
-            }}
-          >
-            Fully equipped vehicles for comfortable road trips.
-          </Typography>
-        </Box>
-
-        <Stack direction="row" justifyContent="center">
+        {/* <Stack direction="row" justifyContent="center">
           <CustomButton
             onClick={onViewGallery}
             sx={{
-              px: { xs: 4.5, sm: 5.5, md: 8 },
-              py: { xs: 1.5, sm: 1.8, md: 2.5 },
-              minHeight: { xs: 52, sm: 56, md: 64 },
-              fontSize: { xs: '0.95rem', sm: '1.05rem', md: '1.25rem' },
-              lineHeight: 1.15,
-              bgcolor: '#fea116',
+              px: { xs: 4, md: 8 },
+              py: { xs: 1.5, md: 2.5 },
+              fontSize: { xs: '1rem', md: '1.25rem' },
+              fontWeight: 700,
+              bgcolor: '#f39a1e',
+              '&:hover': {
+                bgcolor: '#e0891a'
+              }
             }}
           >
             BOOK YOUR RV NOW
           </CustomButton>
-        </Stack>
+        </Stack> */}
       </Container>
     </Box>
   )

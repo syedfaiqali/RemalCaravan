@@ -3,7 +3,7 @@ import CustomButton from './CustomButton'
 
 interface CustomCardProps {
   title: string
-  description: string
+  description?: string
   image?: string
   price?: string
   btnBgColor?: string
@@ -94,7 +94,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
         >
           {title}
         </Typography>
-        
+
         <Typography
           sx={{
             fontFamily: '"Plus Jakarta Sans", sans-serif',
@@ -145,7 +145,7 @@ function CustomCard({ title, description, image, price, btnBgColor, btnTextColor
             bgColor={btnBgColor || "#f3e4d2"}
             textColor={btnTextColor || "#2b2b2b"}
             onClick={onBookNow}
-            sx={{ 
+            sx={{
               fontWeight: 600,
               py: 1.5,
             }}

@@ -55,12 +55,12 @@ function HomePage() {
         <PopularDestinationsSection items={popularDestinations} />
       </MotionSection>
 
-      <MotionSection delay={100}>
+      {/* <MotionSection delay={100}>
         <RecommendedCaravansSection
           caravans={premiumCaravans}
           onBookNow={handleBookNow}
         />
-      </MotionSection>
+      </MotionSection> */}
 
       <MotionSection delay={100}>
         <WhyChooseUsSection />

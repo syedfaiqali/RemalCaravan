@@ -36,11 +36,10 @@ function FeaturedCaravansSection({ caravans, onBookNow }: FeaturedCaravansSectio
         </Box>
 
         <Grid container spacing={4}>
-          {caravans.slice(0, 4).map((caravan) => (
+          {caravans.slice(0, 8).map((caravan) => (
             <Grid key={caravan.id} size={{ xs: 12, sm: 6, md: 3 }}>
               <CustomCard
                 title={caravan.title}
-                description={caravan.sleeps} // Using sleeps count as description to match screenshot
                 image={caravan.image}
                 price={caravan.pricePerDay}
                 btnBgColor="#fea116" // Solid black as seen in screenshot
