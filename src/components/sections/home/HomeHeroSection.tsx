@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Box, Container, Typography, keyframes } from '@mui/material'
-import heroVideo from '../../../assets/s.mp4'
+import heroVideo from '../../../assets/s.webm'
 
 const marqueeAnimation = keyframes`
   0% { transform: translateX(0); }

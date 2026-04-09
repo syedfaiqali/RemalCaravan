@@ -1,10 +1,10 @@
 import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
-import RvHookupIcon from '@mui/icons-material/RvHookup'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import CustomButton from '../common/CustomButton'
+import Logo from '../common/Logo'
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -35,13 +35,8 @@ function Navbar() {
           borderBottom: '1px solid #f3e4d2',
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-          <Box sx={{ width: 36, height: 36, borderRadius: '12px', bgcolor: '#f39a1e', display: 'grid', placeItems: 'center', color: '#fff' }}>
-            <RvHookupIcon fontSize="small" />
-          </Box>
-          <Typography sx={{ color: '#2b2b2b', fontWeight: 800, fontSize: { xs: '1rem', sm: '1.05rem' }, lineHeight: 1.05, fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
-            Remal Caravan
-          </Typography>
+        <Box component={RouterLink} to="/" onClick={handleDrawerToggle} sx={{ textDecoration: 'none' }}>
+          <Logo />
         </Box>
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
@@ -110,46 +105,8 @@ function Navbar() {
             borderRadius: { xs: 0, md: '0 0 28px 28px' },
           }}
         >
-          {/* Logo */}
-          <Box component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center', gap: 1.5, textDecoration: 'none' }}>
-            <Box
-              sx={{
-                width: { xs: 32, md: 36 },
-                height: { xs: 32, md: 36 },
-                borderRadius: '12px',
-                bgcolor: '#f39a1e',
-                display: 'grid',
-                placeItems: 'center',
-                color: '#fff9f3',
-                boxShadow: '0 8px 16px rgba(243, 154, 30, 0.25)',
-              }}
-            >
-              <RvHookupIcon fontSize="small" />
-            </Box>
-            <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-              <Typography
-                sx={{
-                  color: '#2b2b2b',
-                  fontWeight: 800,
-                  fontSize: { xs: '1.1rem', md: '1.25rem' },
-                  fontFamily: '"Plus Jakarta Sans", sans-serif',
-                  lineHeight: 1,
-                }}
-              >
-                Remal
-              </Typography>
-              <Typography
-                sx={{
-                  color: '#2b2b2b',
-                  fontWeight: 800,
-                  fontSize: { xs: '1.1rem', md: '1.25rem' },
-                  fontFamily: '"Plus Jakarta Sans", sans-serif',
-                  lineHeight: 1,
-                }}
-              >
-                Caravan
-              </Typography>
-            </Box>
+          <Box component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
+            <Logo />
           </Box>
 
           {/* Desktop Nav */}

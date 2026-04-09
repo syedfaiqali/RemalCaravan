@@ -3,7 +3,6 @@ import { useAppDispatch } from '../store/hooks'
 import { selectCaravan } from '../store/slices/bookingSlice'
 import { featuredCaravans, premiumCaravans } from '../data/caravans'
 import {
-  caravanForYouImages,
   popularDestinations,
 } from '../data/homeContent'
 import HomeHeroSection from '../components/sections/home/HomeHeroSection'
@@ -46,7 +45,6 @@ function HomePage() {
 
       <MotionSection delay={200}>
         <CaravanForYouSection
-          image={caravanForYouImages[0]}
           onLearnMore={() => navigate('/about')}
         />
       </MotionSection>
