@@ -16,6 +16,8 @@ function Logo({ height = { xs: 55, md: 75 }, sx }: LogoProps) {
         height: height,
         width: 'auto',
         display: 'block',
+        transform: { xs: 'scale(2.0)', md: 'scale(2.1)' },
+        transformOrigin: 'left center',
         ...sx
       }}
     />

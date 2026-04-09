@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
@@ -82,7 +82,7 @@ function Navbar() {
       color="inherit"
       elevation={0}
       sx={{
-        borderRadius: { xs: 0, md: '0 0 28px 28px' },
+        borderRadius: { xs: 0, md: '0' },
         borderBottom: '1px solid rgba(0,0,0,0.04)',
         backdropFilter: 'blur(14px)',
         background: '#fff9f3',
@@ -102,7 +102,7 @@ function Navbar() {
             py: { xs: 1.5, md: 2 },
             px: { xs: 2.5, md: 0 },
             justifyContent: 'space-between',
-            borderRadius: { xs: 0, md: '0 0 28px 28px' },
+            borderRadius: { xs: 0, md: '0' },
           }}
         >
           <Box component={RouterLink} to="/" sx={{ textDecoration: 'none' }}>
