@@ -3,13 +3,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import dayjs, { Dayjs } from 'dayjs'
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
-import TrackChangesOutlinedIcon from '@mui/icons-material/TrackChangesOutlined'
-import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import MotionSection from '../../common/MotionSection'
 import heroImage from '../../../assets/caravan_hero_banner_1775771753954.png'
-import skylineImage from '../../../assets/dubai_skyline.png'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
@@ -442,19 +438,22 @@ function PartnerWithUsSection() {
                       columnGap: 3,
                       rowGap: 1,
                       alignItems: 'center',
+                      '& .MuiFormControlLabel-label': {
+                        whiteSpace: 'nowrap',
+                      },
                     }}
                   >
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Bed option" />} label="Bed option" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Washroom" />} label="Washroom" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Kitchen" />} label="Kitchen" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Lounge" />} label="Lounge" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Dining Options" />} label="Dining Options" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Storage" />} label="Storage" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Heating" />} label="Heating" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Gadgets" />} label="Gadgets" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Water Tanks" />} label="Water Tanks" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Seating and Upholstery" />} label="Seating and Upholstery" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
-                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Entertainment System" />} label="Entertainment System" labelTypographyProps={{ sx: { whiteSpace: 'nowrap' } }} />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Bed option" />} label="Bed option" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Washroom" />} label="Washroom" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Kitchen" />} label="Kitchen" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Lounge" />} label="Lounge" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Dining Options" />} label="Dining Options" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Storage" />} label="Storage" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Heating" />} label="Heating" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Gadgets" />} label="Gadgets" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Water Tanks" />} label="Water Tanks" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Seating and Upholstery" />} label="Seating and Upholstery" />
+                    <FormControlLabel sx={{ width: 'max-content' }} control={<Checkbox name="caravan_facilities" value="Entertainment System" />} label="Entertainment System" />
                   </FormGroup>
                 </Box>
               </Stack>
@@ -718,24 +717,6 @@ function PartnerWithUsSection() {
     }
   }
 
-  const fleetSteps = [
-    {
-      title: 'Live Fleet Visibility',
-      description: 'Track availability, usage, and location updates in real time.',
-      icon: <LocationOnOutlinedIcon sx={{ fontSize: '2rem', color: '#0b3d2e' }} />,
-    },
-    {
-      title: 'Performance Insights',
-      description: 'Monthly performance snapshots and revenue dashboards for every unit.',
-      icon: <TrackChangesOutlinedIcon sx={{ fontSize: '2rem', color: '#0b3d2e' }} />,
-    },
-    {
-      title: 'Dedicated Partner Care',
-      description: 'Priority support, coordinated maintenance, and seasonal planning.',
-      icon: <SupportAgentOutlinedIcon sx={{ fontSize: '2rem', color: '#0b3d2e' }} />,
-    },
-  ]
-
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Box id="partner-with-us" sx={{ bgcolor: '#f7f1e8', pb: { xs: 10, md: 16 } }}>
@@ -990,8 +971,6 @@ function PartnerWithUsSection() {
             </Box>
           </MotionSection>
         </Container>
-
-      </Container>
       </Box>
     </LocalizationProvider>
   )

@@ -55,7 +55,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
             </Typography>
           </Box>
 
-          {/* <CustomButton
+          <CustomButton
             bgColor="#f3e4d2"
             textColor="#2b2b2b"
             onClick={onAction}
@@ -71,8 +71,8 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
               transition: '0.3s',
             }}
           >
-            {buttonText}
-          </CustomButton> */}
+            {buttonText ?? 'Learn More'}
+          </CustomButton>
         </Box>
       </MotionSection>
     </Container>
