@@ -5,7 +5,7 @@ import MotionSection from './MotionSection'
 interface AdventureCTASectionProps {
   title: string
   subtitle: string
-  buttonText: string
+  buttonText?: string
   onAction?: () => void
 }
 
@@ -55,7 +55,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
             </Typography>
           </Box>
 
-          <CustomButton
+          {/* <CustomButton
             bgColor="#f3e4d2"
             textColor="#2b2b2b"
             onClick={onAction}
@@ -72,7 +72,7 @@ function AdventureCTASection({ title, subtitle, buttonText, onAction }: Adventur
             }}
           >
             {buttonText}
-          </CustomButton>
+          </CustomButton> */}
         </Box>
       </MotionSection>
     </Container>

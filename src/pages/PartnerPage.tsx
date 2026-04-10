@@ -8,7 +8,7 @@ function PartnerPage() {
       <AdventureCTASection
         title="Build the Future of RV Travel"
         subtitle="Join our partner network and grow with Remal Caravans."
-        buttonText="Start the Partnership"
+        // buttonText="Start the Partnership"
       />
     </>
   )
