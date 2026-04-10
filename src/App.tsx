@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import FleetPage from './pages/FleetPage'
 import CaravanDetailsPage from './pages/CaravanDetailsPage'
+import PartnerPage from './pages/PartnerPage'
 
 function App() {
   const location = useLocation()
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/fleet" element={<FleetPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/partner" element={<PartnerPage />} />
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
           <Route path="/about" element={<AboutPage />} />
