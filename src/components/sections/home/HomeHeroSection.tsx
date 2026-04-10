@@ -7,11 +7,7 @@ const marqueeAnimation = keyframes`
   100% { transform: translateX(-50%); }
 `
 
-interface HomeHeroSectionProps {
-  onViewGallery: () => void
-}
-
-function HomeHeroSection({ onViewGallery }: HomeHeroSectionProps) {
+function HomeHeroSection() {
   const [text, setText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
   const [loopNum, setLoopNum] = useState(0)

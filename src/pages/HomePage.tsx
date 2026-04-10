@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch } from '../store/hooks'
-import { selectCaravan } from '../store/slices/bookingSlice'
-import { featuredCaravans, premiumCaravans } from '../data/caravans'
+import { premiumCaravans } from '../data/caravans'
 import {
   popularDestinations,
 } from '../data/homeContent'
@@ -10,21 +8,19 @@ import FeaturedCaravansSection from '../components/sections/home/FeaturedCaravan
 import CaravanForYouSection from '../components/sections/home/CaravanForYouSection'
 
 import PopularDestinationsSection from '../components/sections/home/PopularDestinationsSection'
-import RecommendedCaravansSection from '../components/sections/home/RecommendedCaravansSection'
 import WhyChooseUsSection from '../components/sections/home/WhyChooseUsSection'
 import BookYourRVSection from '../components/sections/home/BookYourRVSection'
 import AdventureCTASection from '../components/common/AdventureCTASection'
 import MotionSection from '../components/common/MotionSection'
 
 function HomePage() {
-  const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
 
-  const handleBookNow = (id: string) => {
-    dispatch(selectCaravan(id))
-    navigate('/contact')
-  }
+  // const handleBookNow = (id: string) => {
+  //   dispatch(selectCaravan(id))
+  //   navigate('/contact')
+  // }
 
 
 
@@ -32,7 +28,7 @@ function HomePage() {
     <>
       <MotionSection>
         <HomeHeroSection
-          onViewGallery={() => navigate('/contact')}
+        // onViewGallery={() => navigate('/contact')}
         />
       </MotionSection>
 

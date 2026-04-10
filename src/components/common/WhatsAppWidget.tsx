@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Box, IconButton, Zoom, Typography, Stack, keyframes } from '@mui/material'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import CallIcon from '@mui/icons-material/Call'
@@ -18,14 +18,7 @@ const pulse = keyframes`
   }
 `
 
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-`
-
 function WhatsAppWidget() {
-  const [showTooltip, setShowTooltip] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
   const contacts = [
@@ -42,11 +35,6 @@ function WhatsAppWidget() {
       color: "#25D366"
     }
   ]
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowTooltip(true), 3000)
-    return () => clearTimeout(timer)
-  }, [])
 
   const handleWhatsAppClick = (number: string) => {
     const message = "Hi Remal Caravan! I'm interested in renting an RV."
@@ -126,37 +114,10 @@ function WhatsAppWidget() {
         </Box>
       </Zoom>
 
-      {/* Initial Welcome Bubble */}
-      <Zoom in={showTooltip && !isOpen}>
-        <Box
-          sx={{
-            position: 'absolute',
-            bottom: { xs: 80, md: 90 },
-            left: 0,
-            bgcolor: '#ffffff',
-            p: 2,
-            borderRadius: '20px 20px 20px 4px',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
-            width: 'max-content',
-            border: '1px solid #d3deea',
-            animation: `${float} 3s infinite ease-in-out`
-          }}
-        >
-          <Stack direction="row" spacing={1.5} alignItems="center">
-            <Box sx={{ width: 10, height: 10, bgcolor: '#25D366', borderRadius: '50%', animation: `${pulse} 2s infinite ease-out` }} />
-            <Box>
-              <Typography sx={{ fontWeight: 800, fontSize: '0.9rem', color: '#2b2b2b' }}>Remal Support</Typography>
-              <Typography sx={{ fontSize: '0.8rem', color: '#5b5b5b' }}>Chat with us on WhatsApp!</Typography>
-            </Box>
-          </Stack>
-        </Box>
-      </Zoom>
-
       <Stack spacing={2} alignItems="flex-start">
         <IconButton
           onClick={() => {
             setIsOpen(!isOpen);
-            setShowTooltip(false);
           }}
           sx={{
             width: { xs: 60, md: 70 },

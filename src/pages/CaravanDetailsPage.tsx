@@ -8,7 +8,6 @@ import {
   Typography,
   Tab,
   Tabs,
-  Avatar,
   Divider,
   Fade,
 } from '@mui/material'
@@ -19,7 +18,6 @@ import LocalGasStationIcon from '@mui/icons-material/LocalGasStation'
 import ChildCareIcon from '@mui/icons-material/ChildCare'
 import PersonIcon from '@mui/icons-material/Person'
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar'
-import StarIcon from '@mui/icons-material/Star'
 import heroBanner from '../assets/caravan_hero_banner_1775771753954.png'
 import BedIcon from '@mui/icons-material/Bed'
 import WeekendIcon from '@mui/icons-material/Weekend'

@@ -1,4 +1,3 @@
-import image2s from '../assets/WhatsApp Image 2026-03-08 at 8.22.50 AM.jpeg'
 import image6s from '../assets/WhatsApp Image 2026-03-08 at 8.22.51 AM.jpeg'
 import image7s from '../assets/WhatsApp Image 2026-03-08 at 8.22.52 AM.jpeg'
 import image8s from '../assets/WhatsApp Image 2026-03-08 at 8.22.54 AM.jpeg'
@@ -7,6 +6,8 @@ import jebelHafeetImg from '../assets/jebel_hafeet.png'
 import liwaDesertImg from '../assets/liwa_desert.png'
 import hattaMountainsImg from '../assets/hatta_mountains.png'
 import alQudraLakesImg from '../assets/al_qudra_lakes.png'
+
+import saadiyatBeachImg from '../assets/saadiyat_beach.png'
 
 export interface Destination {
   id: string
@@ -28,7 +29,7 @@ export const destinations: Destination[] = [
     id: 'saadiyat-beach',
     title: 'Saadiyat Beach',
     description: 'Park your RV by the shore and wake up to the sound of crashing waves and golden sands in Abu Dhabi.',
-    image: image2s,
+    image: saadiyatBeachImg,
     category: 'Beaches'
   },
   {
@@ -48,7 +49,7 @@ export const destinations: Destination[] = [
   {
     id: 'al-qudra-lakes',
     title: 'Al Qudra Lakes',
-    description: 'Peaceful mornings and bird watching right outside your RV door at the lake\'s edge in the heart of the desert.',
+    description: 'Peaceful mornings and bird watching right outside your RV door at the lake\'s edge in Dubai.',
     image: alQudraLakesImg,
     category: 'Lakes'
   },
@@ -67,11 +68,11 @@ export const destinations: Destination[] = [
     category: 'Cities'
   },
   {
-    id: 'sir-bani-yas',
-    title: 'Sir Bani Yas Island',
-    description: 'A unique wildlife sanctuary offering exotic camping spots and breathtaking natural beauty.',
+    id: 'jebel-jais',
+    title: 'Jebel Jais',
+    description: 'The highest peak in the UAE, offering thrilling drives and spectacular mountain camping experiences.',
     image: image8s,
-    category: 'Camping Spots'
+    category: 'Mountains'
   }
 ]
 

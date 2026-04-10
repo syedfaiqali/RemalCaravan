@@ -1,8 +1,50 @@
-﻿import { Box, Container, Typography } from '@mui/material'
+import { useState, useEffect, useMemo } from 'react'
+import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import heroImage from '../../../assets/busimage2.jpeg'
 
 function DestinationsHeroSection() {
+  const [text, setText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [loopNum, setLoopNum] = useState(0)
+  const [typingSpeed, setTypingSpeed] = useState(150)
+
+  const messages = useMemo(() => [
+    "Explore Our Destinations",
+    "Discover the Unseen UAE",
+    "Mountain Peaks & Golden Sands",
+    "Your Journey, Your Rules"
+  ], [])
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>
+
+    const handleType = () => {
+      const i = loopNum % messages.length
+      const fullText = messages[i]
+
+      setText(isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1)
+      )
+
+      setTypingSpeed(isDeleting ? 40 : 80)
+
+      if (!isDeleting && text === fullText) {
+        timer = setTimeout(() => setIsDeleting(true), 2500)
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false)
+        setLoopNum(loopNum + 1)
+        setTypingSpeed(500)
+      } else {
+        timer = setTimeout(handleType, typingSpeed)
+      }
+    }
+
+    timer = setTimeout(handleType, typingSpeed)
+    return () => clearTimeout(timer)
+  }, [text, isDeleting, loopNum, typingSpeed, messages])
+
   return (
     <Box
       sx={{
@@ -15,23 +57,45 @@ function DestinationsHeroSection() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         textAlign: 'center',
+        minHeight: { xs: '60vh', md: '70vh' },
+        display: 'flex',
+        alignItems: 'center'
       }}
     >
       <Container maxWidth="lg">
-        <MotionSection delay={100}>
-          <Typography
+        <Typography
+          variant="h1"
+          sx={{
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 800,
+            color: '#f39a1e',
+            fontSize: { xs: '2.5rem', md: '5rem' },
+            lineHeight: 1.1,
+            mb: 3,
+            letterSpacing: '-0.02em',
+            minHeight: { xs: '6rem', md: '12rem' }
+          }}
+        >
+          {text}
+          <Box
+            component="span"
             sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 800,
-              color: '#f39a1e',
-              fontSize: { xs: '3rem', md: '5rem' },
-              lineHeight: 1.1,
-              mb: 3,
-              letterSpacing: '-0.02em',
+              display: 'inline-block',
+              width: { xs: '3px', md: '6px' },
+              height: { xs: '2.2rem', md: '4.2rem' },
+              bgcolor: '#f39a1e',
+              ml: 1.5,
+              animation: 'blink 1s step-end infinite',
+              verticalAlign: 'middle',
+              '@keyframes blink': {
+                'from, to': { opacity: 1 },
+                '50%': { opacity: 0 },
+              },
             }}
-          >
-            Explore Our <br /> Destinations
-          </Typography>
+          />
+        </Typography>
+
+        <MotionSection delay={300}>
           <Typography
             sx={{
               fontFamily: '"Poppins", sans-serif',

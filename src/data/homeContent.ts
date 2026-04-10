@@ -1,7 +1,7 @@
-import image1s from '../assets/For Rent 5/1.jpg'
-import image2s from '../assets/For Rent 6/1.jpeg'
-import image3s from '../assets/For Rent 7/1.jpeg'
-import image4s from '../assets/For Rent 8/1.jpeg'
+// import image1s from '../assets/For Rent 5/1.jpg'
+// import image2s from '../assets/For Rent 6/1.jpeg'
+// import image3s from '../assets/For Rent 7/1.jpeg'
+// import image4s from '../assets/For Rent 8/1.jpeg'
 import image5s from '../assets/WhatsApp Image 2026-03-08 at 8.22.50 AM.jpeg'
 import image6s from '../assets/WhatsApp Image 2026-03-08 at 8.22.51 AM.jpeg'
 import image7s from '../assets/WhatsApp Image 2026-03-08 at 8.22.52 AM.jpeg'
@@ -12,6 +12,9 @@ import image2b from '../assets/For Rent 1/1.jpg'
 import image3b from '../assets/For Rent 2/1.jpg'
 import image4b from '../assets/For Rent 3/1.jpg'
 
+import abuDhabiImg from '../assets/abu_dhabi_skyline.png'
+import dubaiImg from '../assets/dubai_skyline.png'
+import sharjahImg from '../assets/sharjah_view.png'
 import jebelHafeet from '../assets/jebel_hafeet.png'
 import liwaDesert from '../assets/liwa_desert.png'
 import hattaMountains from '../assets/hatta_mountains.png'
@@ -34,10 +37,13 @@ export const recommendedDestinations: DestinationItem[] = [
 ]
 
 export const popularDestinations: DestinationItem[] = [
-  { name: 'Jebel Hafeet', image: jebelHafeet },
-  { name: 'Hatta Mountains', image: hattaMountains },
-  { name: 'Liwa Desert', image: liwaDesert },
-  { name: 'Al Qudra Lakes', image: alQudraLakes },
+  { name: 'Abu Dhabi', image: abuDhabiImg },
+  { name: 'Ajman', image: hattaMountains },
+  { name: 'Al Ain', image: jebelHafeet },
+  { name: 'Hatta', image: hattaMountains },
+  { name: 'Liwa', image: liwaDesert },
+  { name: 'Sharjah', image: sharjahImg },
+  { name: 'Dubai', image: dubaiImg },
 ]
 
 export const aboutPreviewImages = {
