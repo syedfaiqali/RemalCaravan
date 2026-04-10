@@ -93,6 +93,7 @@ function DestinationsGridSection() {
               <MotionSection delay={100 + index * 50}>
                 <Box
                   sx={{
+                    position: 'relative',
                     bgcolor: '#fff',
                     borderRadius: '24px',
                     overflow: 'hidden',
@@ -102,6 +103,10 @@ function DestinationsGridSection() {
                       transform: 'translateY(-10px)',
                       boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
                       borderColor: '#f39a1e'
+                    },
+                    '&:hover .detailOverlay': {
+                      opacity: 1,
+                      transform: 'translateY(0)'
                     }
                   }}
                 >
@@ -131,37 +136,56 @@ function DestinationsGridSection() {
                     <Typography
                       sx={{
                         fontFamily: '"Plus Jakarta Sans", sans-serif',
+                        color: '#f39a1e',
+                        fontSize: '0.95rem',
+                        fontWeight: 700,
+                        mb: 3
+                      }}
+                    >
+                      {dest.category}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: '"Plus Jakarta Sans", sans-serif',
                         color: '#5b5b5b',
                         fontSize: '0.95rem',
                         lineHeight: 1.6,
-                        mb: 4,
                         minHeight: '3em'
+                      }}
+                    >
+                      Hover for more details
+                    </Typography>
+                  </Box>
+                  <Box
+                    className="detailOverlay"
+                    sx={{
+                      position: 'absolute',
+                      inset: 0,
+                      display: 'flex',
+                      alignItems: 'flex-end',
+                      p: 4,
+                      bgcolor: 'rgba(0, 0, 0, 0.85)',
+                      borderRadius: '24px',
+                      color: '#fff',
+                      opacity: 0,
+                      transform: 'translateY(10px)',
+                      transition: 'opacity 0.3s ease, transform 0.3s ease',
+                      pointerEvents: 'none'
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: '"Plus Jakarta Sans", sans-serif',
+                        fontSize: '1rem',
+                        lineHeight: 1.8,
+                        mb: 0,
+                        whiteSpace: 'normal',
+                        wordBreak: 'break-word',
+                        color: '#ffffff'
                       }}
                     >
                       {dest.description}
                     </Typography>
-                    <Button
-                      fullWidth
-                      variant="outlined"
-                      sx={{
-                        borderRadius: '12px',
-                        py: { xs: 1.25, sm: 1.5 },
-                        minHeight: { xs: 44, sm: 48 },
-                        textTransform: 'none',
-                        fontFamily: '"Poppins", sans-serif',
-                        fontWeight: 700,
-                        fontSize: { xs: '0.92rem', sm: '0.98rem' },
-                        borderColor: '#fea116',
-                        color: '#fea116',
-                        '&:hover': {
-                          borderColor: '#f39a1e',
-                          bgcolor: '#fdebd2',
-                          color: '#f39a1e'
-                        }
-                      }}
-                    >
-                      Explore Destination
-                    </Button>
                   </Box>
                 </Box>
               </MotionSection>

@@ -1,6 +1,5 @@
 ﻿import { Box, Container, Grid, Typography, Button } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 interface AboutHeroHighlightsSectionProps {
   image: string
@@ -40,7 +39,7 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
               >
                 Making road trips unforgettable with comfortable RV travel. Explore our story and our commitment to quality travel experiences in the UAE.
               </Typography>
-              <Button
+              {/* <Button
                 variant="contained"
                 size="large"
                 endIcon={<ArrowForwardIcon />}
@@ -63,7 +62,7 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                 }}
               >
                 Explore Our RVs
-              </Button>
+              </Button> */}
             </MotionSection>
           </Grid>
 
