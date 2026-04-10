@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react'
-import { Box, Container, Grid, Typography, Stack, Button, Chip } from '@mui/material'
+import { Box, Container, Grid, Typography, Stack, Chip } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import { destinations, destinationCategories } from '../../../data/destinationsContent'
 

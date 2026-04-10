@@ -1,4 +1,4 @@
-﻿import { Box, Container, Grid, Typography, Button } from '@mui/material'
+﻿import { Box, Container, Grid, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 interface AboutHeroHighlightsSectionProps {
