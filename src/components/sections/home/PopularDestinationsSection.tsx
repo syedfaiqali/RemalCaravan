@@ -35,7 +35,7 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
         </Box>
 
         <Grid container spacing={4}>
-          {items.slice(0, 4).map((item) => (
+          {items.slice(0, 7).map((item) => (
             <Grid key={item.name} size={{ xs: 12, sm: 6, md: 3 }}>
               <Box
                 sx={{

@@ -114,7 +114,7 @@ function Navbar() {
           <Box
             sx={{
               display: { xs: 'none', lg: 'flex' },
-              gap: 4,
+              gap: 3,
               alignItems: 'center',
               justifyContent: 'center',
               px: 4,

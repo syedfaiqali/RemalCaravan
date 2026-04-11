@@ -10,7 +10,7 @@ function FleetHeroSection() {
             fontFamily: '"Poppins", sans-serif',
             fontWeight: 800,
             fontSize: { xs: '2.5rem', md: '4rem' },
-            color: '#2b2b2b',
+            color: '#f39a1e',
             mb: 2,
             lineHeight: 1.1,
           }}
@@ -26,7 +26,7 @@ function FleetHeroSection() {
             lineHeight: 1.6,
           }}
         >
-          Discover the perfect RV for your next adventure. From compact campervans for solo travelers 
+          Discover the perfect RV for your next adventure. From compact campervans for solo travelers
           to luxury integrated motorhomes for large families.
         </Typography>
       </Container>

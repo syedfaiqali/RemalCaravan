@@ -13,7 +13,7 @@ function HomeHeroSection() {
   const [loopNum, setLoopNum] = useState(0)
   const [typingSpeed, setTypingSpeed] = useState(150)
 
-  const marqueeText = "• For Bookings related enquiries please Call @ +91 9038389666 or mail us at info@remalcaravan.com "
+  const marqueeText = "• For Bookings related enquiries please Call @ +91 XXX XXX XXXX or mail us at info@remalcaravan.com "
   const fullMarquee = marqueeText.repeat(10)
 
   const messages = useMemo(() => [

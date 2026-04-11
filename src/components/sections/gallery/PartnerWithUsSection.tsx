@@ -739,7 +739,7 @@ function PartnerWithUsSection() {
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 800,
                   fontSize: { xs: '2.4rem', md: '3.8rem' },
-                  color: '#ffffff',
+                  color: '#f39a1e',
                   letterSpacing: '-0.02em',
                   mb: 2,
                 }}
