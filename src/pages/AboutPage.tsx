@@ -2,7 +2,6 @@ import AboutHeroHighlightsSection from '../components/sections/about/AboutHeroHi
 import AboutWhyChooseSection from '../components/sections/about/AboutWhyChooseSection'
 import AboutStorySection from '../components/sections/about/AboutStorySection'
 import AboutMissionVisionSection from '../components/sections/about/AboutMissionVisionSection'
-import AboutTeamSection from '../components/sections/about/AboutTeamSection'
 import AboutExperienceSection from '../components/sections/about/AboutExperienceSection'
 import {
   aboutHeroImage,
@@ -17,7 +16,6 @@ function AboutPage() {
       <AboutStorySection image={aboutJourneyImages.large} />
       <AboutWhyChooseSection />
       <AboutMissionVisionSection />
-      <AboutTeamSection />
       <AboutExperienceSection image={aboutFooterImage} />
     </>
   )

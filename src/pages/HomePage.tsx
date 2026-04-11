@@ -28,7 +28,6 @@ function HomePage() {
     <>
       <MotionSection>
         <HomeHeroSection
-        // onViewGallery={() => navigate('/contact')}
         />
       </MotionSection>
 
@@ -48,13 +47,6 @@ function HomePage() {
       <MotionSection delay={100}>
         <PopularDestinationsSection items={popularDestinations} />
       </MotionSection>
-
-      {/* <MotionSection delay={100}>
-        <RecommendedCaravansSection
-          caravans={premiumCaravans}
-          onBookNow={handleBookNow}
-        />
-      </MotionSection> */}
 
       <MotionSection delay={100}>
         <WhyChooseUsSection />

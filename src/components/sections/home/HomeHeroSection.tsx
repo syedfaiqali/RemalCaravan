@@ -18,9 +18,7 @@ function HomeHeroSection() {
 
   const messages = useMemo(() => [
     "Explore an unforgettable ride in Motor Home (RV)",
-    "Welcome to the Land of Adventure",
-    "Explore the unexplored beauty of UAE",
-    "Experience Luxury on the Road"
+    "Enjoy UAE landscape motorhome"
   ], [])
 
   useEffect(() => {

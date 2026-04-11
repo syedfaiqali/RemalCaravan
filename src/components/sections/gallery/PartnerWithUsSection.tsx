@@ -9,6 +9,12 @@ import heroImage from '../../../assets/caravan_hero_banner_1775771753954.png'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
+import starLight1 from '../../../assets/Star light/IMG-20250812-WA0030.jpg'
+import oasis1 from '../../../assets/Oasis/IMG-20260104-WA0016.jpg'
+import rent1_1 from '../../../assets/For Rent 1/1.jpg'
+import rent4_1 from '../../../assets/For Rent 4/1.jpg'
+import sale18_1 from '../../../assets/For Sale 18/1.jpg'
+import sunshine1 from '../../../assets/Sunshine/file_00000000c7e0720abaca7f32946cddbf.png'
 
 function PartnerWithUsSection() {
   const [activePartner, setActivePartner] = useState<string | null>(null)
@@ -20,7 +26,7 @@ function PartnerWithUsSection() {
       id: 'campsite',
       title: 'Campsite Partner',
       description: 'List your campsite, welcome premium RV travelers, and grow bookings year-round.',
-      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000&auto=format&fit=crop',
+      image: oasis1,
       detailTitle: 'Campsite Partner',
       detailSubtitle:
         'I have a beautiful property in a tranquil location and I want to collaborate with Remal Caravans for parking, stays, and guest facilities.',
@@ -34,7 +40,7 @@ function PartnerWithUsSection() {
       id: 'dealer',
       title: 'Dealer Partner',
       description: 'Grow sales with co-marketing, training, and a steady customer pipeline.',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1000&auto=format&fit=crop',
+      image: sale18_1,
       detailTitle: 'Dealer Partner',
       detailSubtitle:
         'I want to collaborate with Remal Caravans to sell or lease RVs with strong brand support and qualified leads.',
@@ -48,7 +54,7 @@ function PartnerWithUsSection() {
       id: 'retail',
       title: 'Retail Partner',
       description: 'Place your store in front of RV travelers and expand your local reach.',
-      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop',
+      image: sunshine1,
       detailTitle: 'Retail Partner',
       detailSubtitle:
         'I want my retail brand featured for travelers who need supplies, gear, and essentials on the road.',
@@ -62,7 +68,7 @@ function PartnerWithUsSection() {
       id: 'make',
       title: 'Make a Caravan',
       description: 'Build or customize caravans with our design and engineering support.',
-      image: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=1000&auto=format&fit=crop',
+      image: rent1_1,
       detailTitle: 'Make a Caravan',
       detailSubtitle:
         'I want to build or customize caravans with Remal Caravans and deliver premium standards.',
@@ -76,7 +82,7 @@ function PartnerWithUsSection() {
       id: 'attach',
       title: 'Attach my Caravan',
       description: 'List your caravan under our fleet and let us handle bookings and support.',
-      image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1000&auto=format&fit=crop',
+      image: starLight1,
       detailTitle: 'Attach my Caravan',
       detailSubtitle:
         'I have my own caravan and want to attach it with Remal Caravans for managed bookings and care.',
@@ -90,7 +96,7 @@ function PartnerWithUsSection() {
       id: 'agent',
       title: 'Become an Agent',
       description: 'Represent Remal Caravans in your area and earn on every successful booking.',
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop',
+      image: rent4_1,
       detailTitle: 'Become an Agent',
       detailSubtitle:
         'I want to represent Remal Caravans locally and grow bookings with my network.',
@@ -194,6 +200,14 @@ function PartnerWithUsSection() {
                   inputProps={{ accept: 'image/png, image/jpeg' }}
                   helperText="Only PNG or JPG. One image allowed."
                 />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="13. Details"
+                  required
+                />
               </Stack>
             </Grid>
           </Grid>
@@ -224,9 +238,17 @@ function PartnerWithUsSection() {
                   required
                   inputProps={{ pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' }}
                 />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="4. Details"
+                  required
+                />
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    4. I have my own office and parking space at the proposed location
+                    5. I have my own office and parking space at the proposed location
                   </Typography>
                   <RadioGroup row name="has_office_and_parking">
                     <FormControlLabel value="yes" control={<Radio />} label="Yes" />
@@ -235,7 +257,7 @@ function PartnerWithUsSection() {
                 </Box>
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    5. Willing to start with number of caravans
+                    6. Willing to start with number of caravans
                   </Typography>
                   <RadioGroup row name="start_caravan_count">
                     <FormControlLabel value="1-3" control={<Radio />} label="1-3" />
@@ -248,7 +270,7 @@ function PartnerWithUsSection() {
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Stack spacing={2.5}>
-                {renderContactDatePicker('6. Suitable date & time for contact', 'contact_date')}
+                {renderContactDatePicker('7. Suitable date & time for contact', 'contact_date')}
                 <RadioGroup row name="contact_time">
                   <FormControlLabel value="8-11" control={<Radio />} label="8am-11am" />
                   <FormControlLabel value="11-2" control={<Radio />} label="11am-2pm" />
@@ -257,7 +279,7 @@ function PartnerWithUsSection() {
                 </RadioGroup>
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    7. I have experience in any of the following fields
+                    8. I have experience in any of the following fields
                   </Typography>
                   <FormGroup>
                     <FormControlLabel control={<Checkbox name="experience_fields" value="Tour & Travel" />} label="Tour & Travel" />
@@ -298,9 +320,17 @@ function PartnerWithUsSection() {
                   inputProps={{ pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' }}
                 />
                 <TextField fullWidth name="business_address" label="4. Complete Address of Business / Residence with PIN Code" required />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="5. Details"
+                  required
+                />
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    5. I want to avail the Depreciation benefit
+                    6. I want to avail the Depreciation benefit
                   </Typography>
                   <RadioGroup row name="depreciation_benefit">
                     <FormControlLabel value="yes" control={<Radio />} label="Yes" />
@@ -309,7 +339,7 @@ function PartnerWithUsSection() {
                 </Box>
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    6. I have my own Parking Facility
+                    7. I have my own Parking Facility
                   </Typography>
                   <RadioGroup row name="own_parking_facility">
                     <FormControlLabel value="yes" control={<Radio />} label="Yes" />
@@ -320,7 +350,7 @@ function PartnerWithUsSection() {
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Stack spacing={2.5}>
-                {renderContactDatePicker('6. Suitable date & time for contact', 'contact_date')}
+                {renderContactDatePicker('8. Suitable date & time for contact', 'contact_date')}
                 <RadioGroup row name="contact_time">
                   <FormControlLabel value="8-11" control={<Radio />} label="8am-11am" />
                   <FormControlLabel value="11-2" control={<Radio />} label="11am-2pm" />
@@ -329,7 +359,7 @@ function PartnerWithUsSection() {
                 </RadioGroup>
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    7. From which source you have heard about Remal Caravans
+                    9. From which source you have heard about Remal Caravans
                   </Typography>
                   <FormGroup>
                     <FormControlLabel control={<Checkbox name="heard_from" value="Social Media" />} label="Social Media" />
@@ -374,10 +404,11 @@ function PartnerWithUsSection() {
                     5. Estimated Budget
                   </Typography>
                   <RadioGroup row name="estimated_budget">
-                    <FormControlLabel value="0-25" control={<Radio />} label="0-25 Lacs" />
-                    <FormControlLabel value="25-50" control={<Radio />} label="25-50 Lacs" />
-                    <FormControlLabel value="50-1cr" control={<Radio />} label="50-1 Cr" />
-                    <FormControlLabel value="5cr+" control={<Radio />} label="5 Cr+" />
+                    <FormControlLabel value="0-250k" control={<Radio />} label="Up to AED 250K" />
+                    <FormControlLabel value="250k-500k" control={<Radio />} label="AED 250K – 500K" />
+                    <FormControlLabel value="500k-1m" control={<Radio />} label="AED 500K – 1M" />
+                    <FormControlLabel value="1m-5m" control={<Radio />} label="AED 1M – 5M" />
+                    <FormControlLabel value="5m+" control={<Radio />} label="Above AED 5M" />
                   </RadioGroup>
                 </Box>
                 <Select
@@ -427,9 +458,17 @@ function PartnerWithUsSection() {
                   </RadioGroup>
                 </Box>
                 <TextField fullWidth name="specific_requirements" label="10. Specific requirements (if any)" />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="11. Details"
+                  required
+                />
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    11. Facilities wanted in my Caravan
+                    12. Facilities wanted in my Caravan
                   </Typography>
                   <FormGroup
                     sx={{
@@ -583,6 +622,14 @@ function PartnerWithUsSection() {
                   inputProps={{ accept: 'image/png, image/jpeg' }}
                   helperText="Only PNG, JPG or JPEG. One image allowed."
                 />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="17. Details"
+                  required
+                />
               </Stack>
             </Grid>
           </Grid>
@@ -615,13 +662,21 @@ function PartnerWithUsSection() {
                   inputProps={{ pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' }}
                 />
                 <TextField fullWidth name="office_address" label="5. Complete Address of the Office" required />
+                <TextField
+                  fullWidth
+                  name="details"
+                  multiline
+                  rows={3}
+                  label="6. Details"
+                  required
+                />
               </Stack>
             </Grid>
             <Grid size={{ xs: 12, md: 6 }}>
               <Stack spacing={2.5}>
-                <TextField fullWidth name="company_website" label="6. Website of the Company (if any)" />
-                <TextField fullWidth name="years_in_business" label="7. No. of Years into Tours & Travel Business" />
-                {renderContactDatePicker('8. Suitable date & time for contact', 'contact_date')}
+                <TextField fullWidth name="company_website" label="7. Website of the Company (if any)" />
+                <TextField fullWidth name="years_in_business" label="8. No. of Years into Tours & Travel Business" />
+                {renderContactDatePicker('9. Suitable date & time for contact', 'contact_date')}
                 <RadioGroup row name="contact_time">
                   <FormControlLabel value="8-11" control={<Radio />} label="8am-11am" />
                   <FormControlLabel value="11-2" control={<Radio />} label="11am-2pm" />
@@ -630,13 +685,13 @@ function PartnerWithUsSection() {
                 </RadioGroup>
                 <Box>
                   <Typography sx={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 700, mb: 1 }}>
-                    9. Expected Annual Business Volume with Remal Caravans
+                    10. Expected Annual Business Volume with Remal Caravans
                   </Typography>
                   <RadioGroup row name="expected_annual_volume">
-                    <FormControlLabel value="1-5" control={<Radio />} label="1-5 Cr" />
-                    <FormControlLabel value="5-10" control={<Radio />} label="5-10 Cr" />
-                    <FormControlLabel value="10-20" control={<Radio />} label="10-20 Cr" />
-                    <FormControlLabel value="20+" control={<Radio />} label="20 Cr+" />
+                    <FormControlLabel value="1-5" control={<Radio />} label="AED 1M – 5M" />
+                    <FormControlLabel value="5-10" control={<Radio />} label="AED 5M – 10M" />
+                    <FormControlLabel value="10-20" control={<Radio />} label="AED 10M – 20M" />
+                    <FormControlLabel value="20+" control={<Radio />} label="AED 20M+" />
                   </RadioGroup>
                 </Box>
               </Stack>

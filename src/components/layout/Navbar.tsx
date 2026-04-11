@@ -11,7 +11,7 @@ const navItems = [
   { label: 'Our RV fleet', path: '/fleet' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Partner with Us', path: '/partner' },
-  { label: 'Our Destinations', path: '/destinations' },
+  { label: 'Campsites', path: '/destinations' },
   { label: 'Contact', path: '/contact' },
   { label: 'About Us', path: '/about' },
 ]
@@ -146,16 +146,13 @@ function Navbar() {
               <Box sx={{ textAlign: 'right' }}>
                 <Typography
                   sx={{
-                    fontSize: '0.65rem',
-                    fontWeight: 700,
-                    color: '#5b5b5b',
+                    fontSize: '0.95rem',
+                    fontWeight: 800,
+                    color: '#f39a1e',
                     fontFamily: '"Poppins", sans-serif',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    mb: -0.2
                   }}
                 >
-                  RV on Rent in City
+                  +91 XXX XXX XXXX
                 </Typography>
                 <Typography
                   sx={{

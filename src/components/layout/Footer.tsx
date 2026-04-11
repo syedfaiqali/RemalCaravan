@@ -97,7 +97,7 @@ function Footer() {
                     color: '#5b5b5b'
                   }}
                 >
-                  Making memories on the road since 2010. We provide premium RV experiences for unforgettable journeys across the country. Your adventure starts here.
+                  Making memories on the road since 2023. We provide premium RV experiences for unforgettable journeys across the country. Your adventure starts here.
                 </Typography>
               </Grid>
 
@@ -110,7 +110,8 @@ function Footer() {
                   <Link href="/gallery" sx={linkStyle}>Gallery</Link>
                   <Link href="/fleet" sx={linkStyle}>Our Fleet</Link>
                   <Link href="/contact" sx={linkStyle}>Contact Us</Link>
-                  <Link href="/destinations" sx={linkStyle}>Our Destinations</Link>
+                  <Link href="/destinations" sx={linkStyle}>Campsites</Link>
+                  <Link href="/partner" sx={linkStyle}>Become Our Partner</Link>
                 </Stack>
               </Grid>
 
@@ -127,9 +128,14 @@ function Footer() {
                     }}>
                       <LocalPhoneIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
                     </Box>
-                    <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                      +971 XX XXX XXXX
-                    </Typography>
+                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                      <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
+                        +971 XX XXX XXXX
+                      </Typography>
+                      <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
+                        +971 XX XXX XXXX
+                      </Typography>
+                    </Box>
                   </Stack>
                   <Stack direction="row" spacing={2} alignItems="center">
                     <Box sx={{
@@ -140,10 +146,28 @@ function Footer() {
                     }}>
                       <EmailIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
                     </Box>
-                    <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                      info@remalcaravan.ae
-                    </Typography>
+                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                      <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
+                        info@remalcaravan.ae
+                      </Typography>
+                      <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
+                        booking@remalcaravan.ae
+                      </Typography>
+                    </Box>
                   </Stack>
+                  {/* <Stack direction="row" spacing={2} alignItems="center">
+                    <Box sx={{
+                      bgcolor: '#fdebd2',
+                      p: 1.2,
+                      borderRadius: '12px',
+                      display: 'flex'
+                    }}>
+                      <EmailIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
+                    </Box>
+                    <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
+                      booking@remalcaravan.ae
+                    </Typography>
+                  </Stack> */}
                 </Stack>
               </Grid>
 

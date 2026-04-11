@@ -139,7 +139,7 @@ export const featuredCaravans: CaravanItem[] = [
   {//1
     id: 'star-light',
     title: 'Star Light',
-    description: 'Robust and ready for the dunes, perfect for UAE’s vast desert landscapes.',
+    description: 'Robust and ready for the dunes, perfect for UAE’s vast landscapes.',
     fullDescription: 'Experience unparalleled comfort evokes the sensation of a level of ease and relaxation that transcends ordinary comfort, offering a truly exceptional and memorable experience. This phrase suggests a state of being where every aspect of comfort is optimized to its fullest potential, creating an environment or sensation that feels uniquely tailored to the individual, surpassing all expectations.',
     image: starLight1,
     gallery: [starLight1, starLight2, starLight3, starLight4, starLight5, starLight6, starLight7, starLight8],
@@ -149,27 +149,26 @@ export const featuredCaravans: CaravanItem[] = [
     specificationSummary: {
       fuel: 'Diesel',
       kids: '2 Kids',
-      adults: '4 Adults',
+      adults: '2 Adults',
       vehicleType: 'Light Passenger Vehicle'
     },
     inclusions: [
-      'Driver',
-      'One Queen Size Bed with Linens, Quilt & Partition & Door Lock',
-      'One 3 Seater Motorised Sofa cum Bed with Linens & Quilt',
+      'Two Queen Size Bed with Linens, Quilt & Partition & Door Lock',
+      // 'One 3 Seater Motorised Sofa cum Bed with Linens & Quilt',
       'Two 2 Seater Sofa set',
       '1(One) Queen Size over head bed with Linens & Quilt & Curtain',
       'Air Conditioners (Hot & Cold)',
       'One Smart TV',
-      'Sony Surround Sound System',
+      'Surround Sound System',
       'Mobile Charging Points',
-      'Intercom System to communicate with Driver',
-      'Electrical Marine Toilet with Washbasin & Shower',
+      // 'Intercom System to communicate with Driver',
+      'Toilet with Washbasin & Shower',
       'Shampoo & Shower Gel',
       'Safety Vault',
       'Water Geyser',
-      'Kitchenette with Hot Plate',
+      'Outdoor Kitchenette with Microwave',
       'Electric Kettle',
-      'Pull out Fridge & Sink',
+      'Fridge & Sink',
       'Outdoor Pullout Kitchen with Gas Burner & Sink',
       'Camping Chairs & Table with Awning & Camping Lights',
       'Cooking Utensils',
@@ -179,17 +178,19 @@ export const featuredCaravans: CaravanItem[] = [
       '3 KVA Honda Silent Genset',
       'Umbrella',
       'Fuel up to 250 kms (Free Run/per Day)',
-      'Night Parking at our Authorised Campsites'
+      // 'Night Parking at our Authorised Campsites'
     ],
     exclusions: [
-      'Fuel Cost post 250 kms of free run @ Rs. 100 per km',
+      'Driver',
+      'Fuel Cost post 250 kms of free run @ 100 per km',
       'Breakfast, Lunch & Dinner',
       'Special Permits & Local Passes',
       'Miscellaneous Personal Expenses',
-      'Day Halting Charges (Engine is ON) @ Rs. 1500/- per hour'
+      'Night Parking at our Authorised Campsites',
+      'Fuel for generator excluded'
     ],
     services: [
-      '5Kg extra LPG Cylinder',
+      '5Kg LPG Cylinder',
       'Archery Set',
       'Badminton Set',
       'Barbeque',

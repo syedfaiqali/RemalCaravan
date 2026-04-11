@@ -7,7 +7,7 @@ function GalleryPage() {
     <>
       <GalleryHeroSection />
       <GalleryContentSection />
-      <AdventureCTASection 
+      <AdventureCTASection
         title="Start Your Own RV Adventure"
         subtitle="Ready to write your own story? Book your premium RV today and hit the open road."
         buttonText="Book Your RV Now"

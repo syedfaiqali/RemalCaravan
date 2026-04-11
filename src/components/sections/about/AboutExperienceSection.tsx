@@ -80,15 +80,6 @@ function AboutExperienceSection({ image }: AboutExperienceSectionProps) {
                   >
                     "The best vacation our family has ever had. The RV was spotless, and the support team helped us find the best campsites along the way."
                   </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: '"Poppins", sans-serif',
-                      fontWeight: 700,
-                      color: '#f39a1e'
-                    }}
-                  >
-                    â€” The Henderson Family
-                  </Typography>
                 </Box>
               </Grid>
 

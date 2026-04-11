@@ -1,5 +1,4 @@
-﻿import { Box, Container, Typography, Button } from '@mui/material'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+﻿import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import heroImage from '../../../assets/busimage2.jpeg'
 
@@ -46,28 +45,6 @@ function GalleryHeroSection() {
           >
             Explore our RV adventures and unforgettable road trips across the country.
           </Typography>
-          <Button
-            variant="contained"
-            startIcon={<KeyboardArrowDownIcon />}
-            sx={{
-              bgcolor: '#fff',
-              color: '#2b2b2b',
-              px: 4,
-              py: 2,
-              borderRadius: '16px',
-              fontFamily: '"Poppins", sans-serif',
-              fontWeight: 700,
-              textTransform: 'none',
-              fontSize: '1.1rem',
-              '&:hover': {
-                bgcolor: '#f3e4d2',
-                transform: 'translateY(-3px)'
-              },
-              transition: '0.3s'
-            }}
-          >
-            View Collections
-          </Button>
         </MotionSection>
       </Container>
     </Box>

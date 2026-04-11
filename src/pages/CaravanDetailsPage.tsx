@@ -367,7 +367,7 @@ function CaravanDetailsPage() {
                     color: '#5b5b5b'
                   }}
                 >
-                  (250 of Free Run)*
+                  (250 km Inclusive in Pricing)*
                 </Typography>
               </Box>
             </Box>
@@ -392,7 +392,6 @@ function CaravanDetailsPage() {
             }}
           >
             <Tab label="Information" />
-            <Tab label="Review" />
           </Tabs>
         </Box>
 
@@ -554,7 +553,7 @@ function CaravanDetailsPage() {
                       color: '#333',
                     }}
                   >
-                    Services:
+                    Extra Services with Additional Cost:
                   </Typography>
                   <Grid container spacing={2}>
                     {caravan.services.map((item, idx) => (
@@ -579,12 +578,6 @@ function CaravanDetailsPage() {
                 </Box>
               </MotionSection>
             )}
-          </Box>
-        )}
-
-        {tabValue === 1 && (
-          <Box sx={{ py: 4, textAlign: 'center' }}>
-            <Typography color="text.secondary">No reviews yet for this caravan.</Typography>
           </Box>
         )}
       </Container>

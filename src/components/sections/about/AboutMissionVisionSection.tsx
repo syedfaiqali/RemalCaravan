@@ -58,7 +58,7 @@ function AboutMissionVisionSection() {
                 </Box>
                 <Typography sx={titleStyle}>Our Vision</Typography>
                 <Typography sx={bodyStyle}>
-                  To become the world's most trusted partner for road travel, known for our exceptional fleet and commitment to sustainable tourism.
+                  To become the UAE's most trusted partner for road travel, known for our exceptional fleet and commitment to sustainable tourism.
                 </Typography>
               </Box>
             </MotionSection>
