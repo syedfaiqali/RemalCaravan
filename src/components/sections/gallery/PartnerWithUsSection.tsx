@@ -197,6 +197,7 @@ function PartnerWithUsSection() {
                   name="campsite_photos"
                   label="12. Upload recent pictures of the proposed campsite"
                   type="file"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{ accept: 'image/png, image/jpeg' }}
                   helperText="Only PNG or JPG. One image allowed."
                 />
@@ -619,6 +620,7 @@ function PartnerWithUsSection() {
                   name="caravan_photos"
                   label="16. Upload recent pictures of the proposed Caravan"
                   type="file"
+                  InputLabelProps={{ shrink: true }}
                   inputProps={{ accept: 'image/png, image/jpeg' }}
                   helperText="Only PNG, JPG or JPEG. One image allowed."
                 />
