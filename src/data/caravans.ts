@@ -1,111 +1,111 @@
 // RV Gallery Imports
 // Star light
-import starLight1 from '../assets/Star light/IMG-20250812-WA0030.jpg'
-import starLight2 from '../assets/Star light/IMG-20250518-WA0022.jpg'
-import starLight3 from '../assets/Star light/IMG-20250812-WA0030.jpg'
-import starLight4 from '../assets/Star light/file_00000000b98871f49020eef362975ff7.png'
-import starLight5 from '../assets/Star light/IMG-20260108-WA0034.jpg'
-import starLight6 from '../assets/Star light/IMG-20260108-WA0035.jpg'
-import starLight7 from '../assets/Star light/remal_caravan_enhanced.png'
-import starLight8 from '../assets/Star light/IMG-20260118-WA0087.jpg'
+import starLight1 from '../assets/Star light/IMG-20250812-WA0030.webp'
+import starLight2 from '../assets/Star light/IMG-20250518-WA0022.webp'
+import starLight3 from '../assets/Star light/IMG-20250812-WA0030.webp'
+import starLight4 from '../assets/Star light/file_00000000b98871f49020eef362975ff7.webp'
+import starLight5 from '../assets/Star light/IMG-20260108-WA0034.webp'
+import starLight6 from '../assets/Star light/IMG-20260108-WA0035.webp'
+import starLight7 from '../assets/Star light/remal_caravan_enhanced.webp'
+import starLight8 from '../assets/Star light/IMG-20260118-WA0087.webp'
 
 // Sunshine
-import sunshine1 from '../assets/Sunshine/file_00000000c7e0720abaca7f32946cddbf.png'
-import sunshine2 from '../assets/Sunshine/file_00000000dfb87243900043e99091c9b7.png'
-import sunshine3 from '../assets/Sunshine/file_0000000097ac71f49017620744c7185b.png'
-import sunshine4 from '../assets/Sunshine/file_0000000011dc720a9ba6904b0f993214.png'
+import sunshine1 from '../assets/Sunshine/file_00000000c7e0720abaca7f32946cddbf.webp'
+import sunshine2 from '../assets/Sunshine/file_00000000dfb87243900043e99091c9b7.webp'
+import sunshine3 from '../assets/Sunshine/file_0000000097ac71f49017620744c7185b.webp'
+import sunshine4 from '../assets/Sunshine/file_0000000011dc720a9ba6904b0f993214.webp'
 
 // Oasis
-import oasis1 from '../assets/Oasis/IMG-20260104-WA0016.jpg'
-import oasis2 from '../assets/Oasis/IMG-20260104-WA0017.jpg'
-import oasis3 from '../assets/Oasis/IMG-20260104-WA0018.jpg'
-import oasis4 from '../assets/Oasis/IMG-20260104-WA0019.jpg'
+import oasis1 from '../assets/Oasis/IMG-20260104-WA0016.webp'
+import oasis2 from '../assets/Oasis/IMG-20260104-WA0017.webp'
+import oasis3 from '../assets/Oasis/IMG-20260104-WA0018.webp'
+import oasis4 from '../assets/Oasis/IMG-20260104-WA0019.webp'
 
 // Falcon Rover
-import falconRover1 from '../assets/Falcon Rover/IMG-20260120-WA0024.jpg'
-import falconRover2 from '../assets/Falcon Rover/IMG-20260120-WA0019.jpg'
-import falconRover3 from '../assets/Falcon Rover/IMG-20260120-WA0020.jpg'
-import falconRover4 from '../assets/Falcon Rover/IMG-20260120-WA0021.jpg'
+import falconRover1 from '../assets/Falcon Rover/IMG-20260120-WA0024.webp'
+import falconRover2 from '../assets/Falcon Rover/IMG-20260120-WA0019.webp'
+import falconRover3 from '../assets/Falcon Rover/IMG-20260120-WA0020.webp'
+import falconRover4 from '../assets/Falcon Rover/IMG-20260120-WA0021.webp'
 
 // Apex Blazer
-import apexBlazer1 from '../assets/Apex Blazer/file_00000000fe8472468e789b5c56b9e2c0.png'
-import apexBlazer2 from '../assets/Apex Blazer/file_000000005e307243b5985b4647529284.png'
-import apexBlazer3 from '../assets/Apex Blazer/file_0000000063f0720abdd4d94325d6cdb9.png'
-import apexBlazer4 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.png'
-import apexBlazer5 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.png'
+import apexBlazer1 from '../assets/Apex Blazer/file_00000000fe8472468e789b5c56b9e2c0.webp'
+import apexBlazer2 from '../assets/Apex Blazer/file_000000005e307243b5985b4647529284.webp'
+import apexBlazer3 from '../assets/Apex Blazer/file_0000000063f0720abdd4d94325d6cdb9.webp'
+import apexBlazer4 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.webp'
+import apexBlazer5 from '../assets/Apex Blazer/file_000000008130720a9e2639d51721cbd9.webp'
 
 // Desert Glory
-import desertGlory3 from '../assets/Desert Glory/IMG-20260121-WA0018.jpg'
-import desertGlory2 from '../assets/Desert Glory/IMG-20260121-WA0022.jpg'
-import desertGlory1 from '../assets/Desert Glory/IMG-20260121-WA0023.jpg'
+import desertGlory3 from '../assets/Desert Glory/IMG-20260121-WA0018.webp'
+import desertGlory2 from '../assets/Desert Glory/IMG-20260121-WA0022.webp'
+import desertGlory1 from '../assets/Desert Glory/IMG-20260121-WA0023.webp'
 
 // Rainbow
-import rainbow1 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.png'
-import rainbow2 from '../assets/Rainbow/IMG-20260118-WA0101.jpg'
-import rainbow3 from '../assets/Rainbow/IMG-20260118-WA0102.jpg'
-import rainbow4 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.png'
+import rainbow1 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.webp'
+import rainbow2 from '../assets/Rainbow/IMG-20260118-WA0101.webp'
+import rainbow3 from '../assets/Rainbow/IMG-20260118-WA0102.webp'
+import rainbow4 from '../assets/Rainbow/file_000000000794720a95f0f43dcae5a0c7.webp'
 
 // Terra
-import terra1 from '../assets/Terra/file_00000000b09c7243859f672d035ec067.png'
-import terra2 from '../assets/Terra/file_00000000552c720a869683ddeb6f8f48.png'
-import terra3 from '../assets/Terra/IMG-20260120-WA0025.jpg'
-import terra4 from '../assets/Terra/IMG-20260120-WA0027.jpg'
-import terra5 from '../assets/Terra/IMG-20260120-WA0029.jpg'
+import terra1 from '../assets/Terra/file_00000000b09c7243859f672d035ec067.webp'
+import terra2 from '../assets/Terra/file_00000000552c720a869683ddeb6f8f48.webp'
+import terra3 from '../assets/Terra/IMG-20260120-WA0025.webp'
+import terra4 from '../assets/Terra/IMG-20260120-WA0027.webp'
+import terra5 from '../assets/Terra/IMG-20260120-WA0029.webp'
 
 // Fallback Imports
-import rent1_1 from '../assets/For Rent 1/1.jpg'
-import rent1_2 from '../assets/For Rent 1/2.jpg'
-import rent1_3 from '../assets/For Rent 1/3.jpg'
-import rent1_4 from '../assets/For Rent 1/4.jpg'
+import rent1_1 from '../assets/For Rent 1/1.webp'
+import rent1_2 from '../assets/For Rent 1/2.webp'
+import rent1_3 from '../assets/For Rent 1/3.webp'
+import rent1_4 from '../assets/For Rent 1/4.webp'
 
-import rent4_1 from '../assets/For Rent 4/1.jpg'
-import rent4_2 from '../assets/For Rent 4/2.jpg'
-import rent4_3 from '../assets/For Rent 4/3.jpg'
-import rent4_4 from '../assets/For Rent 4/4.jpg'
+import rent4_1 from '../assets/For Rent 4/1.webp'
+import rent4_2 from '../assets/For Rent 4/2.webp'
+import rent4_3 from '../assets/For Rent 4/3.webp'
+import rent4_4 from '../assets/For Rent 4/4.webp'
 
 // For Rent 6
-import rent6_1 from '../assets/For Rent 6/1.jpeg'
-import rent6_2 from '../assets/For Rent 6/2.jpeg'
-import rent6_3 from '../assets/For Rent 6/3.jpeg'
-import rent6_4 from '../assets/For Rent 6/4.jpeg'
+import rent6_1 from '../assets/For Rent 6/1.webp'
+import rent6_2 from '../assets/For Rent 6/2.webp'
+import rent6_3 from '../assets/For Rent 6/3.webp'
+import rent6_4 from '../assets/For Rent 6/4.webp'
 
 // For Rent 7
-import rent7_1 from '../assets/For Rent 7/1.jpeg'
-import rent7_2 from '../assets/For Rent 7/2.jpeg'
+import rent7_1 from '../assets/For Rent 7/1.webp'
+import rent7_2 from '../assets/For Rent 7/2.webp'
 
 // For Rent 8
-import rent8_1 from '../assets/For Rent 8/1.jpeg'
-import rent8_2 from '../assets/For Rent 8/2.jpeg'
+import rent8_1 from '../assets/For Rent 8/1.webp'
+import rent8_2 from '../assets/For Rent 8/2.webp'
 
 // For Sale 9
-import sale9_1 from '../assets/For Sale 9/1.jpg'
-import sale9_2 from '../assets/For Sale 9/2.jpg'
-import sale9_3 from '../assets/For Sale 9/3.jpg'
-import sale9_4 from '../assets/For Sale 9/4.jpg'
+import sale9_1 from '../assets/For Sale 9/1.webp'
+import sale9_2 from '../assets/For Sale 9/2.webp'
+import sale9_3 from '../assets/For Sale 9/3.webp'
+import sale9_4 from '../assets/For Sale 9/4.webp'
 
 // For sale 1
-import sale1_1 from '../assets/For sale 1/1.jpg'
-import sale1_2 from '../assets/For sale 1/2.jpg'
-import sale1_3 from '../assets/For sale 1/3.jpg'
-import sale1_4 from '../assets/For sale 1/4.jpg'
+import sale1_1 from '../assets/For sale 1/1.webp'
+import sale1_2 from '../assets/For sale 1/2.webp'
+import sale1_3 from '../assets/For sale 1/3.webp'
+import sale1_4 from '../assets/For sale 1/4.webp'
 
 // For sale 2
-import sale2_1 from '../assets/For sale 2/1.jpg'
-import sale2_2 from '../assets/For sale 2/2.jpg'
-import sale2_3 from '../assets/For sale 2/3.jpg'
-import sale2_4 from '../assets/For sale 2/4.jpg'
+import sale2_1 from '../assets/For sale 2/1.webp'
+import sale2_2 from '../assets/For sale 2/2.webp'
+import sale2_3 from '../assets/For sale 2/3.webp'
+import sale2_4 from '../assets/For sale 2/4.webp'
 
 // For sale 4
-import sale4_1 from '../assets/For sale 4/1.jpg'
-import sale4_2 from '../assets/For sale 4/2.jpg'
-import sale4_3 from '../assets/For sale 4/3.jpg'
-import sale4_4 from '../assets/For sale 4/4.jpg'
+import sale4_1 from '../assets/For sale 4/1.webp'
+import sale4_2 from '../assets/For sale 4/2.webp'
+import sale4_3 from '../assets/For sale 4/3.webp'
+import sale4_4 from '../assets/For sale 4/4.webp'
 
 // For Sale 18
-import sale18_1 from '../assets/For Sale 18/1.jpg'
-import sale18_2 from '../assets/For Sale 18/2.jpg'
-import sale18_3 from '../assets/For Sale 18/3.jpg'
-import sale18_4 from '../assets/For Sale 18/4.jpg'
+import sale18_1 from '../assets/For Sale 18/1.webp'
+import sale18_2 from '../assets/For Sale 18/2.webp'
+import sale18_3 from '../assets/For Sale 18/3.webp'
+import sale18_4 from '../assets/For Sale 18/4.webp'
 
 
 export interface CaravanSpec {

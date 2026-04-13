@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
-import heroImage from '../../../assets/busimage2.jpeg'
+import heroImage from '../../../assets/busimage2.webp'
 
 function DestinationsHeroSection() {
   const [text, setText] = useState('')

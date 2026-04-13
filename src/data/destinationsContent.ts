@@ -1,13 +1,13 @@
-import image6s from '../assets/WhatsApp Image 2026-03-08 at 8.22.51 AM.jpeg'
-import image7s from '../assets/WhatsApp Image 2026-03-08 at 8.22.52 AM.jpeg'
-import image8s from '../assets/WhatsApp Image 2026-03-08 at 8.22.54 AM.jpeg'
+import image6s from '../assets/WhatsApp Image 2026-03-08 at 8.22.51 AM.webp'
+import image7s from '../assets/WhatsApp Image 2026-03-08 at 8.22.52 AM.webp'
+import image8s from '../assets/WhatsApp Image 2026-03-08 at 8.22.54 AM.webp'
 
-import jebelHafeetImg from '../assets/jebel_hafeet.png'
-import liwaDesertImg from '../assets/liwa_desert.png'
-import hattaMountainsImg from '../assets/hatta_mountains.png'
-import alQudraLakesImg from '../assets/al_qudra_lakes.png'
+import jebelHafeetImg from '../assets/jebel_hafeet.webp'
+import liwaDesertImg from '../assets/liwa_desert.webp'
+import hattaMountainsImg from '../assets/hatta_mountains.webp'
+import alQudraLakesImg from '../assets/al_qudra_lakes.webp'
 
-import saadiyatBeachImg from '../assets/saadiyat_beach.png'
+import saadiyatBeachImg from '../assets/saadiyat_beach.webp'
 
 export interface Destination {
   id: string
