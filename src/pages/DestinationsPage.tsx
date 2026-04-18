@@ -2,7 +2,7 @@ import DestinationsHeroSection from '../components/sections/destinations/Destina
 import DestinationsGridSection from '../components/sections/destinations/DestinationsGridSection'
 import FeaturedRoadTripsSection from '../components/sections/destinations/FeaturedRoadTripsSection'
 import TravelFreelySection from '../components/sections/destinations/TravelFreelySection'
-import RecommendedTripsSection from '../components/sections/destinations/RecommendedTripsSection'
+// import RecommendedTripsSection from '../components/sections/destinations/RecommendedTripsSection'
 import AdventureCTASection from '../components/common/AdventureCTASection'
 
 function DestinationsPage() {
@@ -12,7 +12,7 @@ function DestinationsPage() {
       <DestinationsGridSection />
       <FeaturedRoadTripsSection />
       <TravelFreelySection />
-      <RecommendedTripsSection />
+      {/* <RecommendedTripsSection /> */}
       <AdventureCTASection
         title="Ready To Explore The New Destinations?"
         subtitle="Stop dreaming and start driving. Choose your destination, pick your RV,

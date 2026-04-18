@@ -16,46 +16,53 @@ export interface Destination {
 
 export const destinations: Destination[] = [
   {
-    id: 'jebel-hafeet',
-    title: 'Jebel Hafeet',
-    description: 'Experience the crisp mountain air and panoramic views of the high altitude retreats in Al Ain.',
-    image: alAinImg,
-    category: 'Mountains'
-  },
-  {
-    id: 'saadiyat-beach',
-    title: 'Saadiyat Beach',
-    description: 'Park your RV by the shore and wake up to the sound of crashing waves and golden sands in Abu Dhabi.',
+    id: 'abu-dhabi',
+    title: 'Abu Dhabi',
+    description: 'Experience the serene beach camping and luxury island retreats in the capital.',
     image: abuDhabiImg,
     category: 'Beaches'
   },
   {
-    id: 'liwa-desert',
-    title: 'Liwa Desert',
-    description: 'Discover the stark beauty of the dunes and camp under a canopy of endless stars in the Empty Quarter.',
-    image: liwaImg,
-    category: 'Desert'
+    id: 'ajman',
+    title: 'Ajman',
+    description: 'A peaceful retreat perfect for coastal camping and exploring pristine mangrove forests.',
+    image: ajmanImg,
+    category: 'Beaches'
   },
   {
-    id: 'hatta-mountains',
-    title: 'Hatta Mountains',
-    description: 'For the bold explorers seeking steep climbs and high-altitude base camps with stunning turquoise pools.',
+    id: 'al-ain',
+    title: 'Al Ain',
+    description: 'Camp at the foot of the majestic mountains and enjoy the lush oasis city landscape.',
+    image: alAinImg,
+    category: 'Mountains'
+  },
+  {
+    id: 'hatta',
+    title: 'Hatta',
+    description: 'Explore the rugged mountain peaks and turquoise dam views in the heart of the Hajar mountains.',
     image: hattaImg,
     category: 'Mountains'
   },
   {
-    id: 'kalba-forest',
-    title: 'Kalba Mangroves',
-    description: 'Get lost in the serene mangrove forests and reconnect with nature in this biodiverse sanctuary.',
-    image: sharjahImg,
-    category: 'Forests'
+    id: 'liwa',
+    title: 'Liwa',
+    description: 'Experience the ultimate desert adventure among the tallest dunes in the Empty Quarter.',
+    image: liwaImg,
+    category: 'Desert'
   },
   {
-    id: 'ajman-beach',
-    title: 'Ajman Beach',
-    description: 'Relax on the pristine white sands of Ajman, a peaceful retreat perfect for beachside camping.',
-    image: ajmanImg,
-    category: 'Beaches'
+    id: 'sharjah',
+    title: 'Sharjah',
+    description: 'Discover the cultural heart of the UAE with unique desert and mangrove camping spots.',
+    image: sharjahImg,
+    category: 'Desert'
+  },
+  {
+    id: 'dubai',
+    title: 'Dubai',
+    description: 'Enjoy lakefront camping at Al Qudra or desert escapes on the outskirts of the city.',
+    image: dubaiCampingImg,
+    category: 'Lakes'
   }
 ]
 
