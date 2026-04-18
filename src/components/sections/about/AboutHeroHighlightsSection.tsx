@@ -1,5 +1,6 @@
-﻿import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
+import { aboutBilingualContent } from '../../../data/aboutBilingualContent'
 
 interface AboutHeroHighlightsSectionProps {
   image: string
@@ -24,20 +25,53 @@ function AboutHeroHighlightsSection({ image }: AboutHeroHighlightsSectionProps) 
                   letterSpacing: '-0.02em',
                 }}
               >
-                About Remal <br />
+                {aboutBilingualContent.hero.en.title.split(' RV Caravan')[0]} <br />
                 <Box component="span" sx={{ color: '#f39a1e' }}>RV Caravan</Box>
               </Typography>
+              
+              {/* Arabic Title */}
+              <Typography
+                dir="rtl"
+                sx={{
+                  fontFamily: '"Cairo", sans-serif',
+                  fontWeight: 800,
+                  fontSize: { xs: '1.8rem', md: '2.5rem' },
+                  color: '#f39a1e',
+                  lineHeight: 1.2,
+                  mb: 4,
+                  mt: -2,
+                  textAlign: 'left'
+                }}
+              >
+                {aboutBilingualContent.hero.ar.title}
+              </Typography>
+
               <Typography
                 sx={{
                   fontFamily: '"Plus Jakarta Sans", sans-serif',
                   fontSize: { xs: '1.1rem', md: '1.25rem' },
                   color: '#5b5b5b',
-                  mb: 5,
+                  mb: 3,
                   lineHeight: 1.6,
                   maxWidth: '550px'
                 }}
               >
-                Making road trips unforgettable with comfortable RV travel. Explore our story and our commitment to quality travel experiences in the UAE.
+                {aboutBilingualContent.hero.en.subtitle}
+              </Typography>
+
+              <Typography
+                dir="rtl"
+                sx={{
+                  fontFamily: '"Cairo", sans-serif',
+                  fontSize: { xs: '1rem', md: '1.15rem' },
+                  color: '#8a8a8a',
+                  mb: 5,
+                  lineHeight: 1.7,
+                  maxWidth: '550px',
+                  textAlign: 'left'
+                }}
+              >
+                {aboutBilingualContent.hero.ar.subtitle}
               </Typography>
               {/* <Button
                 variant="contained"

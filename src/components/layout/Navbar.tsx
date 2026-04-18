@@ -1,4 +1,4 @@
-﻿import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
+import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton, Drawer, List, ListItem, ListItemText, Stack } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
@@ -152,7 +152,7 @@ function Navbar() {
                     fontFamily: '"Poppins", sans-serif',
                   }}
                 >
-                  +91 XXX XXX XXXX
+                  +971 50 120 9512
                 </Typography>
                 <Typography
                   sx={{
@@ -162,7 +162,7 @@ function Navbar() {
                     fontFamily: '"Poppins", sans-serif',
                   }}
                 >
-                  +91 XXX XXX XXXX
+                  +971 50 907 1249
                 </Typography>
               </Box>
               <CustomButton

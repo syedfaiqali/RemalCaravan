@@ -12,13 +12,13 @@ import image2b from '../assets/For Rent 1/1.webp'
 import image3b from '../assets/For Rent 2/1.webp'
 import image4b from '../assets/For Rent 3/1.webp'
 
-import abuDhabiImg from '../assets/abu_dhabi_skyline.webp'
-import dubaiImg from '../assets/dubai_skyline.webp'
-import sharjahImg from '../assets/sharjah_view.webp'
-import jebelHafeet from '../assets/jebel_hafeet.webp'
-import liwaDesert from '../assets/liwa_desert.webp'
-import hattaMountains from '../assets/hatta_mountains.webp'
-import alQudraLakes from '../assets/al_qudra_lakes.webp'
+import alAinImg from '../assets/camping/AL_AIN_CAMPING_SITES_MOTOR_HOME_2.jpeg'
+import abuDhabiImg from '../assets/camping/Abu_dhabi_camping_sites__14.jpeg'
+import liwaImg from '../assets/camping/Liwa_camping_site__2.jpeg'
+import hattaImg from '../assets/camping/Hatta_Camping_Spots_for_Motorhomes_13.jpeg'
+import sharjahImg from '../assets/camping/Sharjah_camping_site__7.jpeg'
+import ajmanImg from '../assets/camping/Ajman_Camping_Sites_motor_home_5.jpeg'
+import dubaiCampingImg from '../assets/camping/uae_camping_sites_1.jpeg'
 
 export interface DestinationItem {
   name: string
@@ -28,22 +28,22 @@ export interface DestinationItem {
 export const caravanForYouImages = [image1b, image2b]
 
 export const recommendedDestinations: DestinationItem[] = [
-  { name: 'Jebel Hafeet', image: jebelHafeet },
-  { name: 'Liwa Desert', image: liwaDesert },
-  { name: 'Hatta Mountains', image: hattaMountains },
-  { name: 'Al Qudra Lakes', image: alQudraLakes },
-  { name: 'Saadiyat Beach', image: image5s },
-  { name: 'Dubai Marina', image: image6s },
+  { name: 'Jebel Hafeet', image: alAinImg },
+  { name: 'Liwa Desert', image: liwaImg },
+  { name: 'Hatta Mountains', image: hattaImg },
+  { name: 'Al Qudra Lakes', image: dubaiCampingImg },
+  { name: 'Saadiyat Beach', image: abuDhabiImg },
+  { name: 'Sharjah City', image: sharjahImg },
 ]
 
 export const popularDestinations: DestinationItem[] = [
   { name: 'Abu Dhabi', image: abuDhabiImg },
-  { name: 'Ajman', image: hattaMountains },
-  { name: 'Al Ain', image: jebelHafeet },
-  { name: 'Hatta', image: hattaMountains },
-  { name: 'Liwa', image: liwaDesert },
+  { name: 'Ajman', image: ajmanImg },
+  { name: 'Al Ain', image: alAinImg },
+  { name: 'Hatta', image: hattaImg },
+  { name: 'Liwa', image: liwaImg },
   { name: 'Sharjah', image: sharjahImg },
-  { name: 'Dubai', image: dubaiImg },
+  { name: 'Dubai', image: dubaiCampingImg },
 ]
 
 export const aboutPreviewImages = {

@@ -130,10 +130,10 @@ function Footer() {
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                       <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                        +971 XX XXX XXXX
+                        +971 50 120 9512
                       </Typography>
                       <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                        +971 XX XXX XXXX
+                        +971 50 907 1249
                       </Typography>
                     </Box>
                   </Stack>
@@ -175,9 +175,9 @@ function Footer() {
               <Grid size={{ xs: 12, md: 3 }}>
                 <Typography sx={headingStyle}>Office Address</Typography>
                 <Typography sx={{ ...infoStyle, fontSize: '1.1rem', color: '#5b5b5b' }}>
-                  Business Bay, <br />
-                  Dubai, United Arab Emirates <br />
-                  P.O. Box - 00000
+                  79, Sheikh Abdullah Al-Shaiba Street <br />
+                  Al Bustan-1 - Liwara Ajman, <br />
+                  United Arab Emirates
                 </Typography>
               </Grid>
             </Grid>

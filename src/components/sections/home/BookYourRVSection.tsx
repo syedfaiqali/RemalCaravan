@@ -213,7 +213,7 @@ function BookYourRVSection() {
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   error={errors.phone}
                   helperText={errors.phone ? 'Phone number is required' : ''}
-                  placeholder="+91 XXX XXX XXXX"
+                  placeholder="+971 50 XXX XXXX"
                   variant="outlined"
                   sx={inputStyles}
                 />

@@ -19,7 +19,7 @@ export const contactCards: ContactCardItem[] = [
   {
     icon: <PhoneInTalkIcon sx={{ fontSize: 40 }} />,
     title: 'Phone No',
-    value: '+971 XX XXX XXXX',
+    value: '+971 50 120 9512',
   },
   {
     icon: <MailOutlineIcon sx={{ fontSize: 40 }} />,
@@ -29,6 +29,6 @@ export const contactCards: ContactCardItem[] = [
   {
     icon: <NearMeIcon sx={{ fontSize: 40 }} />,
     title: 'Address',
-    value: 'Business Bay, Dubai, United Arab Emirates',
+    value: '79, Sheikh Abdullah Al-Shaiba Street - Al Bustan-1 - Liwara Ajman, UAE',
   },
 ]

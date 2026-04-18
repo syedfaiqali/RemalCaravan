@@ -1,4 +1,4 @@
-﻿import { Box, Paper } from '@mui/material'
+import { Box, Paper } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 
 function ContactMapAndDetailsSection() {
@@ -16,7 +16,7 @@ function ContactMapAndDetailsSection() {
         >
           <Box
             component="iframe"
-            src="https://www.google.com/maps?q=Dubai%20United%20Arab%20Emirates&output=embed"
+            src="https://www.google.com/maps?q=25.4138056,55.4507778&hl=en&z=16&amp;output=embed"
             sx={{ 
               width: '100%', 
               height: { xs: 350, md: 550 }, 

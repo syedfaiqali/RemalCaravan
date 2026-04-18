@@ -6,7 +6,7 @@ interface LogoProps {
   sx?: object
 }
 
-function Logo({ height = { xs: 55, md: 75 }, sx }: LogoProps) {
+function Logo({ height = { xs: 60, md: 80 }, sx }: LogoProps) {
   return (
     <Box
       component="img"
@@ -16,7 +16,7 @@ function Logo({ height = { xs: 55, md: 75 }, sx }: LogoProps) {
         height: height,
         width: 'auto',
         display: 'block',
-        transform: { xs: 'scale(2.0)', md: 'scale(2.1)' },
+        transform: { xs: 'scale(1.7)', md: 'scale(1.8)' },
         transformOrigin: 'left center',
         ...sx
       }}

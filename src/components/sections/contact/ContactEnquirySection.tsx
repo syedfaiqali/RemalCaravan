@@ -156,7 +156,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
             </Box>
             <Box>
               <Typography sx={labelStyle}>Phone No</Typography>
-              <Typography sx={valueStyle}>+971 XX XXX XXXX</Typography>
+              <Typography sx={valueStyle}>+971 50 120 9512 / +971 50 907 1249</Typography>
             </Box>
           </Box>
 
@@ -166,7 +166,7 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
             </Box>
             <Box>
               <Typography sx={labelStyle}>Email Address</Typography>
-              <Typography sx={valueStyle}>info@remalcaravan.ae</Typography>
+              <Typography sx={valueStyle}>info@remalcaravan.com</Typography>
             </Box>
           </Box>
 
@@ -177,8 +177,8 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
             <Box>
               <Typography sx={labelStyle}>Office Address</Typography>
               <Typography sx={valueStyle}>
-                Business Bay, <br />
-                Dubai, United Arab Emirates
+                Ajman, <br />
+                United Arab Emirates
               </Typography>
             </Box>
           </Box>
