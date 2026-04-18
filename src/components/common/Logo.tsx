@@ -18,6 +18,7 @@ function Logo({ height = { xs: 60, md: 80 }, sx }: LogoProps) {
         display: 'block',
         transform: { xs: 'scale(1.7)', md: 'scale(1.8)' },
         transformOrigin: 'left center',
+        mixBlendMode: 'darken', // Dynamically removes the white background
         ...sx
       }}
     />
