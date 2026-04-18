@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography, Button, Stack, Chip } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import MotionSection from '../../common/MotionSection'
-import jebelHafeet from '../../../assets/jebel_hafeet.png'
-import liwaDesert from '../../../assets/liwa_desert.png'
-import hattaMountains from '../../../assets/hatta_mountains.png'
-import alQudraLakes from '../../../assets/al_qudra_lakes.png'
+import jebelHafeet from '../../../assets/jebel_hafeet.webp'
+import liwaDesert from '../../../assets/liwa_desert.webp'
+import hattaMountains from '../../../assets/hatta_mountains.webp'
+import alQudraLakes from '../../../assets/al_qudra_lakes.webp'
 
 function RecommendedTripsSection() {
   const trips = [

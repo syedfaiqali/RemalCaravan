@@ -1,6 +1,6 @@
 ﻿import { Box, Container, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
-import heroImage from '../../../assets/busimage2.jpeg'
+import heroImage from '../../../assets/busimage2.webp'
 
 function GalleryHeroSection() {
   return (
