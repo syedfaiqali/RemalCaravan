@@ -135,6 +135,59 @@ export interface CaravanItem {
   services?: string[]
 }
 
+const defaultSpecificationSummary = {
+  fuel: 'Diesel',
+  kids: '2 Kids',
+  adults: '2 Adults',
+  vehicleType: 'Light Passenger Vehicle',
+}
+
+const defaultInclusions = [
+  'One Queen Size Bed with Linens, Quilt & Partition & Door Lock',
+  'One 3 Seater Motorised Sofa cum Bed with Linens & Quilt',
+  '1(One) Queen Size over head bed with Linens & Quilt & Curtain',
+  'Two 2 Seater Sofa set',
+  'One Smart TV',
+  'Sound System',
+  'Mobile Charging Points',
+  'Intercom System to communicate with Driver',
+  'Electrical Marine Toilet with Washbasin & Shower',
+  'Shampoo & Shower Gel',
+  'Kitchenette with Hot Plate',
+  'Electric Kettle',
+  'Pull out Fridge & Sink',
+  'Outdoor Pullout Kitchen with Gas Burner & Sink',
+  'Camping Chairs & Table with Awning & Camping Lights',
+  'Cooking Utensils',
+  '5Kg LPG Cylinder',
+  'Mood Lighting & Emergency Light',
+  'Fire Extinguishers',
+  '3 KVA Honda Silent Genset',
+  'Umbrella',
+  'Fuel up to 250 kms (Free Run/per Day)',
+  'Night Parking',
+]
+
+const defaultExclusions = [
+  'Fuel Cost post 250 kms of free run',
+  'Breakfast, Lunch & Dinner',
+  'Special Permits & Local Passes',
+  'Miscellaneous Personal Expenses',
+  'Day Halting Charges (Engine is ON)',
+  'Driver',
+]
+
+const defaultServices = [
+  '5Kg extra LPG Cylinder',
+  'Archery Set',
+  'Badminton Set',
+  'Barbeque',
+  'Bicycle',
+  'Bonfire',
+  'Fishing Rod',
+  'Hammock',
+]
+
 export const featuredCaravans: CaravanItem[] = [
   {//1
     id: 'star-light',
@@ -217,6 +270,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -235,6 +292,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -253,6 +314,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Premium Interior', 'Large Storage', 'AC'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '24 ft' },
       { label: 'Berths', value: '6 persons' },
@@ -271,6 +336,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Automatic', 'Kitchenette', 'AC'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '20 ft' },
       { label: 'Berths', value: '4 persons' },
@@ -289,6 +358,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Family Friendly', 'Rear Camera', 'AC'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -307,6 +380,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -325,6 +402,10 @@ export const featuredCaravans: CaravanItem[] = [
     pricePerDay: 'Staring from AED 750/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Desert Ready', 'Heavy Duty AC', 'Solar'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '22 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -347,6 +428,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,200/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['6 Berths', 'Dining Booth', 'USB Ports'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '25 ft' },
       { label: 'Berths', value: '6 persons' },
@@ -365,6 +450,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,800/day',
     sleeps: 'Sleeps 7',
     quickSpecs: ['Luxury Line', 'Smart TV', 'Shower Cabin'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '27 ft' },
       { label: 'Berths', value: '7 persons' },
@@ -383,6 +472,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,000/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Eco-Friendly', 'Shore Power', 'Large Windows'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '21 ft' },
       { label: 'Berths', value: '4 persons' },
@@ -401,6 +494,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,500/day',
     sleeps: 'Sleeps 5',
     quickSpecs: ['Off-road Mastery', 'Rugged Build', 'Full Amenities'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '23 ft' },
       { label: 'Berths', value: '5 persons' },
@@ -419,6 +516,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,200/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Off-road Pro', 'Advanced Nav', 'Extra Fuel'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '24 ft' },
       { label: 'Berths', value: '6 persons' },
@@ -436,6 +537,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 1,300/day',
     sleeps: 'Sleeps 3',
     quickSpecs: ['City Friendly', 'Compact', 'Easy Parking'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '18 ft' },
       { label: 'Berths', value: '3 persons' },
@@ -452,6 +557,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 3,500/day',
     sleeps: 'Sleeps 8',
     quickSpecs: ['Full Luxury', '8 Berths', 'Gourmet Kitchen'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '30 ft' },
       { label: 'Berths', value: '8 persons' },
@@ -468,6 +577,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 2,800/day',
     sleeps: 'Sleeps 6',
     quickSpecs: ['Long Haul', 'Max Storage', 'Comfort+'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '26 ft' },
       { label: 'Berths', value: '6 persons' },
@@ -484,6 +597,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 3,000/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Panoramic View', 'Elegant', 'AC'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '25 ft' },
       { label: 'Berths', value: '4 persons' },
@@ -499,6 +616,10 @@ export const premiumCaravans: CaravanItem[] = [
     pricePerDay: 'AED 4,500/day',
     sleeps: 'Sleeps 4',
     quickSpecs: ['Ultra Luxury', '4 Berths', 'Full Tech'],
+    specificationSummary: defaultSpecificationSummary,
+    inclusions: defaultInclusions,
+    exclusions: defaultExclusions,
+    services: defaultServices,
     specs: [
       { label: 'Length', value: '32 ft' },
       { label: 'Berths', value: '4 persons' },
