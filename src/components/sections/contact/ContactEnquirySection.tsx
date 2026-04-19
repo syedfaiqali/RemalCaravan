@@ -1,11 +1,9 @@
-import { Box, Grid, Paper, Stack, TextField, Typography, IconButton } from '@mui/material'
+import { Box, Grid, Paper, Stack, TextField, Typography, IconButton, SvgIcon } from '@mui/material'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone'
 import EmailIcon from '@mui/icons-material/Email'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import CustomButton from '../../common/CustomButton'
 import MotionSection from '../../common/MotionSection'
 import { useAppSelector } from '../../../store/hooks'
@@ -16,9 +14,37 @@ import { toast } from 'sonner'
 
 interface ContactEnquirySectionProps { }
 
+function TikTokIcon() {
+  return (
+    <SvgIcon fontSize="small">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.35V2h-3.3v13.24a2.9 2.9 0 1 1-2-2.76v-3.35a6.24 6.24 0 1 0 5.3 6.15V8.54a8.1 8.1 0 0 0 4.77 1.54V6.69Z" />
+    </SvgIcon>
+  )
+}
+
 function ContactEnquirySection({ }: ContactEnquirySectionProps) {
   const selectedCaravanId = useAppSelector((state) => state.booking.selectedCaravan)
   const selectedCaravan = premiumCaravans.find(c => c.id === selectedCaravanId)
+  const socialLinks = [
+    {
+      label: 'Facebook',
+      href: 'https://www.facebook.com/remal.caravans',
+      icon: FacebookIcon,
+      hoverColor: '#1877F2',
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/remal_caravan',
+      icon: InstagramIcon,
+      hoverColor: '#E4405F',
+    },
+    {
+      label: 'TikTok',
+      href: 'https://www.tiktok.com/@remal.caravans',
+      icon: TikTokIcon,
+      hoverColor: '#010101',
+    },
+  ]
 
   const detailItemStyle = {
     display: 'flex',
@@ -196,16 +222,21 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
               Follow Us
             </Typography>
             <Stack direction="row" spacing={2}>
-              {[FacebookIcon, InstagramIcon, TwitterIcon, LinkedInIcon].map((Icon, index) => (
+              {socialLinks.filter(({ href }) => href).map(({ label, href, icon: Icon, hoverColor }) => (
                 <IconButton
-                  key={index}
+                  key={label}
+                  component="a"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   sx={{
                     bgcolor: '#f3e4d2',
                     color: '#5b5b5b',
                     p: 1.5,
                     transition: '0.3s',
                     '&:hover': {
-                      bgcolor: '#f39a1e',
+                      bgcolor: hoverColor,
                       color: '#fff',
                       transform: 'translateY(-4px)'
                     }
