@@ -811,7 +811,7 @@ function PartnerWithUsSection() {
                   maxWidth: 640,
                 }}
               >
-                Help shape the future of our RV fleet with trusted partnerships, smart collaboration, and shared growth.
+                Grow with Remal through vehicle partnerships, sales opportunities, and travel experiences built for the UAE.
               </Typography>
             </MotionSection>
           </Container>
@@ -838,7 +838,7 @@ function PartnerWithUsSection() {
                   mb: 1.5,
                 }}
               >
-                Get associated with Remal Caravans
+                Choose your partnership path
               </Typography>
               <Typography
                 sx={{
@@ -849,7 +849,7 @@ function PartnerWithUsSection() {
                   mb: { xs: 4, md: 6 },
                 }}
               >
-                We collaborate with campsites, dealers, service teams, and investors to deliver unmatched RV experiences across the UAE.
+                Select the option that matches your vehicle, business, or growth plan and send us the details to start the conversation.
               </Typography>
 
               {activePartner ? (
