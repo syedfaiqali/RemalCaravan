@@ -1,14 +1,13 @@
-﻿import { useState } from 'react'
-import { Box, Container, Grid, Typography, Stack, Chip } from '@mui/material'
+import { Box, Container, Grid, Typography, } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
-import { destinations, destinationCategories } from '../../../data/destinationsContent'
+import { destinations } from '../../../data/destinationsContent'
 
 function DestinationsGridSection() {
-  const [activeCategory, setActiveCategory] = useState('All Spots')
+  // const [activeCategory, setActiveCategory] = useState('All Spots')
 
-  const filteredDestinations = activeCategory === 'All Spots' 
-    ? destinations 
-    : destinations.filter(d => d.category === activeCategory)
+  // const filteredDestinations = activeCategory === 'All Spots'
+  //   ? destinations
+  //   : destinations.filter(d => d.category === activeCategory)
 
   return (
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff' }}>
@@ -88,7 +87,7 @@ function DestinationsGridSection() {
         </Typography>
 
         <Grid container spacing={4} sx={{ mt: 4 }}>
-          {filteredDestinations.map((dest, index) => (
+          {destinations.map((dest, index) => (
             <Grid key={dest.id} size={{ xs: 12, sm: 6, md: 4 }}>
               <MotionSection delay={100 + index * 50}>
                 <Box

@@ -1,8 +1,6 @@
 import DestinationsHeroSection from '../components/sections/destinations/DestinationsHeroSection'
 import DestinationsGridSection from '../components/sections/destinations/DestinationsGridSection'
-import FeaturedRoadTripsSection from '../components/sections/destinations/FeaturedRoadTripsSection'
 import TravelFreelySection from '../components/sections/destinations/TravelFreelySection'
-// import RecommendedTripsSection from '../components/sections/destinations/RecommendedTripsSection'
 import AdventureCTASection from '../components/common/AdventureCTASection'
 
 function DestinationsPage() {
