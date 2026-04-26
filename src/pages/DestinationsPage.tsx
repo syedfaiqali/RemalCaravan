@@ -10,7 +10,7 @@ function DestinationsPage() {
     <>
       <DestinationsHeroSection />
       <DestinationsGridSection />
-      <FeaturedRoadTripsSection />
+      {/* <FeaturedRoadTripsSection /> */}
       <TravelFreelySection />
       {/* <RecommendedTripsSection /> */}
       <AdventureCTASection

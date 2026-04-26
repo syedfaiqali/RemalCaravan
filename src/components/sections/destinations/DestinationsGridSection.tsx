@@ -14,7 +14,7 @@ function DestinationsGridSection() {
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#fff' }}>
       <Container maxWidth="xl" sx={{ px: { xs: 3, md: 8 } }}>
         {/* Filter Section */}
-        <Stack
+        {/* <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={3}
           alignItems={{ xs: 'flex-start', md: 'center' }}
@@ -69,7 +69,7 @@ function DestinationsGridSection() {
               />
             ))}
           </Stack>
-        </Stack>
+        </Stack> */}
 
         {/* Grid Section */}
         <Typography
