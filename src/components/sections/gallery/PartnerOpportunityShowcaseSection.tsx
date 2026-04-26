@@ -1,4 +1,4 @@
-import { Box, Button, Chip, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Chip, Container, Grid, Stack, Typography } from '@mui/material'
 import MotionSection from '../../common/MotionSection'
 import partner1 from '../../../assets/partner1.webp'
 import partner2 from '../../../assets/partner2.webp'
