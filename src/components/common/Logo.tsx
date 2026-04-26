@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import logoImg from '../../assets/Remal Caravan logo design.webp'
+import logoImg from '../../assets/Remal Caravan logo design1.webp'
 
 interface LogoProps {
   height?: number | string | object

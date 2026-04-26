@@ -30,7 +30,7 @@ function App() {
           <Route path="/fleet" element={<FleetPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/partner" element={<PartnerPage />} />
-          <Route path="/destinations" element={<DestinationsPage />} />
+          <Route path="/campsites" element={<DestinationsPage />} />
           <Route path="/caravan/:id" element={<CaravanDetailsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />

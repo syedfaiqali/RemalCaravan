@@ -11,7 +11,7 @@ const navItems = [
   { label: 'Our RV fleet', path: '/fleet' },
   { label: 'Gallery', path: '/gallery' },
   { label: 'Partner with Us', path: '/partner' },
-  { label: 'Campsites', path: '/destinations' },
+  { label: 'Campsites', path: '/campsites' },
   { label: 'Contact', path: '/contact' },
   { label: 'About Us', path: '/about' },
 ]

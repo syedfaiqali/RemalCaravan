@@ -95,7 +95,7 @@ function PopularDestinationsSection({ items }: PopularDestinationsSectionProps) 
                   </Typography>
 
                   <Link
-                    href="/destinations"
+                    href="/campsites"
                     sx={{
                       color: '#ffffff',
                       fontFamily: '"Plus Jakarta Sans", sans-serif',

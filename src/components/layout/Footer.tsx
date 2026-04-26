@@ -110,7 +110,7 @@ function Footer() {
                   <Link href="/gallery" sx={linkStyle}>Gallery</Link>
                   <Link href="/fleet" sx={linkStyle}>Our Fleet</Link>
                   <Link href="/contact" sx={linkStyle}>Contact Us</Link>
-                  <Link href="/destinations" sx={linkStyle}>Campsites</Link>
+                  <Link href="/campsites" sx={linkStyle}>Campsites</Link>
                   <Link href="/partner" sx={linkStyle}>Become Our Partner</Link>
                 </Stack>
               </Grid>
