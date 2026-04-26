@@ -16,7 +16,7 @@ function ContactMapAndDetailsSection() {
         >
           <Box
             component="iframe"
-            src="https://www.google.com/maps?q=25.4138056,55.4507778&hl=en&z=16&amp;output=embed"
+            src="https://www.google.com/maps?q=25.4039191,55.4491539&hl=en&z=17&amp;output=embed"
             sx={{ 
               width: '100%', 
               height: { xs: 350, md: 550 }, 

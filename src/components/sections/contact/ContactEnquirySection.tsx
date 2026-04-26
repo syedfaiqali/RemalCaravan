@@ -203,7 +203,8 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
             <Box>
               <Typography sx={labelStyle}>Office Address</Typography>
               <Typography sx={valueStyle}>
-                Ajman, <br />
+                79, Sheikh Abdullah Al-Shaiba Street <br />
+                Al Bustan-1 - Liwara Ajman, <br />
                 United Arab Emirates
               </Typography>
             </Box>
@@ -346,5 +347,3 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
 }
 
 export default ContactEnquirySection
-
-

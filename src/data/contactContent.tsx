@@ -29,6 +29,6 @@ export const contactCards: ContactCardItem[] = [
   {
     icon: <NearMeIcon sx={{ fontSize: 40 }} />,
     title: 'Address',
-    value: '79, Sheikh Abdullah Al-Shaiba Street - Al Bustan-1 - Liwara Ajman, UAE',
+    value: '79, Sheikh Abdullah Al-Shaiba Street - Al Bustan-1 - Liwara Ajman, United Arab Emirates',
   },
 ]
