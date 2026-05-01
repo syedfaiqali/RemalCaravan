@@ -58,6 +58,21 @@ import sale9_1 from '../assets/For Sale 9/1.webp'
 // For Sale 18
 import sale18_1 from '../assets/For Sale 18/1.webp'
 
+//gallery Images
+import gallery1 from '../assets/gallery1.webp'
+import gallery2 from '../assets/gallery2.webp'
+import gallery3 from '../assets/gallery3.webp'
+import gallery4 from '../assets/gallery1.webp'
+import gallery5 from '../assets/gallery5.webp'
+import gallery6 from '../assets/gallery6.webp'
+import gallery7 from '../assets/gallery7.webp'
+import gallery8 from '../assets/gallery8.webp'
+import gallery9 from '../assets/gallery9.webp'
+import gallery10 from '../assets/gallery10.webp'
+import gallery11 from '../assets/gallery11.webp'
+import gallery12 from '../assets/gallery12.webp'
+import gallery13 from '../assets/gallery13.webp'
+
 
 export interface CaravanSpec {
   label: string
@@ -372,7 +387,7 @@ export const premiumCaravans: CaravanItem[] = [
   ...featuredCaravans,
 ]
 
-export const galleryImages = [starLight1, sunshine1, oasis1, falconRover1, apexBlazer1, desertGlory1, rainbow1, terra1, sale9_1, sale18_1]
+export const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13]
 
 export const heroImage = starLight1
 

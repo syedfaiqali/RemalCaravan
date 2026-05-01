@@ -25,7 +25,7 @@ function GalleryContentSection() {
             Customer Memories
           </Typography>
           <Grid container spacing={2}>
-            {galleryImages.concat(galleryImages).slice(0, 12).map((img, index) => (
+            {galleryImages.concat(galleryImages).slice(0, 13).map((img, index) => (
               <Grid key={index} size={{ xs: 6, sm: 4, md: 2 }}>
                 <MotionSection delay={600 + (index % 6) * 50}>
                   <Box
