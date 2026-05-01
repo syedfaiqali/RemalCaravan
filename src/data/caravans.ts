@@ -52,12 +52,6 @@ import terra3 from '../assets/Terra/IMG-20260120-WA0025.webp'
 import terra4 from '../assets/Terra/IMG-20260120-WA0027.webp'
 import terra5 from '../assets/Terra/IMG-20260120-WA0029.webp'
 
-// For Sale 9
-import sale9_1 from '../assets/For Sale 9/1.webp'
-
-// For Sale 18
-import sale18_1 from '../assets/For Sale 18/1.webp'
-
 //gallery Images
 import gallery1 from '../assets/gallery1.webp'
 import gallery2 from '../assets/gallery2.webp'
