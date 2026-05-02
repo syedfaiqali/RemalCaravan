@@ -757,6 +757,8 @@ function PartnerWithUsSection() {
           message: JSON.stringify(payload, null, 2),
           partner_type: partner?.title || '',
           to_name: "Remal Caravan Admin",
+          to_email: "booking@remalcaravan.com",
+          from_email: "booking@remalcaravan.com",
         },
         PUBLIC_KEY
       )

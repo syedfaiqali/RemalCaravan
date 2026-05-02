@@ -105,12 +105,15 @@ function BookYourRVSection() {
         {
           from_name: formData.name,
           email: formData.email,
+          reply_to: formData.email,
           phone: formData.phone,
           rv_type: formData.rvType,
           pickup_date: formData.pickupDate?.format('DD/MM/YYYY'),
           return_date: formData.returnDate?.format('DD/MM/YYYY'),
           special_requests: formData.specialRequests || 'None',
           to_name: "Remal Caravan Admin",
+          to_email: "booking@remalcaravan.com",
+          from_email: "booking@remalcaravan.com",
         },
         PUBLIC_KEY
       );

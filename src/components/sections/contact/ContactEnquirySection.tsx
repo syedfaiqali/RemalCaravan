@@ -139,6 +139,8 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
           subject: formData.subject,
           message: formData.message,
           to_name: "Remal Caravan Admin",
+          to_email: "booking@remalcaravan.com",
+          from_email: "booking@remalcaravan.com",
         },
         PUBLIC_KEY
       );
