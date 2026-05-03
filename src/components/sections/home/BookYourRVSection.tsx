@@ -5,17 +5,18 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import dayjs, { Dayjs } from 'dayjs'
 import CustomButton from '../../common/CustomButton'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
 
 function BookYourRVSection() {
   const rvTypes = [
-    'Remal Voyager',
-    'Remal Explorer',
-    'Remal Signature',
-    'Remal Family Max',
-    'Remal Lux Cruise',
-    'Luxury 4-berth',
+    'Star Light',
+    'Sunshine',
+    'Oasis',
+    'Falcon Rover',
+    'Apex Blazer',
+    'Desert Glory',
+    'Rainbow',
+    'Terra',
   ]
 
   const inputStyles = {
@@ -46,7 +47,7 @@ function BookYourRVSection() {
     name: '',
     email: '',
     phone: '',
-    rvType: 'Luxury 4-berth',
+    rvType: 'Star Light',
     pickupDate: dayjs() as Dayjs | null,
     returnDate: dayjs().add(3, 'days') as Dayjs | null,
     specialRequests: ''
@@ -93,43 +94,40 @@ function BookYourRVSection() {
 
     setIsSubmitting(true)
 
-    // Replace these placeholder IDs with your actual EmailJS ones
-    const SERVICE_ID = "service_6l2k1k9";
-    const TEMPLATE_ID = "template_5jyv2h6";
-    const PUBLIC_KEY = "yFMFYlO4Y0j259hfO";
-
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
+      const response = await fetch('https://formspree.io/f/xaqvqlee', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
           from_name: formData.name,
-          email: formData.email,
           reply_to: formData.email,
           phone: formData.phone,
           rv_type: formData.rvType,
           pickup_date: formData.pickupDate?.format('DD/MM/YYYY'),
           return_date: formData.returnDate?.format('DD/MM/YYYY'),
           special_requests: formData.specialRequests || 'None',
-          to_name: "Remal Caravan Admin",
-          to_email: "booking@remalcaravan.com",
-          from_email: "booking@remalcaravan.com",
-        },
-        PUBLIC_KEY
-      );
+        })
+      });
 
-      toast.success('Booking request submitted successfully! We will contact you shortly.')
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        rvType: 'Luxury 4-berth',
-        pickupDate: dayjs(),
-        returnDate: dayjs().add(3, 'days'),
-        specialRequests: ''
-      })
+      if (response.ok) {
+        toast.success('Booking request submitted successfully! We will contact you shortly.')
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          rvType: 'Star Light',
+          pickupDate: dayjs(),
+          returnDate: dayjs().add(3, 'days'),
+          specialRequests: ''
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
     } catch (error) {
-      console.error('EmailJS booking error:', error)
+      console.error('Booking error:', error)
       toast.error('Something went wrong. Please try again later.')
     } finally {
       setIsSubmitting(false)

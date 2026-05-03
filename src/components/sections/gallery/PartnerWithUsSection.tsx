@@ -7,7 +7,6 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import MotionSection from '../../common/MotionSection'
 import heroImage from '../../../assets/caravan_hero_banner_1775771753954.webp'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
 import starLight1 from '../../../assets/Star light/IMG-20250812-WA0030.webp'
 import oasis1 from '../../../assets/Oasis/IMG-20260104-WA0016.webp'
@@ -738,38 +737,30 @@ function PartnerWithUsSection() {
       }
     })
 
-    setIsSubmitting(true)
-
-    const SERVICE_ID = "service_6l2k1k9"
-    const TEMPLATE_ID = "template_5jyv2h6"
-    const PUBLIC_KEY = "yFMFYlO4Y0j259hfO"
-
     try {
-      const response = await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
+      const response = await fetch('https://formspree.io/f/xaqvqlee', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
           from_name: String(payload.name || ''),
           reply_to: String(payload.email || ''),
-          email: String(payload.email || ''),
-          phone: String(payload.contact_number || ''),
-          subject: `Partner Inquiry - ${partner?.title || 'Partner'}`,
-          message: JSON.stringify(payload, null, 2),
+          subject: `Partner Inquiry - ${partner?.title || 'Partner'} from ${payload.name}`,
+          ...payload,
           partner_type: partner?.title || '',
-          to_name: "Remal Caravan Admin",
-          to_email: "booking@remalcaravan.com",
-          from_email: "booking@remalcaravan.com",
-        },
-        PUBLIC_KEY
-      )
-      if (response?.status === 200) {
+        })
+      });
+
+      if (response.ok) {
         toast.success('Partner request sent successfully!')
         e.currentTarget.reset()
       } else {
-        toast.error('Something went wrong. Please try again later.')
+        throw new Error('Form submission failed')
       }
     } catch (error) {
-      console.error('EmailJS partner error:', error)
+      console.error('Partner error:', error)
       toast.error('Something went wrong. Please try again later.')
     } finally {
       setIsSubmitting(false)

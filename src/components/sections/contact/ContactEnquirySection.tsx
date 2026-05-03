@@ -9,7 +9,6 @@ import MotionSection from '../../common/MotionSection'
 import { useAppSelector } from '../../../store/hooks'
 import { premiumCaravans } from '../../../data/caravans'
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import { toast } from 'sonner'
 
 interface ContactEnquirySectionProps { }
@@ -122,40 +121,35 @@ function ContactEnquirySection({ }: ContactEnquirySectionProps) {
       return
     }
 
-    setIsSubmitting(true)
-
-    // Updated with your real EmailJS IDs
-    const SERVICE_ID = "service_6l2k1k9";
-    const TEMPLATE_ID = "template_5jyv2h6"; // Reminder: Make sure this is your Contact Template ID!
-    const PUBLIC_KEY = "yFMFYlO4Y0j259hfO";
-
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
+      const response = await fetch('https://formspree.io/f/xaqvqlee', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
           from_name: formData.name,
           reply_to: formData.email,
-          subject: formData.subject,
+          subject: formData.subject || `General Inquiry from ${formData.name}`,
           message: formData.message,
-          to_name: "Remal Caravan Admin",
-          to_email: "booking@remalcaravan.com",
-          from_email: "booking@remalcaravan.com",
-        },
-        PUBLIC_KEY
-      );
-      
-      toast.success('Message sent successfully! We will get back to you soon.')
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      })
+        })
+      });
+
+      if (response.ok) {
+        toast.success('Message sent successfully! We will get back to you soon.')
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
     } catch (error) {
-      console.error('EmailJS error:', error)
-      toast.error('Something went wrong. Please try again later or contact us directly.')
+      console.error('Contact error:', error)
+      toast.error('Something went wrong. Please try again later.')
     } finally {
       setIsSubmitting(false)
     }
