@@ -148,10 +148,10 @@ function Footer() {
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                       <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                        info@remalcaravan.ae
+                        info@remalcaravan.com
                       </Typography>
                       <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                        booking@remalcaravan.ae
+                        booking@remalcaravan.com
                       </Typography>
                     </Box>
                   </Stack>
@@ -165,7 +165,7 @@ function Footer() {
                       <EmailIcon sx={{ color: '#f39a1e', fontSize: '1.4rem' }} />
                     </Box>
                     <Typography sx={{ ...infoStyle, fontWeight: 600, color: '#1e293b' }}>
-                      booking@remalcaravan.ae
+                      booking@remalcaravan.com
                     </Typography>
                   </Stack> */}
                 </Stack>

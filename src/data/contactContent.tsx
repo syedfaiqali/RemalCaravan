@@ -24,7 +24,7 @@ export const contactCards: ContactCardItem[] = [
   {
     icon: <MailOutlineIcon sx={{ fontSize: 40 }} />,
     title: 'Mail',
-    value: 'info@remalcaravan.ae',
+    value: 'info@remalcaravan.com',
   },
   {
     icon: <NearMeIcon sx={{ fontSize: 40 }} />,
